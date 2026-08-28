@@ -127,7 +127,7 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
         <p class="lede">Au printemps 2020, en l'espace de trois mois, j'ai perdu mon mentor professionnel, mon père biologique, ma copine de l'époque — et le monde s'est arrêté par-dessus. J'ai démissionné du système. Pas métaphoriquement : j'ai arrêté, et je suis resté sur Internet.</p>
       </div>
       <div class="body">
-        <p>C'est là que je suis tombé sur <b>Tev</b>. Puis, surtout, sur ce qui s'est construit autour : les équipes successives, les gens qui arrivent, les gens qui partent, les formats qui se cherchent, la boîte qui grossit sans jamais perdre le ton. Jusqu'à la pieuvre entière d'aujourd'hui — <b>Odysée</b> comprise, l'esport, la bouffe, le merch, tout.</p>
+        <p>C'est là que je suis tombé sur <b>Tev</b>. Puis, surtout, sur ce qui s'est construit autour : les équipes successives, les gens qui arrivent, les gens qui partent, les formats qui se cherchent, la boîte qui grossit sans jamais perdre le ton. Jusqu'à la pieuvre entière d'aujourd'hui — <b>Odyssée</b> comprise, l'esport, la bouffe, le merch, tout.</p>
         <p>Je ne dis pas ça pour faire joli avant de parler tarif. Je le dis parce que c'est la seule raison pour laquelle cette refonte existe : personne ne me l'a demandée, personne ne la paie. J'ai regardé la vidéo où vous dites qu'il faut <b>recommencer Tous Imparfaits</b>, que le branding ne suit pas, qu'aucun logo ne fonctionne sur toute la gamme. Et j'ai fait ce que je sais faire, un dimanche, plutôt que de laisser un commentaire.</p>
         <p class="note"><b>C'est aussi mon test d'entrée.</b> Vous jugez le travail avant de me parler — pas un portfolio, pas un appel de découverte, pas un deck. La chose est en ligne, vous cliquez, vous voyez.</p>
       </div>
@@ -214,10 +214,10 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
     <ol class="steps">
       <li><span class="k">A</span><b>Découpe et intégration Shopify</b><span class="t">Le template transformé en thème Shopify propre : sections éditables, blocs réutilisables, panier et checkout natifs, métachamps pour les collections et les paliers de cadeaux. Livré prêt à publier, pas prêt à débugger.</span></li>
       <li><span class="k">B</span><b>Entourer Shopify, sans encore le quitter</b><span class="t">L'étape intermédiaire, la moins risquée : on garde Shopify pour l'encaissement et la conformité, et on reprend tout le reste — la vitrine devient statique et rapide, le catalogue et le contenu sortent de l'admin, et les vues manquantes (catégories, listings filtrables, recherche, compte client) sont construites dans le système de design déjà posé.</span></li>
-      <li><span class="k">C</span><b>Sortir de Shopify — et c'est ce que je conseille</b><span class="t">Quand l'abonnement, la commission et les limites du thème deviennent le vrai coût, on remplace la boîte noire : <b>Stripe en direct</b> pour le paiement (avec Apple Pay, Google Pay, PayPal, SEPA et les taxes gérées), une <b>base NoSQL sécurisée</b> pour le catalogue, les stocks, les commandes et les clients, une <b>API propre</b> devant, et un <b>serveur MCP</b> par-dessus. Le MCP est la vraie bascule : il branche le catalogue et les stocks sur ce que vous utilisez déjà — <b>Notion, Airtable, ClickUp</b>, un tableur, ou directement des agents — pour que l'équipe gère le contenu et les stocks depuis ses propres outils, sans jamais toucher au code. Vous récupérez la marge, la vitesse, et la propriété de vos données.</span></li>
+      <li><span class="k">C</span><b>Sortir de Shopify — et c'est ce que je conseille</b><span class="t">Quand l'abonnement, la commission et les limites du thème deviennent le vrai coût, on remplace la boîte noire : <b>Stripe en direct</b> pour le paiement (avec Apple Pay, Google Pay, PayPal, SEPA et les taxes gérées), une <b>base NoSQL sécurisée</b> pour le catalogue, les stocks, les commandes et les clients, une <b>API propre</b> devant, et un <b>serveur MCP</b> par-dessus. Le MCP est la vraie bascule : il branche le catalogue et les stocks sur ce que vous utilisez déjà — <b>Notion, Airtable, ClickUp</b>, un tableur, ou directement des agents — pour que l'équipe gère le contenu et les stocks depuis ses propres outils, sans jamais toucher au code. Vous récupérez la marge, la vitesse, et la propriété de vos données.</span><span class="t stepmore"><b>Ce que le duo API + MCP débloque vraiment.</b> Une fois le catalogue, les stocks et les commandes derrière une API propre et un serveur MCP, tout outil qui parle MCP s’y branche — et aujourd’hui, ils parlent tous MCP. Votre compta, votre CRM, un chatbot sur le site, un agent qui relance les paniers abandonnés : ce ne sont plus des intégrations à développer une par une, c’est un branchement.<br><br>Le cas qui parle le mieux : <b>un numéro WhatsApp qui répond sur toute la boutique.</b> « Combien de ventes aujourd’hui ? » « Le CA du mois, comparé au mois dernier ? » « Il reste combien de hoodies Yokai en M ? » « Passe le Pack Mystère à − 20 % jusqu’à dimanche. » Vous demandez, ça répond ; vous décidez, ça exécute. Depuis une file d’attente d’aéroport, sans ouvrir un ordinateur et sans former personne à un back-office. Avec un périmètre par personne : qui peut lire quoi, qui peut décider quoi.<br><br>La même prise sert pour les logiciels qu’on n’a jamais envie d’ouvrir — CRM, compta, ERP, tableurs de suivi. Plutôt que d’apprendre leur interface, on leur parle. Et ce n’est pas de la magie, c’est juste devenu accessible : le vrai plafond, c’est le coût en tokens, mes heures disponibles et le budget que vous y mettez. On dimensionne dans cet ordre.</span></li>
       <li><span class="k">D</span><b>Une infra maison, chez vous</b><span class="t">La marche d'après, pour ceux qui veulent arrêter de louer : <b>n8n</b> auto-hébergé pour les automatisations (commandes, e-mails, stocks, alertes, publication), <b>Ollama</b> et des <b>modèles auto-hébergés</b> pour la rédaction, la traduction, le tri du support et la modération — sur vos machines, sans facture par token et sans envoyer vos données à un tiers. Plus le reste de la caisse à outils : serveurs, réseau fermé par défaut, sauvegardes, tableaux de bord, monitoring.</span></li>
       <li><span class="k">E</span><b>Flux réseaux sociaux tenus par des agents</b><span class="t">Des agents qui découpent, légendent, traduisent, planifient et surveillent — sur toute la pieuvre, dans plusieurs langues. Pas un outil de plus dans l'onglet 14 : une chaîne qui tourne et qu'une personne pilote.</span></li>
-      <li><span class="k">F</span><b>Rebranding et redesign de tout l'écosystème</b><span class="t">Les six catégories annoncées dans <a href="https://www.youtube.com/watch?v=OPY3aPZYZRU" rel="noopener" target="_blank">« On doit recommencer Tous Imparfaits »</a>, réparties sous un système visuel unique et tenable. Puis chaque site de l'écosystème repris dans ce système — même grille, même typographie, même logique de conversion.</span></li>
+      <li><span class="k">F</span><b>Rebranding et redesign de tout l'écosystème</b><span class="t">Les six catégories annoncées dans <a href="https://www.youtube.com/watch?v=OPY3aPZYZRU" rel="noopener" target="_blank">« On doit recommencer Tous Imparfaits »</a>, réparties sous un système visuel unique et tenable. Puis chaque site de l'écosystème repris dans ce système — même grille, même typographie, même logique de conversion.</span><span class="t stepmore"><b>Concrètement, la pieuvre.</b> <b>Tokyo Cards</b> vend du TCG japonais — Pokémon, One Piece, Dragon Ball, boosters mystères — à une audience internationale : le sujet y est la fiche produit, la disponibilité et les langues, pas la mode. Le <b>Musée Odyssée</b> ne vend rien encore : il fait rêver, il annonce, il réunit une communauté autour d’un lieu qui n’existe pas. <b>Onamaesama</b> porte des motifs dessinés, <b>AMONE</b>, <b>Kanji Burger</b> et le café <b>SAIBĀ</b> parlent bouffe et lieux physiques, l’<b>esport</b> parle calendrier, effectif et résultats, et <b>Tous Imparfaits</b> parle drop et coupe. Autant de langages de vente différents, autant de problèmes de design différents.<br><br>Ce qui doit être commun, ce n’est donc pas l’apparence — un musée qui ressemblerait à une boutique de t-shirts serait un échec des deux côtés. C’est le <b>socle</b> : une grille et une échelle typographique partagées, un jeu de composants (fiche produit, palier de cadeaux, bloc de preuve, formulaire) qu’on décline au lieu de le réécrire, une même façon d’écrire les prix, les stocks et les délais, un même dispositif de langues, et des tokens de couleur où chaque entité pose sa teinte sans casser les autres. Ça se construit une fois ; ensuite chaque entité coûte des jours, pas des mois.<br><br>Et le bénéfice le plus sous-estimé arrive quand tout l’écosystème partage la même API et le même serveur MCP : il se pilote depuis un seul endroit. Le stock de Tokyo Cards, les commandes de Tous Imparfaits, les chiffres de l’esport — et les réservations d’Odyssée le jour où elles existeront — dans la même conversation.</span></li>
       <li><span class="k">G</span><b>Et le reste</b><span class="t">Audit de sécurité et de conformité (les mentions légales manquantes, entre autres), performance et SEO, tunnels e-mail, outillage interne, dashboards, ce que vous n'avez pas encore eu le temps de nommer.</span></li>
     </ol>
   </div>
@@ -234,8 +234,15 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
         <span class="card__n">Option 1 — La machine</span>
         <h3>Le remboursement des tokens</h3>
         <div class="rule"></div>
-        <div class="price">1× à 3× <small>l'usage réel</small></div>
-        <p>Je facture l'usage constaté de mes modèles, multiplié par un coefficient de 1 à 3 selon la complexité du travail engagé et le niveau de mise au point requis. Un template de landing, c'est 1×. Une chaîne d'agents multilingue qui tourne en production, c'est 3×.</p>
+        <div class="price">1× à 5× <small>l'usage réel</small></div>
+        <p>Je facture l’usage constaté de mes modèles, multiplié par un coefficient de <b>1 à 5</b> selon la complexité du travail engagé et le niveau de mise au point requis.</p>
+        <dl class="coef">
+          <div><dt>1×</dt><dd>Une demande simple, administrative ou ponctuelle</dd></div>
+          <div><dt>2×</dt><dd>Une landing page, une page de vente, un thème</dd></div>
+          <div><dt>3×</dt><dd>Une chaîne d’agents multilingue qui tourne en production</dd></div>
+          <div><dt>4×</dt><dd>Une application web complète</dd></div>
+          <div><dt>5×</dt><dd>Un système nettement plus poussé — infra maison, plateforme, tout ce qui doit tenir dans le temps</dd></div>
+        </dl>
         <ul><li>Consommation détaillée fournie</li><li>Le plancher, pas le plafond, de ma rémunération</li></ul>
       </div>
       <div class="card">
@@ -255,6 +262,8 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
         <p>Pour une implication qui dépasse la prestation. Un fixe mensuel à trois fois le SMIC brut — soit environ <b class="mono">5 600 €</b> par mois sur la base du SMIC au 1<sup>er</sup> juin 2026 (<a href="https://code.travail.gouv.fr/actualite/le-smic-augmente-au-1er-juin-2026-etes-vous-concerne" rel="noopener">1 867,02 € brut</a>) — plus des <b>actions ou un intéressement</b> dans les projets sur lesquels j'ai un impact mesurable.</p>
         <p>Concrètement, voilà à quoi ça ressemble : <b>je travaille sans deadline</b>, tranquillement, en <b>temps très partiel</b> — mais <b>régulièrement</b>, et sur <b>tous les détails et tous les projets que vous voulez</b>. Pas de sprint, pas de rétro-planning tendu, pas de facture qui gonfle : un flux continu qui avance chaque semaine. C'est ce qui rend le rapport <b>prix / qualité / délai</b> aussi efficace — mes modèles absorbent le volume, et moi je n'ai à arbitrer que le goût et les priorités.</p>
         <p>Que ce soit clair : <b>sans deadline et à temps partiel ne veut pas dire à petit impact</b>. C'est même l'inverse. Le temps que je ne passe pas à tenir un planning, je le passe sur le fond — et sur <b>toutes les entités que je peux toucher</b>, la boutique, la marque, les chaînes, l'esport, les outils internes, ce qui n'existe pas encore. Améliorer ce qui tourne, <b>refonder</b> ce qui ne tient plus, <b>innover</b> là où personne n'a eu le temps de regarder. Et sans limite de sujet : <b>web, design, infrastructure, données, IA, automatisation, sécurité</b> — s'il y a de la technologie derrière, je sais m'en occuper, et un an de ce régime change une boîte beaucoup plus qu'un trimestre de sprints.</p>
+        <p><b>Et sur ce mode-là, on la joue réglo sur le reste.</b> Les tokens repassent à <b>1×</b> — le coût constaté, remboursé au centime, sans coefficient de complexité : le fixe est déjà là pour ça. Avec un <b>plancher et un budget définis ensemble</b>, pour que personne ne découvre le montant en fin de mois. Et mes tarifs horaires ne bougent pas non plus : toujours <b class="mono">50 €</b> l’heure ou <b class="mono">500 €</b> la journée, et uniquement si le temps libre que je vous consacre pour ce triple SMIC exige vraiment un bonus exceptionnel. Franchement, ça devrait rester rare.</p>
+        <p>C’est un fonctionnement de <b>CDI, mais facturable à l’étranger</b> : vous avez la régularité et la disponibilité d’un salarié à temps partiel sans le contrat, et je garde ma liberté d’organisation. Dans ces conditions, et avec le remboursement des modèles à 1×, je pense sincèrement pouvoir avoir un <b>impact substantiel sur toutes les entités de la pieuvre</b> plutôt que sur un site à la fois.</p>
         <ul><li>Le fixe couvre la disponibilité et la régularité, pas les heures</li><li>Aucune deadline imposée de part et d'autre — ça avance en continu, pas en à-coups</li><li>Le périmètre est ouvert : le site, la marque, les automatisations, l'infra, les détails qui traînent depuis deux ans</li><li>Je le fais sur mon temps libre, en alternance avec mes propres boîtes</li><li>L'impact vise le fond, pas le délai : refonte, amélioration continue, innovation, quel que soit le sujet technologique</li><li>L'intéressement se discute projet par projet, pas en bloc</li></ul>
       </div>
       <div class="card">
@@ -271,9 +280,26 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
       </div>
     </div>
 
+    <div class="mix" data-mix>
+      <p class="mix__k">Et surtout — ça se panache</p>
+      <h3 class="mix__h">Quatre curseurs,<br>pas quatre cases.</h3>
+      <p class="mix__t">Personne ne choisit une option et s’y enferme. Selon le projet, le mois, ou l’année, le mélange bouge : un peu de cash direct ici, de l’intéressement là, des sponsorings quand ça tombe bien, et le remboursement des modèles qui court en fond. Ça se rediscute quand vous voulez, sans renégocier quoi que ce soit.</p>
+      <div class="mix__bar" data-mixbar>
+        <span class="mix__seg" data-s="0"></span><span class="mix__seg" data-s="1"></span><span class="mix__seg" data-s="2"></span><span class="mix__seg" data-s="3"></span>
+      </div>
+      <ul class="mix__leg">
+        <li data-l="0"><i></i><b>La machine</b><em data-v="0">0 %</em></li>
+        <li data-l="1"><i></i><b>Le temps</b><em data-v="1">0 %</em></li>
+        <li data-l="2"><i></i><b>Le long terme</b><em data-v="2">0 %</em></li>
+        <li data-l="3"><i></i><b>L’échange</b><em data-v="3">0 %</em></li>
+      </ul>
+      <div class="mix__tabs" data-mixtabs role="tablist" aria-label="Scénarios de rémunération"></div>
+      <p class="mix__cap" data-mixcap aria-live="polite"></p>
+    </div>
+
     <div class="cols" style="margin-top:2.2rem">
       <p class="note"><b>NB 1 — Openline face à Ubigi, autant le dire tout de suite.</b> Je sais parfaitement qui sponsorise déjà chez vous. Mon argument est simple : nous sommes <b>moins chers</b>, et nous basculons entre <b>plusieurs MVNO et opérateurs</b> par pays, là où Ubigi est la marque grand public d'un seul opérateur virtuel — Transatel, filiale du groupe NTT (<a href="https://www.transatel.com/pt-br/ubigi/" rel="noopener">Transatel</a>). Sur le papier comme sur le terrain, ça se voit. Si l'exclusivité ne les dérange pas, on y va ; si elle les dérange, on parle de cupof.news et on n'en fait pas un sujet.</p>
-      <p class="note"><b>NB 2 — la discrétion fait partie du deal.</b> Si l'envie vous prend de bosser avec moi et d'en parler, un mot d'avance : <b>je ne cherche pas à devenir influenceur, et je ne veux pas apparaître à l'écran</b>. Je travaille pour des gouvernements, de grands groupes et des personnes politiquement exposées — dans ce métier, la visibilité personnelle est un risque, pas une récompense. Me citer par mon prénom, <b>Paul</b>, ou par mon surnom, <b>Polo</b>, ne me pose aucun problème. Au-delà de ça, non : pas de visage, pas de nom complet, pas de portrait, pas de plateau. <b>À part mes marques — Openline et cupof.news — rien sur moi en particulier.</b> Et pour la même raison, ce que je vous donne ici n'est pas à présenter comme une offre de consulting pour PME ou pour créateurs : ce n'est ni mon marché ni mon fonds de commerce. C'est un coup de main à <b>Tev et à l'univers autour</b> — Odysée, l'esport, la bouffe, le merch — et à personne d'autre. Désolé d'être aussi cadrant là-dessus : c'est le seul point où je ne peux pas être souple.</p>
+      <p class="note"><b>NB 2 — la discrétion fait partie du deal.</b> Si l'envie vous prend de bosser avec moi et d'en parler, un mot d'avance : <b>je ne cherche pas à devenir influenceur, et je ne veux pas apparaître à l'écran</b>. Je travaille pour des gouvernements, de grands groupes et des personnes politiquement exposées — dans ce métier, la visibilité personnelle est un risque, pas une récompense. Me citer par mon prénom, <b>Paul</b>, ou par mon surnom, <b>Polo</b>, ne me pose aucun problème. Au-delà de ça, non : pas de visage, pas de nom complet, pas de portrait, pas de plateau. <b>À part mes marques — Openline et cupof.news — rien sur moi en particulier.</b> Et pour la même raison, ce que je vous donne ici n'est pas à présenter comme une offre de consulting pour PME ou pour créateurs : ce n'est ni mon marché ni mon fonds de commerce. C'est un coup de main à <b>Tev et à l'univers autour</b> — Odyssée, l'esport, la bouffe, le merch — et à personne d'autre. Désolé d'être aussi cadrant là-dessus : c'est le seul point où je ne peux pas être souple.</p>
       <p class="note"><b>NB 3 — cupof.news arrive en octobre.</b> Je le peaufine en ce moment. L'idée n'a rien de révolutionnaire et c'est exprès : une app de news simple et efficace, <b>dix histoires par matin</b>, sans fil algorithmique. Le modèle est <b>freemium</b> — gratuit pour l'essentiel, et vraiment pas cher pour la sélection personnalisée. Utile pour tout le monde, y compris pour une audience qui suit le Japon de loin.</p>
     </div>
   </div>
@@ -286,7 +312,7 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
     <div class="cols">
       <div>
         <h2>Et si ça continue,<br>on se <em>voit</em>.</h2>
-        <p class="lede">Tout ça se règle très bien par e-mail, et ça peut rester comme ça aussi longtemps que vous voulez — je n'ai rien à vous imposer. Simplement, si la collaboration se concrétise et devient un peu régulière, j'aime bien mettre des visages sur les échanges, et plutôt rapidement. Une journée tranquille avec <b>Tev</b> et qui vous voulez, plutôt qu'un appel de trente minutes.</p>
+        <p class="lede">Tout ça se règle très bien par e-mail — ou par messagerie, WhatsApp, Telegram, Signal, Discord, ce que vous utilisez déjà — et ça peut rester comme ça aussi longtemps que vous voulez — je n'ai rien à vous imposer. Simplement, si la collaboration se concrétise et devient un peu régulière, j'aime bien mettre des visages sur les échanges, et plutôt rapidement. Une journée tranquille avec <b>Tev</b> et qui vous voulez, plutôt qu'un appel de trente minutes.</p>
       </div>
       <div class="body">
         <p><b>New York</b> ou <b>Lisbonne</b>, comme vous préférez et quand vos dates s'y prêtent — je fais l'aller-retour entre les deux toute l'année : environ <b>un tiers du temps à New York</b>, <b>deux tiers à Lisbonne</b>. Dites-moi ce qui vous arrange, m'aligner ne me coûte rien.</p>
@@ -461,6 +487,73 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
   pn.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', shut);
   });
+})();
+</script>
+
+<script>
+/* le panachage des quatre options : la barre se recompose scenario par scenario */
+(function () {
+  var box = document.querySelector('[data-mix]');
+  if (!box) return;
+  var SC = [
+    { n: 'Ce template, cet \u00e9t\u00e9', v: [100, 0, 0, 0],
+      c: 'Ce que vous avez sous les yeux : que de la machine, et pas un centime factur\u00e9. J\u2019ai pay\u00e9 les tokens, personne ne m\u2019a rien demand\u00e9. C\u2019est le point de d\u00e9part, pas une offre.' },
+    { n: 'Une d\u00e9coupe Shopify', v: [45, 55, 0, 0],
+      c: 'Un chantier court et cadr\u00e9 : l\u2019usage des mod\u00e8les, plus les heures de mise au point. Rien d\u2019autre \u00e0 arbitrer, et rien qui vous engage au-del\u00e0 de la livraison.' },
+    { n: 'La sortie de Shopify', v: [35, 25, 30, 10],
+      c: 'Le chantier s\u2019\u00e9tale, donc l\u2019int\u00e9ressement entre dans l\u2019\u00e9quation \u2014 et un sponsoring vient absorber une part du co\u00fbt sans sortir de tr\u00e9sorerie.' },
+    { n: 'Un engagement au long terme', v: [20, 5, 60, 15],
+      c: 'Le fixe mensuel prend le relais : la machine repasse \u00e0 1\u00d7, les heures deviennent l\u2019exception, et je travaille sur toute la pieuvre plut\u00f4t que sur un lot.' },
+    { n: 'L\u2019ann\u00e9e d\u2019apr\u00e8s', v: [15, 0, 50, 35],
+      c: 'Les positions ont boug\u00e9 d\u2019elles-m\u00eames : les sponsorings p\u00e8sent plus lourd, le cash direct moins. On n\u2019a rien eu \u00e0 ren\u00e9gocier \u2014 juste \u00e0 constater.' }
+  ];
+  var segs = [].slice.call(box.querySelectorAll('.mix__seg'));
+  var vals = [].slice.call(box.querySelectorAll('[data-v]'));
+  var tabs = box.querySelector('[data-mixtabs]');
+  var cap = box.querySelector('[data-mixcap]');
+  var bar = box.querySelector('[data-mixbar]');
+  var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur = -1, timer = null, auto = !calm, btns = [];
+
+  SC.forEach(function (sc, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'mix__tab';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', 'false');
+    b.textContent = sc.n;
+    b.addEventListener('click', function () { auto = false; stop(); show(i); });
+    tabs.appendChild(b);
+    btns.push(b);
+  });
+
+  function show(i) {
+    if (i === cur) return;
+    cur = i;
+    var sc = SC[i];
+    segs.forEach(function (s, k) { s.style.width = sc.v[k] + '%'; });
+    vals.forEach(function (e, k) { e.textContent = sc.v[k] + '\u202f%'; });
+    cap.textContent = sc.c;
+    btns.forEach(function (b, k) { b.setAttribute('aria-selected', k === i ? 'true' : 'false'); });
+    bar.setAttribute('aria-label', 'R\u00e9partition : ' + SC[i].n + ' \u2014 machine ' + sc.v[0]
+      + '\u202f%, temps ' + sc.v[1] + '\u202f%, long terme ' + sc.v[2] + '\u202f%, \u00e9change ' + sc.v[3] + '\u202f%.');
+  }
+  function next() { show((cur + 1) % SC.length); }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function start() { if (auto && !timer) timer = setInterval(next, 3800); }
+
+  bar.setAttribute('role', 'img');
+  show(0);
+
+  box.addEventListener('pointerenter', stop);
+  box.addEventListener('pointerleave', start);
+  box.addEventListener('focusin', stop);
+
+  if (calm) return;
+  if (!('IntersectionObserver' in window)) { start(); return; }
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { start(); } else { stop(); } });
+  }, { threshold: 0.35 }).observe(box);
 })();
 </script>
 
