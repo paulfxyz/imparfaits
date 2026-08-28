@@ -1,0 +1,45 @@
+MIT License
+
+Copyright (c) 2026 Paul Fleury
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE — PÉRIMÈTRE DE CETTE LICENCE / SCOPE OF THIS LICENSE
+
+La licence MIT ci-dessus couvre UNIQUEMENT le code source de ce dépôt
+(HTML, CSS, JavaScript, scripts Python, structure, système de design).
+
+Elle NE couvre PAS :
+
+  · les photographies produit, le logo, le nom « Tous Imparfaits » et les
+    contenus éditoriaux, qui restent la propriété de ICI JAPON CORP (SASU) ;
+    ils sont inclus ici à des fins de démonstration de la refonte et seront
+    retirés sur simple demande de l'ayant droit ;
+  · les polices Interstate (Adobe Fonts), qui ne sont PAS redistribuées ;
+  · les polices Archivo et Shippori Mincho, sous licence SIL Open Font
+    License 1.1, dont les termes propres s'appliquent ;
+  · les logos des moyens de paiement (Visa, Mastercard, PayPal, etc.), qui
+    appartiennent à leurs détenteurs respectifs.
+
+The MIT license above covers ONLY the source code in this repository.
+Product photography, the logo, the "Tous Imparfaits" name and editorial
+content remain the property of ICI JAPON CORP and are included for
+demonstration purposes only; they will be removed upon request.
