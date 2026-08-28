@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-tc-light="#0a0a0a" data-tc-dark="#1c1c1c">
 <head>
 <meta charset="utf-8">
+<script>/* thème posé avant le premier rendu : évite le flash clair */
+(function(){var k=null;try{k=window['local'+'Storage'].getItem('ti-theme')}catch(e){}
+if(k!=='dark'&&k!=='light'){k=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
+document.documentElement.setAttribute('data-theme',k)}());</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Le template est à vous — une offre à Tous Imparfaits &amp; à l'écosystème Tev · Paul Fleury</title>
 <meta name="description" content="Refonte de tousimparfaits.com offerte, sans contrepartie. Et ce que je peux faire ensuite pour l'écosystème d'Ici Japon : Shopify, agents, rebranding. Par Paul Fleury, entre New York et Lisbonne.">
@@ -11,8 +15,11 @@
 <meta property="og:description" content="Une refonte offerte, et une proposition de travail claire pour l'écosystème d'Ici Japon. Par Paul Fleury.">
 <meta property="og:url" content="https://paulfleury.com/ti/offre/">
 <link rel="preload" href="../assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='27' width='28' height='46' fill='%230a0a0a'/%3E%3Cpath d='M60 18 L40 82' stroke='%23d64747' stroke-width='11' stroke-linecap='round'/%3E%3Crect x='62' y='27' width='28' height='46' fill='%230a0a0a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css?v=20">
+<link rel="icon" href="../assets/favicon.svg?v=1" type="image/svg+xml">
+<link rel="icon" href="../assets/icons/favicon.ico?v=1" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=1">
+<meta name="theme-color" content="#0a0a0a">
 </head>
 <body>
 
@@ -27,7 +34,7 @@
       <span>IM<span class="sl">/</span>PARFAITS</span>
     </a>
     <div class="nav__rt">
-      <div class="mn">
+      <div class="mn" data-theme-anchor>
         <button type="button" class="mn__tg" id="mn-tg" aria-expanded="false" aria-controls="mn-pn">
           <span class="mn__bg" aria-hidden="true"><i></i><i></i><i></i></span>
           <span class="mn__lb">Menu</span>
@@ -151,11 +158,13 @@
         <span class="card__n">03 — L'international</span>
         <h3>Neuf langues, en direct</h3>
         <p>Français, anglais, japonais, chinois, coréen, espagnol, allemand, néerlandais, italien. Bascule instantanée sans rechargement, y compris sur le panier et le tunnel. Détection de la langue du navigateur au premier passage.</p>
-        <ul><li>≈ 750 chaînes par langue</li><li>Titres et métadonnées traduits aussi</li><li>Noms propres et prix protégés</li></ul>
+        <p class="small">La livraison est bloquée à la France, et c'est légitime : on ne touche ni aux euros ni au périmètre annoncé. Mais on découvre, on suit et on partage une marque bien avant de pouvoir commander chez elle. Vous verrez au fil des opérations s'il y a de quoi élargir — le jour où, l'interface n'aura rien à rattraper.</p>
+        <ul><li>≈ 770 chaînes par langue</li><li>Titres et métadonnées traduits aussi</li><li>Noms propres et prix protégés</li></ul>
       </div>
     </div>
     <div class="scope">
       <h3><span class="jp">限</span> Ce que ce showcase est, et ce qu'il n'est pas</h3>
+      <p class="note"><b>Aucun jugement sur le site actuel :</b> il tourne, il vend, il a sa personnalité, et il y a du vrai travail derrière — ce n'est pas une refonte-sanction. Je trouve simplement que mon dispositif d'agents de design IA sort des choses sympas : un style très ciblé et des fonctionnalités réellement utiles, qui ajoutent de la valeur à une présence web sans rien casser de ce qui marche déjà — à vous de juger si ça vous parle.</p>
       <p>Autant être net tout de suite : <b>ce que vous avez sous les yeux est une vitrine statique</b>, faite pour montrer le potentiel du parcours en un après-midi de travail — pas un site de production. Rien n'est connecté à un vrai stock, à un vrai paiement, à une vraie commande.</p>
       <div class="scope__cols">
         <div class="scope__c scope__c--yes">
@@ -455,5 +464,6 @@
 })();
 </script>
 
+<script src="../assets/theme.js?v=20" defer></script>
 </body>
 </html>

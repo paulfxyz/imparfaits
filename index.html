@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-tc-light="#0a0a0a" data-tc-dark="#1c1c1c">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tous Imparfaits — Streetwear inspiré du Japon | Concept de refonte</title>
 <meta name="description" content="Tous Imparfaits : vêtements et goodies inspirés de la culture japonaise, coupes signées JACKY, graphismes signés par des artistes invités, expédiés de France. Livraison offerte dès 100 €, expédition 48–72 h depuis la France.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial' font-size='19' font-weight='900' text-anchor='middle' fill='%23d64747'%3ETI%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="assets/favicon.svg?v=1" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon.ico?v=1" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=1">
+<link rel="manifest" href="assets/site.webmanifest?v=1">
 <meta name="theme-color" content="#0a0a0a">
+<script>/* thème posé avant le premier rendu : évite le flash clair */
+(function(){var k=null;try{k=window['local'+'Storage'].getItem('ti-theme')}catch(e){}
+if(k!=='dark'&&k!=='light'){k=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
+document.documentElement.setAttribute('data-theme',k)}());</script>
 <link rel="canonical" href="https://paulfleury.com/ti/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
@@ -26,7 +33,7 @@
 <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/mincho-jp-subset.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/veste-yokai-beige-2.webp" as="image" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=19">
+<link rel="stylesheet" href="styles.css?v=20">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://paulfleury.com/ti/#org","name":"Tous Imparfaits","url":"https://paulfleury.com/ti/","logo":"https://paulfleury.com/ti/assets/logo.webp","email":"tousimparfaits@gmail.com","foundingDate":"2021","description":"Vêtements et goodies inspirés de la culture japonaise, imaginés par la team Ici Japon.","address":{"@type":"PostalAddress","streetAddress":"26 Avenue Christian Doppler, Bat D5","postalCode":"77700","addressLocality":"Bailly-Romainvilliers","addressCountry":"FR"},"sameAs":["https://www.instagram.com/icijapon/","https://x.com/IciJapon"]},
@@ -78,7 +85,7 @@
 <!-- ══ Header ══ -->
 <header class="hdr">
   <div class="wrap hdr__in">
-    <a class="hdr__logo" href="#top" aria-label="Tous Imparfaits — accueil">
+    <a class="hdr__logo" href="#rebranding" aria-label="Tous Imparfaits — le nom et l’écusson">
       <span class="tilogo tilogo--hdr" translate="no"><span class="tilogo__new" aria-hidden="true">IM<span class="tilogo__sl">/</span>PARFAITS</span><img class="tilogo__old" fetchpriority="high" decoding="async" width="1000" height="537" src="assets/logo.webp" alt="" aria-hidden="true"></span>
     </a>
     <nav class="hdr__nav" aria-label="Navigation principale">
@@ -947,6 +954,70 @@
 </main>
 
 <!-- ══ Closer ══ -->
+<!-- ══ Rebranding : le nom, la marque ══ -->
+<section class="sec sec--ink reb" id="rebranding">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="txt reveal">
+        <p class="eyebrow"><span class="idx" aria-hidden="true">[12]</span> <span class="jp" aria-hidden="true">紋</span> Le nouveau logo</p>
+        <h2 class="display h-sec">Le nom ne change pas.<br><span class="accent">La signature, si.</span></h2>
+        <p class="reb__lede">On s’appelle toujours Tous Imparfaits : dans les textes, à l’oral, sur le domaine, sur les réseaux. Ce qui change, c’est l’image — deux blocs pleins et une barre rouge.</p>
+      </div>
+    </div>
+
+    <div class="reb__stage reveal" data-d="1">
+      <div class="rebanim" id="rebanim" translate="no" aria-hidden="true">
+        <span class="rebanim__badge"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="22" fill="#0a0a0a"/><rect x="10" y="27" width="28" height="46" fill="#ededed"/><path d="M61 18 L41 82" stroke="#d64747" stroke-width="12.5" stroke-linecap="round"/><rect x="62" y="27" width="28" height="46" fill="#ededed"/></svg></span><span class="rebanim__tous"><i>Tous</i></span><span class="rebanim__im">Im</span><span class="rebanim__sl"><i>/</i></span><span class="rebanim__pf">parfaits</span>
+      </div>
+      <p class="rebanim__cap mono-s">Le nom se dit. Le logo se voit.</p>
+      <button class="rebanim__replay" type="button" data-reb-replay><span aria-hidden="true">↻</span> Rejouer l’animation</button>
+    </div>
+
+    <div class="reb__grid">
+      <div class="rebcard reveal" data-d="1">
+        <p class="rebcard__k">Le nom</p>
+        <h3>Le nom et les identifiants ne bougent pas</h3>
+        <p>tousimparfaits.com, @tousimparfaits, la facture, le mail de suivi, la conversation. Le nom ne bouge pas d’un caractère : rien à réapprendre, rien à réexpliquer, aucun référencement à reconstruire.</p>
+      </div>
+      <div class="rebcard reveal" data-d="2">
+        <p class="rebcard__k">Le signe</p>
+        <h3>L’écusson, partout où ça se voit</h3>
+        <p>Le logo en tête de page, la broderie sur l’étiquette, le tampon sur le carton, l’icône dans l’onglet. Deux blocs, une barre : aucun détail fin, aucun dégradé. Ça tient à seize pixels comme à trois mètres.</p>
+      </div>
+      <div class="rebcard reveal" data-d="3">
+        <p class="rebcard__k">La blague</p>
+        <h3>Une barre déplace la vérité</h3>
+        <p>Le même mot, la même barre, deux lectures opposées. On répète que personne n’est parfait. La barre glisse d’un cran, et tout le monde l’est.</p>
+        <div class="reb__read">
+          <span class="reb__readline"><span class="reb__rw" translate="no" aria-hidden="true">Im<span class="reb__rs">/</span>parfaits</span> <em>se lit « imparfaits »</em></span>
+          <span class="reb__readline"><span class="reb__rw" translate="no" aria-hidden="true">Im<span class="reb__rs reb__rs--on">/</span>parfaits</span> <em>se lit « I’m parfait »</em></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reb__uses">
+      <div class="rebuse reveal" data-d="1">
+        <div class="rebuse__vis">
+          <span class="tabmock" aria-hidden="true"><img src="assets/icons/favicon-32.png?v=1" width="16" height="16" alt="" decoding="async"><span class="tabmock__t">Tous Imparfaits</span><span class="tabmock__x">×</span></span>
+        </div>
+        <p class="rebuse__lab mono-s">Dans l’onglet, à seize pixels</p>
+      </div>
+      <div class="rebuse reveal" data-d="2">
+        <div class="rebuse__vis">
+          <img class="rebuse__ios" src="assets/icons/apple-touch-icon.png?v=1" width="180" height="180" alt="" loading="lazy" decoding="async">
+        </div>
+        <p class="rebuse__lab mono-s">Sur l’écran d’accueil</p>
+      </div>
+      <div class="rebuse reveal" data-d="3">
+        <div class="rebuse__vis">
+          <img class="rebuse__mark" src="assets/favicon.svg?v=1" width="100" height="100" alt="" loading="lazy" decoding="async">
+        </div>
+        <p class="rebuse__lab mono-s">Brodé, tamponné, sérigraphié</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="closer">
   <span class="tilogo tilogo--closer" translate="no"><span class="tilogo__new" aria-hidden="true">IM<span class="tilogo__sl">/</span>PARFAITS</span><img class="tilogo__old" loading="lazy" decoding="async" width="1000" height="537" src="assets/logo.webp" alt="" aria-hidden="true"></span>
   <h2 class="closer__word display">Tous<br>Imparfaits</h2>
@@ -1559,7 +1630,8 @@
   </div>
 </div>
 
-<script src="app.js?v=19"></script>
-<script src="assets/i18n.js?v=19" defer></script>
+<script src="app.js?v=20"></script>
+<script src="assets/i18n.js?v=20" defer></script>
+<script src="assets/theme.js?v=20" defer></script>
 </body>
 </html>

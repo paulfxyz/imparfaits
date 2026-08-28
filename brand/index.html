@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-tc-light="#0a0a0a" data-tc-dark="#1c1c1c">
 <head>
 <meta charset="utf-8">
+<script>/* theme pose avant le premier rendu : evite le flash clair */
+(function(){var k=null;try{k=window['local'+'Storage'].getItem('ti-theme')}catch(e){}
+if(k!=='dark'&&k!=='light'){k=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}
+document.documentElement.setAttribute('data-theme',k)}());</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tous Imparfaits — 60 pistes d'identité</title>
 <meta name="description" content="Soixante pistes de logo, favicon et app icon : trente pour Tous Imparfaits, trente pour Imparfaits. Planche de travail, rien n'est appliqué au site.">
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%23d64747'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="icon" href="../assets/favicon.svg?v=1" type="image/svg+xml">
+<link rel="icon" href="../assets/icons/favicon.ico?v=1" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=1">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="stylesheet" href="styles.css?v=20">
 </head>
 <body>
 <div class="fontload" aria-hidden="true"><span class="jg">不完全私</span><span class="pinyon">Ti</span></div>
 
 <header class="top">
   <div class="wrap">
+    <span class="themeslot" data-theme-anchor aria-hidden="true"></span>
     <p class="eyebrow"><span class="n">[00]</span> <span class="jp">紋</span> Planche d'identité</p>
     <h1>Soixante pistes.<br><em>Une seule est retenue.</em></h1>
     <p class="lede">Trente marques pour <b>Tous Imparfaits</b> — dont, en première position, <b>le branding actuel</b> enfin doté d'une icône — et trente pour <b>Imparfaits</b>. <b>La direction est arbitrée :</b> le logo et l'écusson deviennent <b>IM / PARFAITS</b> — le nom <b>Tous Imparfaits</b>, lui, continue de se dire et de s'écrire. Chaque piste est livrée en logo complet, en favicon de 16 à 48 px, en app icon sur trois fonds et en onglet de navigateur — pour juger ce qui survit à la petite taille, pas seulement ce qui est joli en grand.</p>
@@ -2028,5 +2036,6 @@
     (« non, pas »), 完全 (« parfait, complet »), 家紋 (« blason familial »), 福 (« chance, bonheur ») et 私 (« moi, privé »). Direction retenue : le logo et l'écusson deviennent <b>IM / PARFAITS</b> (piste 03) ; le nom, le site et les réseaux restent <b>Tous Imparfaits</b>. Rien n'est encore poussé en production.</p>
   </div>
 </footer>
+<script src="../assets/theme.js?v=20" defer></script>
 </body>
 </html>

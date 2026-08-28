@@ -60,6 +60,20 @@ Ce dépôt est **ma réponse, non sollicitée et gratuite**, à cette vidéo. Tr
 
 ## 🔍 Ce que ce showcase est, et ce qu'il n'est pas
 
+> [!NOTE]
+> ### Aucun jugement sur le site actuel
+>
+> Il tourne, il vend, il a sa personnalité, et il y a du vrai travail derrière — ce n’est pas une
+> refonte-sanction. Je trouve simplement que mon dispositif d’agents de design IA sort des choses
+> sympas : un style très ciblé et des fonctionnalités réellement utiles, qui ajoutent de la valeur
+> à une présence web sans rien casser de ce qui marche déjà — à vous de juger si ça vous parle.
+>
+> Les **neuf langues** en sont le meilleur exemple. La livraison est aujourd’hui limitée à la
+> France, et c’est parfaitement légitime — mais un catalogue qui se lit en japonais, en coréen ou
+> en espagnol intéresse déjà du monde : on découvre une marque bien avant de pouvoir la commander.
+> Et vous verrez, au fil des opérations, si **Tous Imparfaits** a de quoi
+> s’internationaliser aussi côté logistique. Le site, lui, est déjà prêt pour ce jour-là.
+
 Autant être net d'entrée : **ce dépôt est une vitrine statique**, faite pour montrer le potentiel du parcours en un après-midi de travail — **pas un site de production**. Rien n'est connecté à un vrai stock, à un vrai paiement, à une vraie commande. Le panier vit en mémoire dans le navigateur ; aucune transaction n'est possible.
 
 **Trois vues sont construites, de bout en bout :**
@@ -139,7 +153,7 @@ La direction est une **refonte audacieuse**, pas un lifting. Trois principes :
 
 ## 🌍 Internationalisation — 9 langues
 
-Traduction intégrale de l'interface, **766 clés par langue**, sans framework : un dictionnaire JSON par langue et un runtime de 16 ko qui remplace les nœuds texte, les `placeholder`, les `aria-label` et les `<html lang>`.
+Traduction intégrale de l'interface, **767 clés par langue**, sans framework : un dictionnaire JSON par langue et un runtime de 16 ko qui remplace les nœuds texte, les `placeholder`, les `aria-label` et les `<html lang>`.
 
 | Langue | Code | Dictionnaire |
 |---|---|---|
@@ -159,6 +173,7 @@ Détails qui ont demandé du soin :
 - **Le « Pack Mystère » garde son mot français.** `Mystère福袋` en japonais, `Mystère 盲盒` en chinois, `Mystère 박스` en coréen, `Mystère-Paket` en allemand : le mot latin est conservé comme élément de marque, le contenant est traduit — et le clin d'œil au *fukubukuro* japonais est explicité dans chaque langue.
 - **Détection automatique** de la langue du navigateur, choix mémorisé, et repli propre sur le français si le stockage local est indisponible.
 - **Les prix restent en euros** partout : la boutique expédie depuis la France, changer la devise sans changer la logistique serait un mensonge d'interface.
+- **Traduire n'est pas promettre de livrer.** Le périmètre de livraison reste celui d'aujourd'hui, affiché sans ambiguïté dans les neuf langues. L'intérêt est ailleurs : on découvre, on suit et on partage une marque bien avant de pouvoir commander chez elle — et le jour où le périmètre s'élargit, l'interface n'a rien à rattraper.
 
 ---
 
@@ -184,6 +199,58 @@ brand/
 
 <div align="center"><br>
 <img src=".github/img/shot-brand.png" alt="La planche d'identité" width="88%">
+</div>
+
+<div align="center"><br>
+<img src=".github/img/shot-rebranding.png" alt="La section qui explique le rebranding, en thème clair" width="88%">
+<br><em>La section qui l'explique en bas de la landing — le nom d'un côté, la signature de l'autre</em>
+</div>
+
+<br>
+
+<div align="center">
+<img src=".github/img/shot-rebranding-dark.png" alt="La même section en thème sombre" width="88%">
+<br><em>La même, en thème sombre</em>
+</div>
+
+---
+
+## 🌗 Thème clair, thème sombre
+
+Les trois pages ont un **sélecteur de thème** — à gauche du sélecteur de langue sur la landing,
+en haut à droite sur la planche d'identité, à gauche du menu sur la page d'offre. Le choix suit
+d'abord la préférence du système, puis reste mémorisé. Le thème est posé **avant le premier rendu**,
+donc aucun flash clair au chargement.
+
+Ce n'est pas une inversion automatique : chaque couleur a été rejouée à la main, y compris les
+fonds des spécimens de la planche d'identité, **volontairement figés dans les deux thèmes** — une
+planche de marque doit montrer chaque logo sur le fond auquel il est destiné, pas sur celui du
+lecteur.
+
+<div align="center">
+<img src=".github/img/shot-theme-light.png" alt="La section collections en thème clair" width="88%">
+<br><em>Thème clair</em>
+</div>
+
+<br>
+
+<div align="center">
+<img src=".github/img/shot-theme-dark.png" alt="La même section en thème sombre" width="88%">
+<br><em>Thème sombre — mêmes proportions, mêmes accents, contrastes recalculés</em>
+</div>
+
+<br>
+
+<div align="center">
+<img src=".github/img/shot-brand-dark.png" alt="La planche d'identité en thème sombre" width="88%">
+<br><em>La planche d'identité en sombre : les fonds des spécimens restent ceux du logo, pas ceux de la page</em>
+</div>
+
+<br>
+
+<div align="center">
+<img src=".github/img/shot-marks-dark.png" alt="Deux spécimens de logo en thème sombre" width="88%">
+<br><em>Le même verdict à 16 px, quel que soit le thème du lecteur</em>
 </div>
 
 ---
@@ -271,7 +338,7 @@ python3 -m http.server 8080
 ├── styles.css
 ├── app.js                  ← panier, filtres, drawer, accordéons
 ├── assets/
-│   ├── i18n/               ← 9 dictionnaires × 766 clés
+│   ├── i18n/               ← 9 dictionnaires × 767 clés
 │   ├── i18n.js             ← le runtime de traduction
 │   ├── fonts/              ← Archivo Variable + Shippori Mincho (sous-ensemble)
 │   ├── pay/                ← icônes de paiement en SVG
