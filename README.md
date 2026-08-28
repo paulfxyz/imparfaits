@@ -213,6 +213,13 @@ brand/
 <br><em>La même, en thème sombre</em>
 </div>
 
+Le logo du site rejoue cette bascule en trois secondes : il s'ouvre sur
+**TOUS IMPARFAITS**, la barre rouge se glisse au milieu, **TOUS** se replie, et le
+signe arrive en dernier. Elle ne tourne pas en boucle : elle joue une fois quand le
+logo entre en scène, puis se rejoue au survol — ou au clic, pour les deux logos qui
+ne sont pas des liens. Le signe est détouré, sans son carré : il prend la couleur du
+texte, donc il marche tel quel sur papier comme sur encre.
+
 ---
 
 ## 🌗 Thème clair, thème sombre

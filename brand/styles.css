@@ -39,7 +39,16 @@ a{color:inherit}
 /* ---------- tête ---------- */
 .top{position:relative;border-bottom:1px solid var(--line);padding:clamp(2.5rem,7vw,5rem) 0 clamp(1.75rem,4vw,2.75rem)}
 .themeslot{display:none}
-.top .themetog{position:absolute;top:clamp(1.1rem,3vw,1.9rem);right:var(--gut);z-index:5}
+/* le switcher flotte : plusieurs specimens sont transparents ou poses sur un
+   fond fige, il faut pouvoir basculer le theme depuis n'importe ou dans la
+   planche sans remonter en haut de page */
+.top .themetog{position:fixed;top:clamp(1.1rem,3vw,1.9rem);right:var(--gut);z-index:60;
+  background:var(--paper-warm);
+  box-shadow:0 1px 2px rgba(10,10,10,.07),0 12px 28px -14px rgba(10,10,10,.3)}
+[data-theme="dark"] .top .themetog{border-color:rgba(var(--ink-rgb),.28);
+  box-shadow:0 0 0 1px rgba(0,0,0,.55),0 14px 32px -14px rgba(0,0,0,.85)}
+@media (max-width:700px){.top .themetog{top:.9rem;right:1rem}}
+@media print{.top .themetog{display:none}}
 .top .eyebrow{padding-right:3.2rem}
 .eyebrow{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;row-gap:.25rem;
   font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
@@ -201,6 +210,9 @@ h1 em{font-style:normal;color:var(--accent)}
 .ft ul{margin:0;padding:0 0 0 1.1rem;font-size:.85rem;color:var(--ink2);display:flex;flex-direction:column;gap:.5rem}
 .ft b{font-variation-settings:'wdth' 100,'wght' 700}
 .ftgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.5rem,4vw,3rem)}
+.ftlinks{margin:clamp(1.5rem,3.5vw,2.4rem) 0 0;padding-top:1.3rem;border-top:1px solid var(--line);font-size:.88rem;line-height:1.9;color:var(--grey)}
+.ftlinks a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(var(--ink-rgb),.24);transition:border-color .18s}
+.ftlinks a:hover{border-color:var(--accent)}
 .disc{margin-top:2rem;font-size:.74rem;color:var(--grey);max-width:78ch}
 
 /* ---------- switcher clair / sombre ---------- */
