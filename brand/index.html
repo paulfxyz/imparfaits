@@ -14,7 +14,9 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
 <link rel="icon" href="../assets/icons/favicon.ico?v=2" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=1">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="stylesheet" href="styles.css?v=22">
+<link rel="stylesheet" href="styles.css?v=23">
+<link rel="stylesheet" href="../assets/tilogo.css?v=1">
+<link rel="stylesheet" href="../assets/rebanim.css?v=1">
 </head>
 <body>
 <div class="fontload" aria-hidden="true"><span class="jg">不完全私</span><span class="pinyon">Ti</span></div>
@@ -22,6 +24,7 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
 <header class="top">
   <div class="wrap">
     <span class="themeslot" data-theme-anchor aria-hidden="true"></span>
+    <span class="tilogo tilogo--board" translate="no" aria-hidden="true" data-tilogo><span class="tilogo__mk"><svg viewBox="8 10 84 80" fill="none" aria-hidden="true"><rect x="10" y="27" width="28" height="46" fill="currentColor"/><path d="M61 18 41 82" stroke="#d64747" stroke-width="12.5" stroke-linecap="round"/><rect x="62" y="27" width="28" height="46" fill="currentColor"/></svg></span><span class="tilogo__dot" aria-hidden="true"><i></i></span><span class="tilogo__t"><i>Tous</i></span><span class="tilogo__im">Im</span><span class="tilogo__sl"><i>/</i></span><span class="tilogo__pf">parfaits</span></span>
     <p class="eyebrow"><span class="n">[00]</span> <span class="jp">紋</span> Planche d'identité</p>
     <h1>Soixante pistes.<br><em>Une seule est retenue.</em></h1>
     <p class="lede">Trente marques pour <b>Tous Imparfaits</b> — dont, en première position, <b>le branding actuel</b> enfin doté d'une icône — et trente pour <b>Imparfaits</b>. <b>La direction est arbitrée :</b> le logo et l'écusson deviennent <b>IM / PARFAITS</b> — le nom <b>Tous Imparfaits</b>, lui, continue de se dire et de s'écrire. Chaque piste est livrée en logo complet, en favicon de 16 à 48 px, en app icon sur trois fonds et en onglet de navigateur — pour juger ce qui survit à la petite taille, pas seulement ce qui est joli en grand.</p>
@@ -42,15 +45,21 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
 <section class="decide">
   <div class="wrap">
     <p class="eyebrow"><span class="n">[✓]</span> <span class="jp">定</span> La décision</p>
-    <div class="decide__grid">
-      <div class="decide__mark">
-        <svg viewBox="0 0 100 100" aria-hidden="true" class="mk mk--big">
-          <rect x="10" y="27" width="28" height="46" fill="currentColor"/>
-          <path d="M60 18 L40 82" class="as" stroke-width="11" stroke-linecap="round"/>
-          <rect x="62" y="27" width="28" height="46" fill="currentColor"/>
-        </svg>
-        <span class="slashwm wm">IM<span class="sl">/</span>PARFAITS</span>
+    <div class="decide__stage" data-reb-scene>
+      <div class="rebframe" data-reb-frame>
+        <div class="rebanim" id="rebanim" translate="no" aria-hidden="true" data-rebanim><span class="rebanim__badge"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect width="100" height="100" rx="22" fill="#0a0a0a"/><rect x="10" y="27" width="28" height="46" fill="#ededed"/><path d="M61 18 L41 82" stroke="#d64747" stroke-width="12.5" stroke-linecap="round"/><rect x="62" y="27" width="28" height="46" fill="#ededed"/></svg></span><span class="rebanim__dot" aria-hidden="true"><i></i></span><span class="rebanim__tous"><i>Tous</i></span><span class="rebanim__im">Im</span><span class="rebanim__sl"><i>/</i></span><span class="rebanim__pf">parfaits</span>
+        </div>
+        <div class="rebijc" id="rebijc" aria-hidden="true" data-rebijc>
+          <span class="rebijc__r" aria-hidden="true"></span>
+          <span class="rebijc__t">Une initiative d’<b>Ici Japon Corp.</b></span>
+          <span class="rebijc__m" aria-hidden="true"></span>
+        </div>
       </div>
+      <p class="rebanim__cap">Le nom se dit. Le logo se voit.</p>
+      <button class="rebanim__replay" type="button" data-reb-replay><span aria-hidden="true">↻</span> Rejouer l’animation</button>
+    </div>
+
+    <div class="decide__grid">
       <div class="decide__body">
         <h2>Le logo devient <em>IM / PARFAITS</em>.</h2>
         <p class="decide__lede">C'est le conseil que <b>Big Flo</b> donnait déjà : couper le nom, garder le mot qui porte. On l'applique là où ça compte — <b>le logo et l'écusson deviennent IM / PARFAITS</b>, piste 03 — sans rien retirer au langage : on continue de dire, d'écrire et de vendre <b>Tous Imparfaits</b>. Le nom reste entier, c'est la signature qui se resserre.</p>
@@ -2155,7 +2164,9 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
     (« non, pas »), 完全 (« parfait, complet »), 家紋 (« blason familial »), 福 (« chance, bonheur ») et 私 (« moi, privé »). Direction retenue : le logo et l'écusson deviennent <b>IM / PARFAITS</b> (piste 03) ; le nom, le site et les réseaux restent <b>Tous Imparfaits</b>. Rien n'est encore poussé en production.</p>
   </div>
 </footer>
-<script src="../assets/theme.js?v=22" defer></script>
+<script src="../assets/theme.js?v=23" defer></script>
+<script src="../assets/tilogo.js?v=1" defer></script>
+<script src="../assets/rebanim.js?v=1" defer></script>
 <script src="anim.js?v=1" defer></script>
 </body>
 </html>

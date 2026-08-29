@@ -102,13 +102,6 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .sec--ink :focus-visible, .worlds :focus-visible, .news :focus-visible,
 .ft :focus-visible, .offer :focus-visible, .hero :focus-visible { outline-color: #fff; }
-.skip {
-  position: fixed; top: -100px; left: var(--gutter); z-index: 200;
-  background: var(--ink); color: var(--paper); padding: .85rem 1.2rem;
-  font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
-  font-variation-settings: 'wdth' 95, 'wght' 800; transition: top .25s var(--ease);
-}
-.skip:focus { top: 12px; }
 
 /* ---------- Typographie système ---------- */
 .display {
@@ -759,62 +752,7 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
   .themetog svg { width: 15px; height: 15px; }
 }
 
-/* ---------- Logo : l'intro qui passe du nom a la signature ----------
-   Phases cumulatives, l'ordre des regles fait la chronologie :
-   IMPARFAITS -> TOUS IMPARFAITS -> TOUS IM/PARFAITS -> IM/PARFAITS -> avec le signe.
-   Les segments se replient via grid-template-columns 0fr, donc sans largeur
-   codee en dur : le meme composant tient a 1.1rem comme a 1.4rem, quelle que
-   soit la graisse et l'interlettrage de la variante. */
-.tilogo {
-  position: relative; display: inline-flex; align-items: center; line-height: 1;
-  font-family: 'ArchivoVar', system-ui, sans-serif;
-  font-variation-settings: 'wdth' 74, 'wght' 800;
-  text-transform: uppercase; letter-spacing: -.015em; color: currentColor;
-  white-space: nowrap;
-}
-.tilogo__im, .tilogo__pf { flex: none; }
 
-.tilogo__mk, .tilogo__t, .tilogo__sl {
-  flex: none; display: grid; grid-template-columns: 0fr;
-  overflow: hidden; opacity: 0;
-  transition: grid-template-columns .5s var(--ease), max-width .5s var(--ease),
-              opacity .3s var(--ease), margin .5s var(--ease),
-              transform .52s cubic-bezier(.2, 1.5, .45, 1);
-}
-.tilogo__mk { max-width: 0; }
-.tilogo__mk > svg, .tilogo__t > i, .tilogo__sl > i {
-  display: block; min-width: 0; font-style: normal; white-space: nowrap;
-}
-/* le signe est detoure, pas en pastille : il prend la couleur du texte et
-   marche donc tel quel sur papier comme sur encre */
-.tilogo__mk { transform: translateX(-.28em) scale(.62) rotate(-12deg); }
-.tilogo__mk > svg { width: .9em; height: .9em; }
-.tilogo__sl > i { color: var(--accent); font-variation-settings: 'wdth' 62, 'wght' 900; }
-
-.tilogo.p1 .tilogo__t  { grid-template-columns: 1fr; opacity: 1; margin-right: .26em; }
-.tilogo.p2 .tilogo__sl { grid-template-columns: 1fr; opacity: 1; margin: 0 .05em; }
-.tilogo.p3 .tilogo__t  { grid-template-columns: 0fr; opacity: 0; margin-right: 0; }
-.tilogo.p4 .tilogo__mk { grid-template-columns: 1fr; max-width: 1.4em; opacity: 1;
-  margin-right: .3em; transform: none; }
-
-@media (prefers-reduced-motion: reduce) {
-  .tilogo__mk, .tilogo__t, .tilogo__sl { transition: none; }
-}
-.tilogo.no-anim * { transition: none !important; }
-
-.tilogo--hdr { font-size: 1.32rem; }
-.tilogo--closer {
-  justify-content: center; margin: 0 auto clamp(1.4rem, 2.6vw, 2.2rem);
-  font-size: clamp(.95rem, 2vw, 1.4rem); letter-spacing: .16em;
-  font-variation-settings: 'wdth' 88, 'wght' 700;
-}
-.tilogo--closer .tilogo__sl > i { font-variation-settings: 'wdth' 70, 'wght' 900; }
-.tilogo--closer .tilogo__mk > svg { width: 1.05em; height: 1.05em; }
-.tilogo--closer.p2 .tilogo__sl { margin: 0 .1em 0 .04em; }
-.tilogo--ft { margin-bottom: 1rem; font-size: 1.5rem; color: var(--on-ink); }
-/* hors lien, le curseur annonce qu'un clic rejoue l'intro */
-.tilogo--closer, .tilogo--ft { cursor: pointer; }
-@media (max-width: 560px) { .tilogo--hdr { font-size: 1.1rem; } }
 
 /* ---------- Section rebranding : le nom, la marque ---------- */
 /* la section suit le theme : box claire en clair, box sombre en sombre */
@@ -838,95 +776,7 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 }
 /* la scene tient un 16/9 : l'animation du logo au centre, la signature IJC
    dessous. Les deux respirent dans le meme cadre, coherent avec la planche. */
-.rebframe {
-  aspect-ratio: 16 / 9; width: 100%; max-width: 1120px; margin: 0 auto;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: clamp(1.1rem, 3.4vh, 2.6rem);
-}
-@media (max-width: 620px) { .rebframe { aspect-ratio: 4 / 3; } }
 
-/* ── la signature Ici Japon Corp., a la fin de la rencontre ──────────────── */
-.rebijc {
-  display: flex; align-items: center; justify-content: center; gap: clamp(.55rem, 1.6vw, .95rem);
-  opacity: 0; transform: translateY(10px);
-  transition: opacity .6s var(--ease), transform .7s var(--ease);
-}
-.rebanim.is-p5 ~ .rebijc, .rebijc.is-on { opacity: 1; transform: none; }
-.rebijc__r {
-  display: block; flex: none; height: 1px; background: rgba(var(--ink-rgb), .28);
-  width: 0; transition: width .7s var(--ease) .12s;
-}
-.rebijc.is-on .rebijc__r { width: clamp(18px, 5vw, 46px); }
-.rebijc__t {
-  font-family: 'ArchivoVar', system-ui, sans-serif;
-  font-variation-settings: 'wdth' 90, 'wght' 500;
-  text-transform: uppercase; font-size: clamp(.58rem, 1.5vw, .9rem);
-  letter-spacing: .17em; color: var(--mut); white-space: nowrap;
-}
-.rebijc__t b { font-variation-settings: 'wdth' 90, 'wght' 800; color: var(--ink); }
-/* la pieuvre officielle, detouree : un masque, donc elle prend la couleur du
-   texte et suit les deux themes sans jamais etre redessinee */
-.rebijc__m {
-  display: block; flex: none;
-  width: clamp(36px, 5.6vw, 66px); aspect-ratio: 560 / 473;
-  background: var(--accent);
-  -webkit-mask: url("assets/ijc-mark.png") no-repeat center / contain;
-  mask: url("assets/ijc-mark.png") no-repeat center / contain;
-  opacity: 0; transform: scale(.72) rotate(-8deg);
-  transition: opacity .5s var(--ease) .26s, transform .62s cubic-bezier(.2, 1.5, .45, 1) .26s;
-}
-.rebijc.is-on .rebijc__m { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) {
-  .rebijc, .rebijc__r, .rebijc__m { transition: none; }
-}
-
-.rebanim {
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'ArchivoVar', system-ui, sans-serif;
-  font-variation-settings: 'wdth' 74, 'wght' 800;
-  text-transform: uppercase; letter-spacing: -.015em;
-  font-size: clamp(1.5rem, 7vw, 5.5rem); line-height: 1;
-  color: var(--ink); white-space: nowrap;
-}
-.rebanim__im, .rebanim__pf { flex: none; }
-.rebanim__badge {
-  flex: none; display: block; overflow: hidden;
-  width: 0; margin-right: 0; opacity: 0;
-  transform: translateX(-16px) scale(.7) rotate(-10deg);
-  transition: width .6s var(--ease), margin-right .6s var(--ease),
-              opacity .4s var(--ease), transform .6s cubic-bezier(.2, 1.5, .45, 1);
-}
-.rebanim__badge svg { display: block; width: .94em; height: .94em; }
-/* en sombre l'ecusson est un carre sombre sur un fond sombre : un filet
-   rend sa silhouette sans toucher au dessin lui-meme */
-[data-theme="dark"] .rebanim__badge svg { border-radius: 22%; box-shadow: 0 0 0 1px rgba(237,237,237,.18); }
-.rebanim__tous, .rebanim__sl {
-  flex: none; display: block; overflow: hidden;
-  max-width: 0; opacity: 0;
-  transition: max-width .6s var(--ease), opacity .38s var(--ease), margin .6s var(--ease);
-}
-.rebanim__tous > i, .rebanim__sl > i { display: block; font-style: normal; white-space: nowrap; }
-.rebanim__sl > i {
-  color: var(--accent); font-variation-settings: 'wdth' 62, 'wght' 900;
-  transform: scaleY(0); transform-origin: top;
-  transition: transform .42s var(--ease) .1s;
-}
-/* les phases sont cumulatives : l'ordre des regles fait la chronologie */
-.rebanim.is-p1 .rebanim__tous { max-width: 4.6em; opacity: 1; margin-right: .3em; }
-.rebanim.is-p2 .rebanim__sl { max-width: .52em; opacity: 1; margin: 0 .04em; }
-.rebanim.is-p2 .rebanim__sl > i { transform: none; }
-.rebanim.is-p3 .rebanim__tous { max-width: 0; opacity: 0; margin-right: 0; }
-.rebanim.is-p4 .rebanim__badge { width: .94em; margin-right: .3em; opacity: 1; transform: none; }
-.rebanim.no-anim * { transition: none !important; }
-
-.rebanim__cap { margin-top: clamp(1.2rem, 2.6vw, 1.8rem); color: var(--mut-2); }
-.rebanim__replay {
-  margin-top: 1rem; padding: .35rem .1rem; background: none; border: 0; cursor: pointer;
-  font: inherit; font-size: .72rem; letter-spacing: .13em; text-transform: uppercase;
-  color: var(--mut-2); border-bottom: 1px solid rgba(var(--ink-rgb), .24);
-  transition: color .24s var(--ease), border-color .24s var(--ease);
-}
-.rebanim__replay:hover, .rebanim__replay:focus-visible { color: var(--ink); border-color: var(--accent); }
 
 .reb__grid { display: grid; gap: clamp(1.2rem, 2.6vw, 2.2rem); grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .rebcard { border-top: 2px solid var(--accent); padding-top: 1.1rem; min-width: 0; }
@@ -1827,44 +1677,62 @@ html[data-lang-loading] body { opacity: .82; transition: opacity .12s; }
 
 /* ═══════════════════════════════════════════════════════════════════════════
    BOUTONS FLOTTANTS + MODALE DE CONTACT
-   Deux boutons carrés en bas à droite : retour en haut (apparaît au scroll)
-   et « nous écrire ». La modale ouvre trois vues : les canaux, un message
-   court, une demande de rendez-vous filtrée.
+   Deux pastilles rondes : la flèche de retour en bas à gauche (elle apparaît
+   au scroll), le contact en bas à droite, sans texte. La modale ouvre trois
+   vues : les canaux, un message court, une demande de rendez-vous filtrée.
    ═══════════════════════════════════════════════════════════════════════════ */
-.fabs {
-  position: fixed; right: clamp(.9rem, 2.2vw, 1.6rem); bottom: clamp(.9rem, 2.2vw, 1.6rem);
-  z-index: 70; display: flex; flex-direction: column; align-items: flex-end; gap: .55rem;
-}
-body.hasbar .fabs { bottom: calc(78px + .7rem); }
-body.locked .fabs { display: none; }
-
 .fab {
-  flex: none; display: inline-flex; align-items: center; gap: .5rem;
-  border: 1px solid rgba(var(--ink-rgb), .18); background: var(--surface); color: var(--ink);
-  cursor: pointer; font: inherit; line-height: 1; padding: 0;
-  box-shadow: 0 8px 26px rgba(0, 0, 0, .13);
-  transition: background .2s var(--ease), color .2s var(--ease),
-              border-color .2s var(--ease), transform .22s var(--ease), opacity .28s var(--ease);
+  position: fixed; z-index: 70; flex: none; display: inline-flex; align-items: center;
+  justify-content: center; border: 1px solid rgba(var(--ink-rgb), .18);
+  background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; line-height: 1;
+  padding: 0; border-radius: 50%; box-shadow: 0 8px 26px rgba(0, 0, 0, .13);
+  transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease),
+              transform .22s var(--ease), opacity .28s var(--ease), box-shadow .22s var(--ease);
 }
 .fab svg { width: 20px; height: 20px; flex: none; }
 .fab:hover { transform: translateY(-2px); }
 .fab:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+body.locked .fab { display: none; }
 
-.fab--top { width: 46px; height: 46px; justify-content: center; }
+/* la fleche de retour vit en bas a gauche, loin du pouce qui tient le telephone */
+.fab--top {
+  left: clamp(.9rem, 2.2vw, 1.6rem); bottom: clamp(.9rem, 2.2vw, 1.6rem);
+  width: 44px; height: 44px;
+}
 .fab--top[hidden] { display: none; }
 .fab--top:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
+/* et le contact en bas a droite : une seule pastille, sans texte */
 .fab--chat {
-  height: 52px; padding: 0 1.05rem; background: var(--accent); color: #fff; border-color: var(--accent);
-  font-family: 'ArchivoVar', system-ui, sans-serif; font-variation-settings: 'wdth' 88, 'wght' 700;
-  text-transform: uppercase; font-size: .62rem; letter-spacing: .13em;
+  right: clamp(.9rem, 2.2vw, 1.6rem); bottom: clamp(.9rem, 2.2vw, 1.6rem);
+  width: 56px; height: 56px; background: var(--accent); border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(214, 71, 71, .34);
 }
-.fab--chat:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-.fab--chat.is-open { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-@media (max-width: 560px) {
-  .fab--chat { width: 52px; padding: 0; justify-content: center; }
-  .fab__lab { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+/* la barre d’achat n’existe qu’en petit ecran : on ne remonte que la */
+@media (max-width: 860px) {
+  body.hasbar .fab--top, body.hasbar .fab--chat { bottom: calc(78px + .7rem); }
 }
+
+.fab__mk { width: 31px; height: 31px; position: relative; z-index: 2; }
+.fab__bub { fill: #fff; }
+.fab__sl { stroke: var(--accent); stroke-width: 4.6; stroke-linecap: round; fill: none;
+  transition: stroke .2s var(--ease); }
+.fab--chat:hover { background: var(--ink); border-color: var(--ink);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .3); }
+.fab--chat:hover .fab__sl { stroke: var(--accent); }
+.fab--chat.is-open { background: var(--ink); border-color: var(--ink); }
+
+/* un halo qui respire deux fois, puis se tait */
+.fab__halo {
+  position: absolute; inset: -1px; border-radius: 50%; z-index: 1;
+  border: 2px solid var(--accent); opacity: 0; pointer-events: none;
+  animation: fabhalo 2.4s var(--ease) 1.4s 2;
+}
+@keyframes fabhalo {
+  0% { opacity: .55; transform: scale(1); }
+  70%, 100% { opacity: 0; transform: scale(1.55); }
+}
+.fab--chat:hover .fab__halo, .fab--chat.is-open .fab__halo { animation: none; opacity: 0; }
 
 /* ── la modale ──────────────────────────────────────────────────────────── */
 .ct {
@@ -2022,5 +1890,6 @@ body.locked .fabs { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .fab, .ct, .ct__frame, .ct__row, .ct__meet { transition: none; }
+  .fab__halo { animation: none; opacity: 0; }
   .fab:hover, .ct__row:hover, .ct__meet:hover { transform: none; }
 }

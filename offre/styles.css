@@ -45,6 +45,11 @@ a{color:inherit}
 .nav__mk{display:flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:800;
   letter-spacing:.06em;font-size:.8rem;text-transform:uppercase;margin-right:auto}
 .nav__mk svg{width:20px;height:20px;color:var(--ink);flex:none}
+/* le verrou anime remplace le lockup fixe : il gere sa propre echelle en em */
+.nav__mk{gap:0}
+.nav__mk .tilogo{font-size:1.02rem;color:var(--ink)}
+.nav__mk .tilogo svg{width:.9em;height:.9em}
+.nav__mk .tilogo--nav .tilogo__mk>svg{width:.9em;height:.9em}
 .nav__mk .sl{color:var(--accent)}
 .nav__rt{position:relative;display:flex;align-items:center;gap:.5rem;flex:none}
 
@@ -65,7 +70,7 @@ a{color:inherit}
   .mn__lb{display:none}
   .mn__tg{padding:.66rem .7rem}
 }
-@media(max-width:389px){.nav__mk span{display:none}}
+@media(max-width:389px){.nav__mk .tilogo{font-size:.9rem}}
 
 /* menu deroulant */
 .mn{position:static;flex:none}

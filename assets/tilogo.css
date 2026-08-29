@@ -1,0 +1,68 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Le verrou logo anime — compose partage par les trois pages
+   (accueil, planche de marque, page offre). Une seule source, un seul rendu.
+   ═══════════════════════════════════════════════════════════════════════════ */
+/* ---------- Logo : l'intro qui passe du nom a la signature ----------
+   Phases cumulatives, l'ordre des regles fait la chronologie :
+   IMPARFAITS -> TOUS IMPARFAITS -> TOUS IM/PARFAITS -> IM/PARFAITS -> avec le signe.
+   Les segments se replient via grid-template-columns 0fr, donc sans largeur
+   codee en dur : le meme composant tient a 1.1rem comme a 1.4rem, quelle que
+   soit la graisse et l'interlettrage de la variante. */
+.tilogo {
+  position: relative; display: inline-flex; align-items: center; line-height: 1;
+  font-family: 'ArchivoVar', 'Archivo', system-ui, sans-serif;
+  font-variation-settings: 'wdth' 74, 'wght' 800;
+  text-transform: uppercase; letter-spacing: -.015em; color: currentColor;
+  white-space: nowrap;
+}
+.tilogo__im, .tilogo__pf { flex: none; }
+
+.tilogo__mk, .tilogo__dot, .tilogo__t, .tilogo__sl {
+  flex: none; display: grid; grid-template-columns: 0fr;
+  overflow: hidden; opacity: 0;
+  transition: grid-template-columns .5s var(--ease, cubic-bezier(.16, .84, .32, 1)), max-width .5s var(--ease, cubic-bezier(.16, .84, .32, 1)),
+              opacity .3s var(--ease, cubic-bezier(.16, .84, .32, 1)), margin .5s var(--ease, cubic-bezier(.16, .84, .32, 1)),
+              transform .52s cubic-bezier(.2, 1.5, .45, 1);
+}
+.tilogo__mk, .tilogo__dot { max-width: 0; }
+.tilogo__mk > svg, .tilogo__t > i, .tilogo__sl > i {
+  display: block; min-width: 0; font-style: normal; white-space: nowrap;
+}
+/* le signe est detoure, pas en pastille : il prend la couleur du texte et
+   marche donc tel quel sur papier comme sur encre */
+.tilogo__mk { transform: translateX(-.28em) scale(.62) rotate(-12deg); }
+.tilogo__mk > svg { width: .9em; height: .9em; }
+.tilogo__sl > i { color: var(--accent); font-variation-settings: 'wdth' 62, 'wght' 900; }
+/* le point separateur : il rime avec la barre rouge et aere le verrou sans
+   ajouter de dessin. Il n’arrive qu’avec l’ecusson, en phase 4. */
+.tilogo__dot > i {
+  display: block; min-width: 0; width: .18em; height: .18em;
+  border-radius: 50%; background: var(--accent);
+}
+
+.tilogo.p1 .tilogo__t  { grid-template-columns: 1fr; opacity: 1; margin-right: .26em; }
+.tilogo.p2 .tilogo__sl { grid-template-columns: 1fr; opacity: 1; margin: 0 .05em; }
+.tilogo.p3 .tilogo__t  { grid-template-columns: 0fr; opacity: 0; margin-right: 0; }
+.tilogo.p4 .tilogo__mk { grid-template-columns: 1fr; max-width: 1.4em; opacity: 1;
+  margin-right: .24em; transform: none; }
+.tilogo.p4 .tilogo__dot { grid-template-columns: 1fr; max-width: .2em; opacity: 1;
+  margin-right: .24em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tilogo__mk, .tilogo__dot, .tilogo__t, .tilogo__sl { transition: none; }
+}
+.tilogo.no-anim * { transition: none !important; }
+
+.tilogo--hdr { font-size: 1.32rem; }
+.tilogo--closer {
+  justify-content: center; margin: 0 auto clamp(1.4rem, 2.6vw, 2.2rem);
+  font-size: clamp(.95rem, 2vw, 1.4rem); letter-spacing: .16em;
+  font-variation-settings: 'wdth' 88, 'wght' 700;
+}
+.tilogo--closer .tilogo__sl > i { font-variation-settings: 'wdth' 70, 'wght' 900; }
+.tilogo--closer .tilogo__mk > svg { width: 1.05em; height: 1.05em; }
+.tilogo--closer.p2 .tilogo__sl { margin: 0 .1em 0 .04em; }
+.tilogo--ft { margin-bottom: 1rem; font-size: 1.5rem; color: var(--on-ink, var(--paper)); }
+/* hors lien, le curseur annonce qu'un clic rejoue l'intro */
+.tilogo--closer, .tilogo--ft { cursor: pointer; }
+@media (max-width: 560px) { .tilogo--hdr { font-size: 1.1rem; } }

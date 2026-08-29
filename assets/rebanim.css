@@ -1,0 +1,99 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   La rencontre : l’animation complete du logo + la signature Ici Japon Corp.
+   Compose partage par l’accueil et la planche de marque. Le cadre 16/9 et les
+   deux themes sont geres ici ; chaque page fournit seulement sa scene d’accueil.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.rebframe {
+  aspect-ratio: 16 / 9; width: 100%; max-width: 1120px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: clamp(1.1rem, 3.4vh, 2.6rem);
+}
+@media (max-width: 620px) { .rebframe { aspect-ratio: 4 / 3; } }
+
+/* ── la signature Ici Japon Corp., a la fin de la rencontre ──────────────── */
+.rebijc {
+  display: flex; align-items: center; justify-content: center; gap: clamp(.55rem, 1.6vw, .95rem);
+  opacity: 0; transform: translateY(10px);
+  transition: opacity .6s var(--ease, cubic-bezier(.16, .84, .32, 1)), transform .7s var(--ease, cubic-bezier(.16, .84, .32, 1));
+}
+.rebanim.is-p5 ~ .rebijc, .rebijc.is-on { opacity: 1; transform: none; }
+.rebijc__r {
+  display: block; flex: none; height: 1px; background: rgba(var(--ink-rgb), .28);
+  width: 0; transition: width .7s var(--ease, cubic-bezier(.16, .84, .32, 1)) .12s;
+}
+.rebijc.is-on .rebijc__r { width: clamp(18px, 5vw, 46px); }
+.rebijc__t {
+  font-family: 'ArchivoVar', 'Archivo', system-ui, sans-serif;
+  font-variation-settings: 'wdth' 90, 'wght' 500;
+  text-transform: uppercase; font-size: clamp(.58rem, 1.5vw, .9rem);
+  letter-spacing: .17em; color: var(--mut, var(--grey)); white-space: nowrap;
+}
+.rebijc__t b { font-variation-settings: 'wdth' 90, 'wght' 800; color: var(--ink); }
+/* la pieuvre officielle, detouree : un masque, donc elle prend la couleur du
+   texte et suit les deux themes sans jamais etre redessinee */
+.rebijc__m {
+  display: block; flex: none;
+  width: clamp(36px, 5.6vw, 66px); aspect-ratio: 560 / 473;
+  background: var(--accent);
+  -webkit-mask: url("ijc-mark.png") no-repeat center / contain;
+  mask: url("ijc-mark.png") no-repeat center / contain;
+  opacity: 0; transform: scale(.72) rotate(-8deg);
+  transition: opacity .5s var(--ease, cubic-bezier(.16, .84, .32, 1)) .26s, transform .62s cubic-bezier(.2, 1.5, .45, 1) .26s;
+}
+.rebijc.is-on .rebijc__m { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .rebijc, .rebijc__r, .rebijc__m { transition: none; }
+}
+
+.rebanim {
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'ArchivoVar', 'Archivo', system-ui, sans-serif;
+  font-variation-settings: 'wdth' 74, 'wght' 800;
+  text-transform: uppercase; letter-spacing: -.015em;
+  font-size: clamp(1.5rem, 7vw, 5.5rem); line-height: 1;
+  color: var(--ink); white-space: nowrap;
+}
+.rebanim__im, .rebanim__pf { flex: none; }
+.rebanim__badge {
+  flex: none; display: block; overflow: hidden;
+  width: 0; margin-right: 0; opacity: 0;
+  transform: translateX(-16px) scale(.7) rotate(-10deg);
+  transition: width .6s var(--ease, cubic-bezier(.16, .84, .32, 1)), margin-right .6s var(--ease, cubic-bezier(.16, .84, .32, 1)),
+              opacity .4s var(--ease, cubic-bezier(.16, .84, .32, 1)), transform .6s cubic-bezier(.2, 1.5, .45, 1);
+}
+.rebanim__badge svg { display: block; width: .94em; height: .94em; }
+/* en sombre l'ecusson est un carre sombre sur un fond sombre : un filet
+   rend sa silhouette sans toucher au dessin lui-meme */
+[data-theme="dark"] .rebanim__badge svg { border-radius: 22%; box-shadow: 0 0 0 1px rgba(237,237,237,.18); }
+.rebanim__dot, .rebanim__tous, .rebanim__sl {
+  flex: none; display: block; overflow: hidden;
+  max-width: 0; opacity: 0;
+  transition: max-width .6s var(--ease, cubic-bezier(.16, .84, .32, 1)), opacity .38s var(--ease, cubic-bezier(.16, .84, .32, 1)), margin .6s var(--ease, cubic-bezier(.16, .84, .32, 1));
+}
+.rebanim__tous > i, .rebanim__sl > i { display: block; font-style: normal; white-space: nowrap; }
+.rebanim__dot > i {
+  display: block; width: .17em; height: .17em; border-radius: 50%;
+  background: var(--accent);
+}
+.rebanim__sl > i {
+  color: var(--accent); font-variation-settings: 'wdth' 62, 'wght' 900;
+  transform: scaleY(0); transform-origin: top;
+  transition: transform .42s var(--ease, cubic-bezier(.16, .84, .32, 1)) .1s;
+}
+/* les phases sont cumulatives : l'ordre des regles fait la chronologie */
+.rebanim.is-p1 .rebanim__tous { max-width: 4.6em; opacity: 1; margin-right: .3em; }
+.rebanim.is-p2 .rebanim__sl { max-width: .52em; opacity: 1; margin: 0 .04em; }
+.rebanim.is-p2 .rebanim__sl > i { transform: none; }
+.rebanim.is-p3 .rebanim__tous { max-width: 0; opacity: 0; margin-right: 0; }
+.rebanim.is-p4 .rebanim__badge { width: .94em; margin-right: .26em; opacity: 1; transform: none; }
+.rebanim.is-p4 .rebanim__dot { max-width: .2em; opacity: 1; margin-right: .26em; }
+.rebanim.no-anim * { transition: none !important; }
+
+.rebanim__cap { margin-top: clamp(1.2rem, 2.6vw, 1.8rem); color: var(--mut-2, var(--mut, var(--grey))); }
+.rebanim__replay {
+  margin-top: 1rem; padding: .35rem .1rem; background: none; border: 0; cursor: pointer;
+  font: inherit; font-size: .72rem; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--mut-2, var(--mut, var(--grey))); border-bottom: 1px solid rgba(var(--ink-rgb), .24);
+  transition: color .24s var(--ease, cubic-bezier(.16, .84, .32, 1)), border-color .24s var(--ease, cubic-bezier(.16, .84, .32, 1));
+}
+.rebanim__replay:hover, .rebanim__replay:focus-visible { color: var(--ink); border-color: var(--accent); }

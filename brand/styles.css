@@ -259,7 +259,7 @@ h1 em{font-style:normal;color:var(--accent)}
 [data-theme="dark"] .decide{background:#1c1c1c;--bg:#1c1c1c}
 .decide .eyebrow{color:var(--paper);opacity:.85}
 .decide .eyebrow .n,.decide .eyebrow .jp{color:var(--accent);opacity:1}
-.decide__grid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);
+.decide__grid{display:grid;grid-template-columns:minmax(0,1fr);
   gap:clamp(1.5rem,4vw,3.25rem);align-items:start;margin-top:clamp(1.4rem,3vw,2.2rem)}
 .decide__mark{border:1px solid rgba(237,237,237,.22);background:rgba(255,255,255,.04);
   padding:clamp(1.5rem,3vw,2.25rem);display:flex;flex-direction:column;align-items:center;
@@ -441,3 +441,27 @@ h1 em{font-style:normal;color:var(--accent)}
   .pv-lec__r--a{opacity:0}
   .pv-br__tile{opacity:.75}
 }
+
+/* ── Le verrou anime dans l’entete de la planche ─────────────────────────── */
+.top .tilogo{margin:0 0 clamp(1rem,2.2vw,1.5rem);font-size:clamp(1.15rem,2.8vw,1.7rem);
+  color:var(--ink);cursor:pointer}
+
+/* la section est encree dans les deux themes : on redeclare ici les jetons dont
+   vit l’animation, apres le bloc d’origine, sinon c’est l’encre sombre qui gagne. */
+.decide{--ink:#ededed;--ink-rgb:237,237,237;--grey:#9b9b9b;--mut:#a4a4a4;--mut-2:#8f8f8f;
+  --ease:cubic-bezier(.16,.84,.32,1)}
+/* ── La decision : le cadre 16/9 complet, comme sur l’accueil ─────────────── */
+.decide__stage{margin:clamp(1.6rem,3.4vw,2.6rem) 0 clamp(2rem,4vw,3rem);
+  padding:clamp(1.6rem,4vw,3rem) clamp(1rem,3vw,2rem);
+  border:1px solid rgba(237,237,237,.2);background:rgba(237,237,237,.035);
+  text-align:center;overflow:hidden}
+/* bande plus resserree qu’a l’accueil : la scene tient deja dans un encadre */
+.decide__stage .rebframe{max-width:900px;aspect-ratio:8/3}
+/* la section est sombre dans les deux themes : l’ecusson garde donc son filet */
+.decide .rebanim__badge svg{border-radius:22%;box-shadow:0 0 0 1px rgba(237,237,237,.22)}
+.decide .rebanim{font-size:clamp(1.35rem,6.2vw,4.4rem)}
+.decide .rebanim__cap{margin-top:clamp(1rem,2.4vw,1.6rem);color:#a4a4a4;
+  font-size:.78rem;letter-spacing:.06em}
+.decide .rebanim__replay{color:#a4a4a4;border-bottom-color:rgba(237,237,237,.28)}
+.decide .rebanim__replay:hover,.decide .rebanim__replay:focus-visible{color:#ededed;border-color:var(--accent)}
+@media(max-width:620px){.decide__stage .rebframe{aspect-ratio:4/3}}
