@@ -61,7 +61,7 @@
   transition: width .6s var(--ease, cubic-bezier(.16, .84, .32, 1)), margin-right .6s var(--ease, cubic-bezier(.16, .84, .32, 1)),
               opacity .4s var(--ease, cubic-bezier(.16, .84, .32, 1)), transform .6s cubic-bezier(.2, 1.5, .45, 1);
 }
-.rebanim__badge svg { display: block; width: 1.04em; height: 1.04em; }
+.rebanim__badge svg { display: block; width: var(--reb-mk, 1.04em); height: var(--reb-mk, 1.04em); }
 /* en sombre l'ecusson est un carre sombre sur un fond sombre : un filet
    rend sa silhouette sans toucher au dessin lui-meme */
 /* plus de cerclage a rajouter : le bloc arrondi est lui-meme visible,
@@ -86,7 +86,7 @@
 .rebanim.is-p2 .rebanim__sl { max-width: .52em; opacity: 1; margin: 0 .04em; }
 .rebanim.is-p2 .rebanim__sl > i { transform: none; }
 .rebanim.is-p3 .rebanim__tous { max-width: 0; opacity: 0; margin-right: 0; }
-.rebanim.is-p4 .rebanim__badge { width: .94em; margin-right: .26em; opacity: 1; transform: none; }
+.rebanim.is-p4 .rebanim__badge { width: var(--reb-mk, 1.04em); margin-right: .26em; opacity: 1; transform: none; }
 .rebanim.is-p4 .rebanim__dot { max-width: .2em; opacity: 1; margin-right: .26em; }
 .rebanim.no-anim * { transition: none !important; }
 
