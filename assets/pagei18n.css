@@ -1,0 +1,151 @@
+/* ══════════════════════════════════════════════════════════════════
+   Sélecteur de langue des pages /offre et /brand + réglages
+   typographiques anglais / japonais.
+   ══════════════════════════════════════════════════════════════════ */
+
+.plangs {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  height: 38px;
+  border: 1px solid rgba(var(--ink-rgb), .2);
+  border-radius: 2px;
+  overflow: hidden;
+  flex: none;
+  vertical-align: middle;
+  background: var(--paper-warm);
+}
+
+.plangs__b {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--mut);
+  font-family: inherit;
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0 .72em;
+  cursor: pointer;
+  transition: color .18s, background-color .18s;
+  white-space: nowrap;
+}
+
+.plangs__b + .plangs__b {
+  border-left: 1px solid rgba(var(--ink-rgb), .16);
+}
+
+.plangs__b[lang="ja"] {
+  font-size: .7rem;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+.plangs__b:hover { color: var(--ink); }
+
+.plangs__b.is-on {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.plangs__b:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -3px;
+}
+
+/* Planche de marque : le bouton de theme flotte en haut a droite,
+   le selecteur de langue se pose juste a sa gauche. */
+.top .plangs {
+  position: fixed;
+  top: clamp(1.1rem, 3vw, 1.9rem);
+  right: calc(var(--gut) + 38px + .5rem);
+  z-index: 60;
+  box-shadow: 0 1px 2px rgba(10, 10, 10, .07), 0 12px 28px -14px rgba(10, 10, 10, .3);
+}
+
+[data-theme="dark"] .top .plangs {
+  border-color: rgba(var(--ink-rgb), .28);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .55), 0 14px 32px -14px rgba(0, 0, 0, .85);
+}
+
+@media (max-width: 700px) {
+  .top .plangs { top: .9rem; right: calc(1rem + 38px + .4rem); height: 34px; }
+  .top .plangs .plangs__b { padding: 0 .58em; }
+}
+
+@media print { .top .plangs { display: none } }
+
+/* Le selecteur du panneau de navigation ne sert que sur mobile. */
+.plangs--pan, .plangs__h { display: none }
+
+@media (max-width: 700px) {
+  .nav .plangs--hdr { display: none }
+  .plangs--pan {
+    display: inline-flex;
+    margin: .1rem 0 .55rem;
+    background: transparent;
+  }
+  .plangs__h { display: block }
+}
+
+/* ── typographie japonaise ────────────────────────────────────── */
+
+html[lang="ja"] {
+  --jp-stack: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic",
+    "YuGothic", "Noto Sans JP", "Meiryo", sans-serif;
+}
+
+html[lang="ja"] body,
+html[lang="ja"] p,
+html[lang="ja"] li,
+html[lang="ja"] dd,
+html[lang="ja"] dt,
+html[lang="ja"] td,
+html[lang="ja"] th,
+html[lang="ja"] figcaption,
+html[lang="ja"] .lede,
+html[lang="ja"] .tag,
+html[lang="ja"] .eyebrow,
+html[lang="ja"] button,
+html[lang="ja"] input,
+html[lang="ja"] select,
+html[lang="ja"] textarea {
+  font-family: var(--jp-stack);
+  font-feature-settings: "palt" 1;
+}
+
+/* Les titres display restent puissants mais lisibles : on garde une
+   graisse forte et on serre moins que le latin. */
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] h4,
+html[lang="ja"] .h-sec,
+html[lang="ja"] .display {
+  font-family: var(--jp-stack);
+  font-weight: 800;
+  letter-spacing: -.015em;
+  line-height: 1.28;
+  text-transform: none;
+  font-feature-settings: "palt" 1;
+}
+
+/* Le japonais coupe partout : on désactive la césure latine et on
+   autorise le retour à la ligne à l'intérieur des mots. */
+html[lang="ja"] * {
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+/* ── anglais ──────────────────────────────────────────────────── */
+
+html[lang="en"] .eyebrow,
+html[lang="en"] .tag {
+  letter-spacing: .12em;
+}

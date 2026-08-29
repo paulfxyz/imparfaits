@@ -1,13 +1,19 @@
 /* --- Le logo : l'intro qui passe du nom a la signature ---------------------
-   IMPARFAITS -> TOUS IMPARFAITS -> TOUS IM/PARFAITS -> IM/PARFAITS -> + signe.
+   IMPARFAITS -> TOUS IMPARFAITS -> TOUS IM/PARFAITS -> IM/PARFAITS -> + signe,
+   et dans le header : le signe se retire et IM/PARFAITS se range a gauche.
    Elle ne tourne pas en boucle : elle joue une fois quand le logo entre en
    scene, puis se rejoue au survol, ou au clic quand le logo n'est pas un lien. */
 (function () {
   var logos = [].slice.call(document.querySelectorAll('[data-tilogo]'));
   if (!logos.length) return;
 
-  var PH = ['p1', 'p2', 'p3', 'p4'];
-  var STEP = [80, 720, 1360, 1700];
+  /* Le verrou du header joue une phase de plus : l'ecusson se retire et
+     IM/PARFAITS glisse se ranger a gauche. Les autres verrous s'arretent a p4. */
+  var PH = ['p1', 'p2', 'p3', 'p4', 'p5'];
+  var STEP = [80, 720, 1360, 1700, 2760];
+  function steps(el) {
+    return el.classList.contains('tilogo--hdr') ? PH.length : 4;
+  }
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function clear(el) {
@@ -21,17 +27,18 @@
     clear(el);
     PH.forEach(function (c) { el.classList.remove(c); });
 
+    var n = steps(el);
     if (still) {                          /* pas de mouvement : etat final direct */
       el.classList.add('no-anim');
-      PH.forEach(function (c) { el.classList.add(c); });
+      PH.slice(0, n).forEach(function (c) { el.classList.add(c); });
       el.__busy = 0;
       return;
     }
     void el.offsetWidth;                  /* on force le reflow avant de rejouer */
-    PH.forEach(function (c, i) {
+    PH.slice(0, n).forEach(function (c, i) {
       el.__t.push(setTimeout(function () { el.classList.add(c); }, STEP[i]));
     });
-    el.__t.push(setTimeout(function () { el.__busy = 0; }, STEP[3] + 760));
+    el.__t.push(setTimeout(function () { el.__busy = 0; }, STEP[n - 1] + 760));
   }
 
   logos.forEach(function (el) {

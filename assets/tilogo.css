@@ -48,6 +48,13 @@
   margin-right: .24em; transform: none; }
 .tilogo.p4 .tilogo__dot { grid-template-columns: 1fr; max-width: .2em; opacity: 1;
   margin-right: .24em; }
+/* Phase 5, reservee au verrou du header : l'ecusson et le point se retirent,
+   et IM/PARFAITS glisse se ranger a gauche, seul. */
+.tilogo.p5 .tilogo__mk {
+  grid-template-columns: 0fr; max-width: 0; opacity: 0; margin-right: 0;
+  transform: translateX(-.34em) scale(.5) rotate(-10deg);
+}
+.tilogo.p5 .tilogo__dot { grid-template-columns: 0fr; max-width: 0; opacity: 0; margin-right: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .tilogo__mk, .tilogo__dot, .tilogo__t, .tilogo__sl { transition: none; }

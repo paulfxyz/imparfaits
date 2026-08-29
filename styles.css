@@ -35,7 +35,7 @@
   --paper: #ededed;       /* fond de page */
   --paper-warm: #f6f4f0;  /* fond alterné */
   --surface: #fff;        /* cartes, popovers, boutons flottants */
-  --grey: #9b9b9b;
+  --grey: #6a6a6a;
   --mut: #565656;         /* légendes sur fond clair */
   --mut-2: #6a6a6a;
   --mut-3: #a2a2a2;
@@ -65,7 +65,7 @@
   --paper: #0e0e0e;
   --paper-warm: #161616;
   --surface: #1b1b1b;
-  --grey: #7e7e7e;
+  --grey: #8a8a8a;
   --mut: #a4a4a4;
   --mut-2: #8f8f8f;
   --mut-3: #6f6f6f;
@@ -140,6 +140,7 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 
 /* ---------- Boutons (mid-premium : rectangles francs) ---------- */
 .btn {
+  transition: color .35s var(--ease), border-color .35s var(--ease);
   --bg: var(--ink); --fg: var(--paper);
   position: relative; display: inline-flex; align-items: center; gap: .7rem;
   padding: 1.05rem 1.9rem; background: var(--bg); color: var(--fg);
@@ -148,14 +149,24 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
   overflow: hidden; isolation: isolate; border: 1.5px solid var(--bg);
 }
 .btn > span { position: relative; z-index: 2; transition: color .35s var(--ease); }
+/* Le balayage se glisse DERRIERE le libelle : z-index negatif dans le contexte
+   isole du bouton. Sans cela, un bouton dont le texte n'est pas emballe dans un
+   <span> voyait son libelle recouvert au survol — le bouton devenait un bloc noir. */
 .btn::before {
-  content: ''; position: absolute; inset: 0; z-index: 1; background: var(--accent);
+  content: ''; position: absolute; inset: 0; z-index: -1; background: var(--accent);
   transform: translateY(101%); transition: transform .42s var(--ease);
 }
-.btn:hover::before { transform: translateY(0); }
-.btn:hover > span { color: #fff; }
+.btn:hover:not([disabled]):not([aria-disabled='true'])::before { transform: translateY(0); }
+.btn:hover:not([disabled]):not([aria-disabled='true']),
+.btn:hover:not([disabled]):not([aria-disabled='true']) > span { color: #fff; }
 .btn .arw { transition: transform .35s var(--ease); }
-.btn:hover .arw { transform: translateX(5px); }
+.btn:hover:not([disabled]) .arw { transform: translateX(5px); }
+/* Etat inactif : contour seul, libelle en gris, aucun balayage. */
+.btn[disabled], .btn[aria-disabled='true'] {
+  background: none; border-color: rgba(var(--ink-rgb), .2); color: var(--mut-2);
+  opacity: .62; cursor: not-allowed;
+}
+.btn[disabled]::before, .btn[aria-disabled='true']::before { content: none; }
 .btn--accent { --bg: var(--accent); --fg: #fff; }
 .btn--accent::before { background: var(--ink-surface); }
 .btn--ghost { --bg: transparent; --fg: currentColor; border-color: currentColor; }
@@ -408,7 +419,7 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 /* ---------- Tuiles collections ---------- */
 .tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(.55rem, 1vw, 1rem); }
 .tile {
-  position: relative; overflow: hidden; background: var(--ink-2); color: #fff;
+  position: relative; overflow: hidden; background: #1c1c1c; color: #fff;
   aspect-ratio: 4 / 5; display: flex; align-items: flex-end; padding: 1.15rem;
 }
 .tile img {
@@ -798,17 +809,30 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 .rebuse { display: flex; flex-direction: column; gap: .85rem; align-items: center; text-align: center; min-width: 0; }
 .rebuse__vis {
   width: 100%; min-height: 138px; display: grid; place-items: center; padding: 1.4rem;
-  background: #f2efe9; border: 1px solid rgba(10,10,10,.09);
+  background: var(--paper-warm); border: 1px solid rgba(var(--ink-rgb), .1);
 }
 .rebuse__lab { color: var(--mut-2); }
-.rebuse__ios { width: 82px; height: 82px; border-radius: 22.5%; display: block; }
-.rebuse__mark { width: 88px; height: 88px; display: block; }
+/* Le fond de l’écran d’accueil est sombre dans les deux thèmes : la marque s’y pose en clair. */
+.rebuse__vis--ink { background: #0a0a0a; border-color: rgba(237,237,237,.14); color: #ededed; }
+/* Fond ajouré : le damier passe à travers les deux réserves. */
+.rebuse__vis--tr {
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(45deg, rgba(var(--ink-rgb), .08) 25%, transparent 25% 75%, rgba(var(--ink-rgb), .08) 75%),
+    linear-gradient(45deg, rgba(var(--ink-rgb), .08) 25%, transparent 25% 75%, rgba(var(--ink-rgb), .08) 75%);
+  background-size: 18px 18px; background-position: 0 0, 9px 9px;
+}
+.rebuse__ios, .rebuse__mark { display: block; color: currentColor; }
+.rebuse__ios { width: 82px; height: 82px; }
+.rebuse__mark { width: 88px; height: 88px; }
+.rebuse__ios svg, .rebuse__mark svg { display: block; width: 100%; height: 100%; }
 .tabmock {
   display: inline-flex; align-items: center; gap: .5rem; max-width: 100%;
-  background: #fff; color: #0a0a0a; border: 1px solid rgba(10,10,10,.1); border-bottom: 0;
+  background: var(--surface); color: var(--ink); border: 1px solid rgba(var(--ink-rgb), .12); border-bottom: 0;
   border-radius: 9px 9px 0 0; padding: .5rem .7rem;
 }
-.tabmock img { width: 16px; height: 16px; flex: none; }
+.tabmock__i { width: 16px; height: 16px; flex: none; display: block; }
+.tabmock__i svg { display: block; width: 16px; height: 16px; }
 .tabmock__t { font-size: .74rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tabmock__x { font-size: .78rem; opacity: .4; flex: none; }
 
@@ -1802,7 +1826,12 @@ body.locked .fab { display: none; }
 }
 .ct__arr { flex: none; color: var(--accent); font-size: .9rem; }
 
-.ct__meet { margin-top: .85rem; border-style: dashed; background: none; }
+.ct__meet {
+  margin-top: .85rem; border-style: dashed; background: none;
+  border-color: rgba(var(--ink-rgb), .16); opacity: .7;
+  transition: opacity .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.ct__meet:hover, .ct__meet:focus-visible { opacity: 1; }
 
 .ct__back {
   display: inline-flex; align-items: center; gap: .4rem; margin: 0 0 .9rem;
@@ -1833,7 +1862,7 @@ body.locked .fab { display: none; }
 }
 .ct__f input[aria-invalid="true"], .ct__f textarea[aria-invalid="true"], .ct__f select[aria-invalid="true"] { border-color: var(--accent); }
 .ct__send { width: 100%; justify-content: center; margin-top: .3rem; }
-.ct__send[disabled] { opacity: .42; cursor: not-allowed; }
+.ct__send[disabled] { letter-spacing: .16em; }
 .ct__fine { margin: .1rem 0 0; font-size: .7rem; line-height: 1.45; color: var(--mut); }
 .ct__warn {
   margin: 0 0 1rem; padding: .8rem .9rem; font-size: .78rem; line-height: 1.5;

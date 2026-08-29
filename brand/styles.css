@@ -6,7 +6,7 @@
   color-scheme:light;
   --ink:#0a0a0a; --ink2:#282828; --ink-rgb:10,10,10;
   --paper:#ededed; --paper-warm:#f6f4f0;
-  --grey:#9b9b9b; --accent:#d64747;
+  --grey:#6a6a6a; --accent:#d64747;
   --card:#fff;
   --tabrow:#d5d5d5; --tabbg:#efefef; --tabfg:#0a0a0a;
   --logo-inv:none;
@@ -19,7 +19,7 @@
   color-scheme:dark;
   --ink:#ededed; --ink2:#bdbdbd; --ink-rgb:237,237,237;
   --paper:#0e0e0e; --paper-warm:#161616;
-  --grey:#8b8b8b;
+  --grey:#8a8a8a;
   --card:#151515;
   --tabrow:#2b2b2b; --tabbg:#1e1e1e; --tabfg:#ededed;
   --logo-inv:invert(1);
@@ -92,9 +92,9 @@ h1 em{font-style:normal;color:var(--accent)}
   display:flex;align-items:center;justify-content:center;padding:clamp(1.4rem,3vw,2.4rem);
   border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:180px;
   background:#f6f4f0;color:#0a0a0a;--bg:#f6f4f0;
-  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#9b9b9b;--card:#fff;--logo-inv:none}
+  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#6a6a6a;--card:#fff;--logo-inv:none}
 .opt__stage--ink{grid-area:inkstage;background:#0a0a0a;color:#fff;border-right:none;--bg:#0a0a0a;
-  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#9b9b9b;--card:#fff;--logo-inv:invert(1)}
+  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#6a6a6a;--card:#fff;--logo-inv:invert(1)}
 .opt__no{position:absolute;top:.7rem;left:.8rem;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
   font-variation-settings:'wdth' 92,'wght' 700;color:var(--grey)}
 .opt__stage--ink .opt__no{color:rgba(255,255,255,.42)}
@@ -127,13 +127,13 @@ h1 em{font-style:normal;color:var(--accent)}
 .szi span{font-size:.55rem;color:var(--grey);letter-spacing:.06em;font-variation-settings:'wdth' 92,'wght' 700}
 .inv{background:#0a0a0a;color:#fff;padding:.6rem .75rem;display:inline-flex;gap:.85rem;align-items:flex-end;
   margin-top:.7rem;--bg:#0a0a0a;
-  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#9b9b9b;--logo-inv:invert(1)}
+  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#6a6a6a;--logo-inv:invert(1)}
 .inv .szi span{color:rgba(255,255,255,.45)}
 
 /* « inverse » = le fond oppose a celui de la carte : en theme sombre,
    c'est donc la bande claire qui joue ce role */
 [data-theme="dark"] .inv{background:#f6f4f0;color:#0a0a0a;--bg:#f6f4f0;--logo-inv:none;
-  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#9b9b9b}
+  --ink:#0a0a0a;--ink2:#282828;--ink-rgb:10,10,10;--paper:#ededed;--grey:#6a6a6a}
 [data-theme="dark"] .inv .szi span{color:rgba(10,10,10,.45)}
 [data-theme="dark"] .inv .logoimg{filter:none}
 
@@ -253,7 +253,7 @@ h1 em{font-style:normal;color:var(--accent)}
 
 /* ---------- bloc décision ---------- */
 .decide{background:#0a0a0a;color:#ededed;--bg:#0a0a0a;
-  --ink:#0a0a0a;--ink2:#282828;--paper:#ededed;--grey:#9b9b9b;--logo-inv:invert(1);
+  --ink:#0a0a0a;--ink2:#282828;--paper:#ededed;--grey:#6a6a6a;--logo-inv:invert(1);
   padding:clamp(2.75rem,6vw,4.5rem) 0;border-bottom:1px solid rgba(237,237,237,.14)}
 /* en theme sombre la page est deja noire : on souleve la bande d'un cran */
 [data-theme="dark"] .decide{background:#1c1c1c;--bg:#1c1c1c}
@@ -457,7 +457,7 @@ h1 em{font-style:normal;color:var(--accent)}
 
 /* la section est encree dans les deux themes : on redeclare ici les jetons dont
    vit l’animation, apres le bloc d’origine, sinon c’est l’encre sombre qui gagne. */
-.decide{--ink:#ededed;--ink-rgb:237,237,237;--grey:#9b9b9b;--mut:#a4a4a4;--mut-2:#8f8f8f;
+.decide{--ink:#ededed;--ink-rgb:237,237,237;--grey:#8a8a8a;--mut:#a4a4a4;--mut-2:#8f8f8f;
   --ease:cubic-bezier(.16,.84,.32,1)}
 /* ── La decision : le cadre 16/9 complet, comme sur l’accueil ─────────────── */
 .decide__stage{margin:clamp(1.6rem,3.4vw,2.6rem) 0 clamp(2rem,4vw,3rem);
