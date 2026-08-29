@@ -36,7 +36,7 @@
     }
   };
 
-  var DICT_V = '20';       // version des dictionnaires (cache-busting)
+  var DICT_V = '21';       // version des dictionnaires (cache-busting)
   var cache = {};          // code -> dict
   var fragKeys = {};       // code -> [clés triées par longueur décroissante]
   var cur = 'fr';

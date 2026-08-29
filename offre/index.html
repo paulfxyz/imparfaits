@@ -15,9 +15,9 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
 <meta property="og:description" content="Une refonte offerte, et une proposition de travail claire pour l'écosystème d'Ici Japon. Par Paul Fleury.">
 <meta property="og:url" content="https://paulfleury.com/ti/offre/">
 <link rel="preload" href="../assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=21">
-<link rel="icon" href="../assets/favicon.svg?v=1" type="image/svg+xml">
-<link rel="icon" href="../assets/icons/favicon.ico?v=1" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="styles.css?v=22">
+<link rel="icon" href="../assets/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="../assets/icons/favicon.ico?v=2" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png?v=1">
 <meta name="theme-color" content="#0a0a0a">
 </head>
@@ -342,10 +342,14 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
 </section>
 
 <!-- ══ CLÔTURE ═══════════════════════════════════════ -->
-<div class="end">
+<div class="end" id="end" data-end>
   <div class="wrap">
-    <span class="endwm">IM<span class="sl">/</span>PARFAITS</span>
+    <p class="end__k" aria-hidden="true">Voilà, c’est tout</p>
+    <span class="endwm" aria-label="IM / PARFAITS"><span class="endwm__a">IM</span><span class="sl endwm__b" aria-hidden="true">/</span><span class="endwm__c">PARFAITS</span></span>
+    <span class="end__rule" aria-hidden="true"></span>
     <p>Personne n'est parfait. C'est écrit sur vos vêtements depuis 2021, et c'est exactement pour ça que ce travail était facile à commencer.</p>
+    <p class="end__sig">— Paul, à Lisbonne, pour Tous Imparfaits.</p>
+    <button type="button" class="end__replay" data-endreplay>↻ Rejouer</button>
   </div>
 </div>
 
@@ -570,6 +574,43 @@ document.documentElement.setAttribute('data-theme',k)}());</script>
 })();
 </script>
 
-<script src="../assets/theme.js?v=21" defer></script>
+<script>
+/* la cloture se compose a l'arrivee, et se rejoue au clic */
+(function () {
+  var end = document.querySelector('[data-end]');
+  if (!end) return;
+  var PH = ['is-p1', 'is-p2', 'is-p3', 'is-p4'];
+  var AT = [60, 620, 1320, 1720];
+  var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timers = [];
+
+  function play() {
+    timers.forEach(clearTimeout);
+    timers = [];
+    PH.forEach(function (c) { end.classList.remove(c); });
+    if (calm) { PH.forEach(function (c) { end.classList.add(c); }); return; }
+    timers.push(setTimeout(function () {
+      PH.forEach(function (c, i) {
+        timers.push(setTimeout(function () { end.classList.add(c); }, AT[i]));
+      });
+    }, 30));
+  }
+
+  var btn = end.querySelector('[data-endreplay]');
+  if (btn) btn.addEventListener('click', play);
+
+  if (!('IntersectionObserver' in window)) { play(); return; }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      play();
+    });
+  }, { threshold: 0.3 });
+  io.observe(end);
+})();
+</script>
+
+<script src="../assets/theme.js?v=22" defer></script>
 </body>
 </html>

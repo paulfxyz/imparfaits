@@ -159,6 +159,9 @@
     document.body.classList.toggle('locked', any);
     document.body.classList.toggle('locked-cart', !!(LOCKS.cart || LOCKS.pv));
   }
+  /* la modale de contact vit dans son propre fichier : elle emprunte le verrou */
+  window.TI_LOCK = { lock: lock, unlock: unlock };
+
   /* filet de sécurité : si un verrou traîne sans panneau ouvert, on libère */
   function auditLocks() {
     var d = document.getElementById('drawer');
@@ -167,6 +170,8 @@
     var pvEl = document.getElementById('pv');
     if (LOCKS.pv && (!pvEl || pvEl.hidden)) unlock('pv');
     if (LOCKS.cart && (!c || c.hidden)) unlock('cart');
+    var ctEl = document.getElementById('ct');
+    if (LOCKS.contact && (!ctEl || ctEl.hidden)) unlock('contact');
   }
   setInterval(auditLocks, 1200);
   window.addEventListener('pageshow', auditLocks);
@@ -1360,6 +1365,7 @@
   if (!el) return;
   var PH = ['is-p1', 'is-p2', 'is-p3', 'is-p4'];
   var AT = [60, 1150, 2060, 2820];
+  var ijc = document.getElementById('rebijc');
   var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
   var timers = [];
 
@@ -1368,10 +1374,18 @@
     el.classList.remove('no-anim');
     PH.forEach(function (c) { el.classList.remove(c); });
     void el.offsetWidth;
-    if (mq.matches) { el.classList.add('no-anim'); PH.forEach(function (c) { el.classList.add(c); }); return; }
+    if (ijc) ijc.classList.remove('is-on');
+    if (mq.matches) {
+      el.classList.add('no-anim');
+      PH.forEach(function (c) { el.classList.add(c); });
+      if (ijc) ijc.classList.add('is-on');
+      return;
+    }
     PH.forEach(function (c, i) {
       timers.push(setTimeout(function () { el.classList.add(c); }, AT[i]));
     });
+    /* la signature Ici Japon Corp. arrive apres la rencontre, jamais avant */
+    if (ijc) timers.push(setTimeout(function () { ijc.classList.add('is-on'); }, AT[3] + 780));
   }
 
   var io = new IntersectionObserver(function (es) {
