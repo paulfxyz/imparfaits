@@ -28,22 +28,23 @@
 .tilogo__mk > svg, .tilogo__t > i, .tilogo__sl > i {
   display: block; min-width: 0; font-style: normal; white-space: nowrap;
 }
-/* le signe est detoure, pas en pastille : il prend la couleur du texte et
-   marche donc tel quel sur papier comme sur encre */
+/* le signe est un bloc arrondi plein en couleur de texte, les deux batons
+   etant des reserves paire-impaire : encre sur papier, papier sur encre,
+   sans variable de theme. La barre oblique reste rouge dans les deux cas. */
 .tilogo__mk { transform: translateX(-.28em) scale(.62) rotate(-12deg); }
-.tilogo__mk > svg { width: .9em; height: .9em; }
+.tilogo__mk > svg { width: 1em; height: 1em; }
 .tilogo__sl > i { color: var(--accent); font-variation-settings: 'wdth' 62, 'wght' 900; }
 /* le point separateur : il rime avec la barre rouge et aere le verrou sans
    ajouter de dessin. Il n’arrive qu’avec l’ecusson, en phase 4. */
 .tilogo__dot > i {
-  display: block; min-width: 0; width: .18em; height: .18em;
-  border-radius: 50%; background: var(--accent);
+  display: block; min-width: 0; width: .16em; height: .16em;
+  border-radius: .015em; background: var(--tl-dot, var(--accent));
 }
 
 .tilogo.p1 .tilogo__t  { grid-template-columns: 1fr; opacity: 1; margin-right: .26em; }
 .tilogo.p2 .tilogo__sl { grid-template-columns: 1fr; opacity: 1; margin: 0 .05em; }
 .tilogo.p3 .tilogo__t  { grid-template-columns: 0fr; opacity: 0; margin-right: 0; }
-.tilogo.p4 .tilogo__mk { grid-template-columns: 1fr; max-width: 1.4em; opacity: 1;
+.tilogo.p4 .tilogo__mk { grid-template-columns: 1fr; max-width: 1.55em; opacity: 1;
   margin-right: .24em; transform: none; }
 .tilogo.p4 .tilogo__dot { grid-template-columns: 1fr; max-width: .2em; opacity: 1;
   margin-right: .24em; }
@@ -60,7 +61,7 @@
   font-variation-settings: 'wdth' 88, 'wght' 700;
 }
 .tilogo--closer .tilogo__sl > i { font-variation-settings: 'wdth' 70, 'wght' 900; }
-.tilogo--closer .tilogo__mk > svg { width: 1.05em; height: 1.05em; }
+.tilogo--closer .tilogo__mk > svg { width: 1.14em; height: 1.14em; }
 .tilogo--closer.p2 .tilogo__sl { margin: 0 .1em 0 .04em; }
 .tilogo--ft { margin-bottom: 1rem; font-size: 1.5rem; color: var(--on-ink, var(--paper)); }
 /* hors lien, le curseur annonce qu'un clic rejoue l'intro */

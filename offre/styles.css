@@ -185,12 +185,14 @@ section.dark .card ul{color:#bdbdbd}
   font-weight:900;font-size:clamp(1.5rem,3.2vw,2.1rem);letter-spacing:-.02em;line-height:1}
 .price small{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
 /* le bareme du coefficient */
-.coef{margin:.85rem 0 0;display:grid;gap:1px;background:rgba(var(--ink-rgb),.1)}
-.coef>div{background:var(--surface);display:grid;grid-template-columns:2.3rem 1fr;
-  gap:.65rem;align-items:baseline;padding:.5rem .1rem .5rem 0}
-.coef dt{font-weight:800;font-size:.95rem;color:var(--accent);
-  font-variant-numeric:tabular-nums}
-.coef dd{margin:0;font-size:.86rem;line-height:1.45;color:var(--grey)}
+.coef{margin:.9rem 0 0;display:grid;gap:0;background:none;
+  border-top:1px solid rgba(var(--ink-rgb),.12)}
+.coef>div{background:none;display:grid;grid-template-columns:2.1rem 1fr;
+  gap:.7rem;align-items:baseline;padding:.52rem 0;
+  border-bottom:1px solid rgba(var(--ink-rgb),.12)}
+.coef dt{font-weight:800;font-size:.9rem;color:var(--accent);
+  font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.coef dd{margin:0;font-size:.855rem;line-height:1.45;color:var(--mut,var(--grey))}
 section.dark .steps span.stepmore{border-left-color:rgba(237,237,237,.24)}
 
 .rule{height:2px;background:var(--accent);width:44px;margin:0 0 1rem}

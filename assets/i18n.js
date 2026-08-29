@@ -36,7 +36,7 @@
     }
   };
 
-  var DICT_V = '21';       // version des dictionnaires (cache-busting)
+  var DICT_V = '22';       // version des dictionnaires (cache-busting)
   var cache = {};          // code -> dict
   var fragKeys = {};       // code -> [clés triées par longueur décroissante]
   var cur = 'fr';
@@ -61,12 +61,36 @@
     return el.getAttribute(k);
   }
 
-  /* ── traduction d'une chaîne ─────────────────────────────────── */
+  /* Les clés ont été extraites avec des espaces ordinaires, alors que le
+     HTML porte de vraies espaces insécables devant « : », « % », « € ».
+     Sans cette normalisation, une phrase entière restait en français dans
+     les neuf langues alors que sa traduction existait bel et bien. */
+  var NBSP = /[\u00a0\u202f\u2009]/g;
+  function nz(s) { return s.replace(NBSP, ' '); }
+
+  var NZFOR = null, NZMAP = null;
+  function nzmap(dict) {
+    if (NZFOR === dict) return NZMAP;
+    NZFOR = dict; NZMAP = {};
+    var ks = Object.keys(dict);
+    for (var i = 0; i < ks.length; i++) {
+      var f = nz(ks[i]);
+      if (NZMAP[f] === undefined) NZMAP[f] = dict[ks[i]];
+    }
+    return NZMAP;
+  }
+
+  /* ── traduction d'une chaîne ────────────────────────────── */
   function tr(raw, dict, frags) {
     if (!raw) return raw;
     var t = raw.trim();
     if (!t) return raw;
     var hit = dict[t];
+    if (hit === undefined) {
+      var f = nz(t);
+      if (f !== t) hit = dict[f];
+      if (hit === undefined) hit = nzmap(dict)[f];
+    }
     if (hit !== undefined) return raw.replace(t, hit);
     if (!frags.length) return raw;
     var out = raw, touched = false;

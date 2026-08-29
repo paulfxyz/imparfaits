@@ -1,5 +1,6 @@
 /* Les preuves — quatre scènes séquencées, jouées à l'entrée dans le viewport,
-   rejouables au clic. Chaque scène cumule les classes is-p1 → is-p4. */
+   rejouables au clic. Chaque scène cumule ses classes is-p1 → is-pN, N étant
+   donné par la longueur de sa cadence. */
 (function () {
   'use strict';
 
@@ -7,11 +8,18 @@
   if (!CARDS.length) return;
 
   var CALM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var PH = ['is-p1', 'is-p2', 'is-p3', 'is-p4'];
+  /* le nombre de temps est deduit de la cadence : une scene peut en compter
+     cinq la ou les autres en gardent quatre. */
+  function phases(n) {
+    var a = [], i;
+    for (i = 1; i <= n; i++) { a.push('is-p' + i); }
+    return a;
+  }
+  var ALL = phases(6);
 
   /* cadence propre à chaque scène (ms) */
   var TIME = {
-    lecture: [80, 760, 1560, 2560],
+    lecture: [80, 980, 1820, 2680, 3560],
     px: [120, 760, 1420, 2020],
     brode: [80, 700, 1500, 2200],
     cout: [80, 620, 1080, 2100]
@@ -20,6 +28,7 @@
   function make(card) {
     var kind = card.getAttribute('data-pv');
     var at = TIME[kind] || [80, 700, 1400, 2100];
+    var PH = phases(at.length);
     var timers = [];
     var done = false;
 
@@ -30,7 +39,7 @@
 
     function reset() {
       clear();
-      PH.forEach(function (c) { card.classList.remove(c); });
+      ALL.forEach(function (c) { card.classList.remove(c); });
     }
 
     function play() {
