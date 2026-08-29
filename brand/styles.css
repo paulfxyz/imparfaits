@@ -476,3 +476,58 @@ h1 em{font-style:normal;color:var(--accent)}
 .decide .rebanim__replay{color:#a4a4a4;border-bottom-color:rgba(237,237,237,.28)}
 .decide .rebanim__replay:hover,.decide .rebanim__replay:focus-visible{color:#ededed;border-color:var(--accent)}
 @media(max-width:620px){.decide__stage .rebframe{aspect-ratio:4/3}}
+
+/* ---- preuve 05 : l'animation de bascule ------------------------------- */
+/* le cadre est deja aux bonnes proportions : ici il ne fait que se caler
+   dans la scene 16/9 de la carte, avec un corps de texte reduit. */
+.pv-an{grid-template-rows:1fr auto;gap:.5rem;place-items:center}
+.pv-an__frame{width:100%;max-width:none;aspect-ratio:auto;height:auto;min-height:0;
+  font-size:clamp(1.3rem,4.6vw,2.2rem)}
+.pv--an .rebanim{font-size:clamp(1.3rem,4.6vw,2.2rem)}
+.pv-an__cap{font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);
+  text-align:center;opacity:0;transition:opacity .6s ease 2.6s}
+.pv--an .pv-an__cap{opacity:1}
+
+/* ---- preuve 06 : les declinaisons de l'ecusson ------------------------ */
+.pv-dc{place-items:center}
+.pvd{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(.5rem,1.6vw,1.1rem) clamp(.7rem,2.4vw,1.7rem);justify-items:center}
+.pvd__t{display:grid;justify-items:center;gap:.28rem;opacity:0;transform:translateY(8px) scale(.9);
+  transition:opacity .45s ease,transform .5s cubic-bezier(.16,.84,.32,1)}
+.pvd__sq{display:grid;place-items:center;width:clamp(38px,7.2vw,60px);aspect-ratio:1;
+  border-radius:4px;color:var(--ink)}
+.pvd__sq svg{display:block;width:76%;height:76%}
+.pvd__l{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);
+  font-variation-settings:'wght' 700;line-height:1}
+.pvd__s{font-size:.54rem;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);line-height:1}
+/* transparent : le damier passe a travers les deux reserves */
+.pvd__t--tr .pvd__sq{background-color:#fff;
+  background-image:linear-gradient(45deg,#dcdcdc 25%,transparent 25%,transparent 75%,#dcdcdc 75%),
+                   linear-gradient(45deg,#dcdcdc 25%,transparent 25%,transparent 75%,#dcdcdc 75%);
+  background-size:9px 9px;background-position:0 0,4.5px 4.5px;color:#0a0a0a;
+  box-shadow:inset 0 0 0 1px rgba(10,10,10,.16)}
+.pvd__t--wh .pvd__sq{background:#0a0a0a;color:#ededed}
+.pvd__t--bk .pvd__sq{background:#ededed;color:#0a0a0a;box-shadow:inset 0 0 0 1px rgba(10,10,10,.14)}
+/* en couleurs : bloc violet, barre menthe, sur un fond qui les separe */
+.pvd__t--co .pvd__sq{background:#d4fff8;color:#58468c}
+.pvd__t--co .pvd__sq svg path:last-child{stroke:#d64747}
+/* brode : le meme trace, pique en points de fil sur une toile */
+.pvd__t--br .pvd__sq{color:#0a0a0a;
+  background:repeating-linear-gradient(90deg,#e8e2d6 0 2px,#ddd5c6 2px 4px),
+             repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 2px,transparent 2px 4px);
+  box-shadow:inset 0 0 0 1px rgba(10,10,10,.16)}
+.pvd__st rect,.pvd__st line{fill:none;stroke:currentColor;stroke-linecap:round}
+.pvd__st rect{stroke-width:5;stroke-dasharray:5 4.4}
+.pvd__st rect:first-child{stroke-width:4;stroke-dasharray:6 5;opacity:.5}
+.pvd__st line{stroke:#d64747;stroke-width:8;stroke-dasharray:5.5 4.6}
+/* en 3D : le meme trace, extrude en couches vectorielles (donc net a toute
+   taille, et les deux reserves restent des reserves) */
+.pvd__t--td .pvd__sq{background:#ededed;color:#0a0a0a;box-shadow:inset 0 0 0 1px rgba(10,10,10,.14)}
+.pvd__t--td .pvd__sq svg{width:82%;height:82%}
+.pv[data-pv="decl"].is-p1 .pvd__t:nth-child(1),
+.pv[data-pv="decl"].is-p2 .pvd__t:nth-child(2),
+.pv[data-pv="decl"].is-p3 .pvd__t:nth-child(3),
+.pv[data-pv="decl"].is-p4 .pvd__t:nth-child(4),
+.pv[data-pv="decl"].is-p5 .pvd__t:nth-child(5),
+.pv[data-pv="decl"].is-p6 .pvd__t:nth-child(6){opacity:1;transform:none}
+@media(max-width:420px){.pvd{grid-template-columns:repeat(3,minmax(0,1fr))}.pvd__s{display:none}}
