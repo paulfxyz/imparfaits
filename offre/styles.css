@@ -357,3 +357,22 @@ html{scroll-behavior:auto}}
 @media (min-width:820px){.mix__cap{min-height:3em}}
 @media (max-width:760px){.mix__leg{grid-template-columns:repeat(2,1fr)}}
 @media (prefers-reduced-motion:reduce){.mix__seg{transition:none}}
+
+/* ── La facture (relevé d'usage) ───────────────────────────────── */
+.bill{margin-top:2rem;border:1px solid var(--line);background:var(--surface);
+  padding:clamp(1.15rem,3vw,1.8rem);display:grid;gap:clamp(1.1rem,3vw,1.9rem);
+  grid-template-columns:1fr;align-items:start}
+.bill__f{margin:0}
+.bill__f img{display:block;width:100%;max-width:348px;height:auto;
+  border:1px solid var(--line);background:#fff}
+.bill__f figcaption{margin-top:.5rem;font-size:.74rem;color:var(--grey)}
+.bill__k{display:block;font-size:.66rem;font-weight:800;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.bill__tx p{margin:0 0 .7rem;font-size:.95rem;line-height:1.62;color:var(--ink-2)}
+.bill__tx p:last-child{margin-bottom:0}
+.bill__tx b{color:var(--ink)}
+.bill__z{font-size:.88rem!important;border-left:3px solid var(--accent);
+  padding-left:.95rem;color:var(--mut)!important}
+.bill__b{font-size:.82rem!important;color:var(--grey)!important;
+  padding-top:.6rem;border-top:1px solid var(--line)}
+@media(min-width:820px){.bill{grid-template-columns:348px 1fr}}

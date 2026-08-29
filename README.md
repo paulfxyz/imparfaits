@@ -15,7 +15,7 @@ Pas envie de cloner ? Le site entier se télécharge en une archive : **[paulfle
 
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-0a0a0a?style=for-the-badge&labelColor=282828)](LICENSE)
 [![Prix](https://img.shields.io/badge/prix-0%20%E2%82%AC-d64747?style=for-the-badge&labelColor=282828)](offre/)
-[![Tokens](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20400%20%24%20de%20tokens-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
+[![Tokens](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20500%20%24%20de%20tokens-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 [![Temps](https://img.shields.io/badge/temps-4%20%C3%A0%205%20h-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 
 [![Le site refait](https://img.shields.io/badge/en%20ligne-paulfleury.com%2Fti-d64747?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/)
@@ -294,9 +294,16 @@ Par transparence, puisque le travail est offert et que la [page d'offre](https:/
 
 | Poste | Montant |
 |---|---|
-| **Tokens consommés par mes modèles** | **≈ 400 $** d'usage réel mesuré |
-| **Temps humain** | **4 à 5 h** — un dimanche après-midi : cadrage, recherche, direction artistique, arbitrages, relecture, QA |
+| **Usage de mes modèles** | **26 607 crédits** — soit **≈ 500 $** à 15–18 $ les mille crédits chez mon fournisseur privé |
+| **Temps humain** | **4 à 5 h** — un dimanche, en multitâche avec d’autres projets : cadrage, recherche, direction artistique, arbitrages, relecture, QA |
+| **Temps machine** | **une dizaine d’heures** de travail continu, en parallèle |
 | **Facturé à Ici Japon Corp** | **0 €** |
+
+<p align="center">
+  <img src=".github/img/usage.jpg" width="348" alt="Relevé d'usage : 26 607,26 crédits consommés, 10 h 15 min 17 s de travail, et 0,00 crédit en image, vidéo et audio.">
+  <br>
+  <sub>Le relevé brut, sans retouche. Les trois zéros — image, vidéo, audio — sont la preuve qu’aucun visuel n’a été généré.</sub>
+</p>
 
 **Aucune image n'a été générée par IA.** Toutes les photographies produit viennent du site réel — c'est un choix : une refonte se juge sur les vrais visuels de la marque, pas sur des rendus flatteurs qui n'existeront jamais en boutique.
 
@@ -422,7 +429,7 @@ Je construis mes propres produits — [Openline](https://openline.com) (opérate
 
 Avec mes équipes chez **[megastack.sh](https://megastack.sh)** et chez **[calliope.agency](https://calliope.agency)**, on a fini, à force, par développer nos propres modèles dédiés au **branding**, au **web design** et au **développement d'applications web**. Pas des prompts recyclés : des modèles entraînés et outillés pour ça, d'une efficacité assez folle. Ils tournent déjà sur mes propres boîtes — Openline, cupof.news — et sur les projets de nos clients.
 
-Ce dépôt est ce que ça donne : **≈ 400 $ de tokens et 4 à 5 h dessus** — un dimanche après-midi. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
+Ce dépôt est ce que ça donne : **≈ 500 $ de tokens et 4 à 5 h de mon temps** — un dimanche, en multitâche avec d’autres projets, pendant qu’une dizaine d’heures tournaient en fond. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
 
 Alors je me suis dit : tiens, je vais proposer de donner un coup de pouce à **Tev** et à l'équipe. 🤝
 
