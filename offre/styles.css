@@ -1,3 +1,4 @@
+@font-face{font-family:'ArchivoVar';src:url('../assets/fonts/archivo-var.woff2') format('woff2-variations');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
 @font-face{font-family:'Archivo';src:url('../assets/fonts/archivo-var.woff2') format('woff2-variations');font-weight:100 900;font-style:normal;font-display:swap}
 @font-face{font-family:'Archivo';src:url('../assets/fonts/archivo-var-italic.woff2') format('woff2-variations');font-weight:100 900;font-style:italic;font-display:swap}
 @font-face{font-family:'MinchoJP';src:url('../assets/fonts/mincho-jp-subset.woff2') format('woff2');font-weight:400;font-display:swap}

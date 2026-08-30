@@ -24,7 +24,9 @@
               opacity .3s var(--ease, cubic-bezier(.16, .84, .32, 1)), margin .5s var(--ease, cubic-bezier(.16, .84, .32, 1)),
               transform .52s cubic-bezier(.2, 1.5, .45, 1);
 }
-.tilogo__mk, .tilogo__dot { max-width: 0; }
+/* Etat de repos = IMPARFAITS seul : si le script d'intro ne tourne pas, le
+   verrou reste lisible au lieu d'afficher TOUS et la barre colles. */
+.tilogo__mk, .tilogo__dot, .tilogo__t, .tilogo__sl { max-width: 0; }
 .tilogo__mk > svg, .tilogo__t > i, .tilogo__sl > i {
   display: block; min-width: 0; font-style: normal; white-space: nowrap;
 }
@@ -41,9 +43,9 @@
   border-radius: .015em; background: var(--tl-dot, var(--accent));
 }
 
-.tilogo.p1 .tilogo__t  { grid-template-columns: 1fr; opacity: 1; margin-right: .26em; }
-.tilogo.p2 .tilogo__sl { grid-template-columns: 1fr; opacity: 1; margin: 0 .05em; }
-.tilogo.p3 .tilogo__t  { grid-template-columns: 0fr; opacity: 0; margin-right: 0; }
+.tilogo.p1 .tilogo__t  { grid-template-columns: 1fr; max-width: 12em; opacity: 1; margin-right: .26em; }
+.tilogo.p2 .tilogo__sl { grid-template-columns: 1fr; max-width: 1em; opacity: 1; margin: 0 .05em; }
+.tilogo.p3 .tilogo__t  { grid-template-columns: 0fr; max-width: 0; opacity: 0; margin-right: 0; }
 .tilogo.p4 .tilogo__mk { grid-template-columns: 1fr; max-width: 1.55em; opacity: 1;
   margin-right: .24em; transform: none; }
 .tilogo.p4 .tilogo__dot { grid-template-columns: 1fr; max-width: .2em; opacity: 1;
@@ -74,3 +76,27 @@
 /* hors lien, le curseur annonce qu'un clic rejoue l'intro */
 .tilogo--closer, .tilogo--ft { cursor: pointer; }
 @media (max-width: 560px) { .tilogo--hdr { font-size: 1.1rem; } }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Verrou d'isolement : le logo est un dessin, pas du texte.
+   Aucune regle de langue (html[lang="ja"] et sa pile japonaise), de titre ou
+   de theme ne doit l'atteindre — il garde sa fonte, sa casse et sa ligne
+   insecable quelle que soit la langue affichee, et il n'est jamais traduit
+   (translate="no" dans le balisage).
+   ═══════════════════════════════════════════════════════════════════════════ */
+.tilogo, .tilogo *,
+html[lang] .tilogo, html[lang] .tilogo *,
+html[data-lang] .tilogo, html[data-lang] .tilogo * {
+  font-family: 'ArchivoVar', 'Archivo', system-ui, sans-serif !important;
+  font-style: normal !important;
+  font-feature-settings: normal !important;
+  font-synthesis: none;
+  text-transform: uppercase !important;
+  writing-mode: horizontal-tb !important;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
+  line-break: auto !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+}
