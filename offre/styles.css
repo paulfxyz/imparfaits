@@ -353,13 +353,13 @@ html{scroll-behavior:auto}}
 .mix__seg[data-s="0"]{background:var(--c0)} .mix__seg[data-s="1"]{background:var(--c1)}
 .mix__seg[data-s="2"]{background:var(--c2)} .mix__seg[data-s="3"]{background:var(--c3)}
 .mix__leg{list-style:none;margin:.8rem 0 0;padding:0;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem clamp(.6rem,1.6vw,1.4rem)}
-.mix__leg li{display:flex;align-items:center;gap:.45rem;min-width:0;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem clamp(.6rem,1.6vw,1.4rem)}
+.mix__leg li{display:flex;align-items:baseline;gap:.45rem;min-width:0;
   font-size:.82rem;color:var(--grey)}
-.mix__leg i{width:.6rem;height:.6rem;flex:0 0 auto}
+.mix__leg i{width:.6rem;height:.6rem;flex:0 0 auto;transform:translateY(-.05rem)}
 .mix__leg li[data-l="0"] i{background:var(--c0)} .mix__leg li[data-l="1"] i{background:var(--c1)}
 .mix__leg li[data-l="2"] i{background:var(--c2)} .mix__leg li[data-l="3"] i{background:var(--c3)}
-.mix__leg b{color:var(--ink);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mix__leg b{color:var(--ink);font-weight:700;min-width:0;overflow-wrap:break-word;line-height:1.25}
 .mix__leg em{font-style:normal;font-weight:800;color:var(--ink);margin-left:.4rem;
   font-variant-numeric:tabular-nums;flex:0 0 auto}
 .mix__tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:clamp(1.3rem,2.4vw,1.8rem)}
@@ -372,7 +372,8 @@ html{scroll-behavior:auto}}
 .mix__cap{margin:.9rem 0 0;font-size:.9rem;line-height:1.5;color:var(--ink-2);
   max-width:72ch;min-height:4.5em}
 @media (min-width:820px){.mix__cap{min-height:3em}}
-@media (max-width:760px){.mix__leg{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:1060px){.mix__leg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.mix__leg{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.mix__seg{transition:none}}
 
 /* ── La facture (relevé d'usage) ───────────────────────────────── */

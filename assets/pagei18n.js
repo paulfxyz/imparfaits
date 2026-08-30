@@ -12,7 +12,7 @@
 (function () {
   'use strict';
 
-  var VER = '2';
+  var VER = '3';
   var KEY = 'ti-lang';
 
   var LANGS = [
