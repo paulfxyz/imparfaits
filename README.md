@@ -15,7 +15,7 @@ Pas envie de cloner ? Le site entier se télécharge en une archive : **[paulfle
 
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-0a0a0a?style=for-the-badge&labelColor=282828)](LICENSE)
 [![Prix](https://img.shields.io/badge/prix-0%20%E2%82%AC-d64747?style=for-the-badge&labelColor=282828)](offre/)
-[![Tokens](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20500%20%24%20de%20tokens-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
+[![Crédits](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20500%20%24%20de%20cr%C3%A9dits-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 [![Temps](https://img.shields.io/badge/temps-4%20%C3%A0%205%20h-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 
 [![Le site refait](https://img.shields.io/badge/en%20ligne-paulfleury.com%2Fti-d64747?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/)
@@ -294,10 +294,12 @@ Par transparence, puisque le travail est offert et que la [page d'offre](https:/
 
 | Poste | Montant |
 |---|---|
-| **Usage de mes modèles** | **26 607 crédits** — soit **≈ 500 $** à 15–18 $ les mille crédits chez mon fournisseur privé |
+| **Usage de mes modèles** | **26 607 crédits** — soit **≈ 500 $** à 17–22 $ les mille crédits chez mon fournisseur privé, selon la complexité des tâches |
 | **Temps humain** | **4 à 5 h** — un dimanche, en multitâche avec d’autres projets : cadrage, recherche, direction artistique, arbitrages, relecture, QA |
 | **Temps machine** | **une dizaine d’heures** de travail continu, en parallèle |
 | **Facturé à Ici Japon Corp** | **0 €** |
+
+> **Un crédit n’est pas un token.** C’est l’unité de compte de mon fournisseur : elle agrège **des millions de tokens** consommés sur **des dizaines de modèles et de services d’IA** — Anthropic, OpenAI, Google, Mistral, Alibaba, OpenRouter et d’autres — auxquels s’ajoutent le raisonnement, les recherches, les lectures de pages et les outils appelés en route. Pour ne pas mélanger deux unités, ce dépôt et la page d’offre ne parlent que de **crédits**.
 
 <p align="center">
   <img src=".github/img/usage.jpg" width="348" alt="Relevé d'usage : 26 607,26 crédits consommés, 10 h 15 min 17 s de travail, et 0,00 crédit en image, vidéo et audio.">
@@ -376,7 +378,7 @@ Quatre marches, par ordre croissant d'engagement — et d'autonomie retrouvée.
 | **1** | **Découper en thème Shopify** | Sections éditables, blocs réutilisables, panier et checkout natifs, métachamps par univers. Livré prêt à publier. |
 | **2** | **Entourer Shopify** | On garde Shopify pour l'encaissement et la conformité, on reprend tout le reste : vitrine statique et rapide, catalogue et contenu sortis de l'admin, vues manquantes construites. Le moins risqué. |
 | **3** | **Sortir de Shopify** — 👍 **vivement conseillé** | **Stripe en direct** (Apple Pay, Google Pay, PayPal, SEPA, taxes), **base NoSQL sécurisée** pour catalogue / stocks / commandes / clients, **API propre**, et un **serveur MCP** par-dessus pour brancher stocks et contenu sur **Notion, Airtable, ClickUp**, un tableur ou directement des agents. La marge, la vitesse et la propriété des données reviennent à la maison. |
-| **4** | **Une infra in-house** | **n8n** auto-hébergé pour les automatisations (commandes, e-mails, stocks, alertes, publication), **Ollama** et des **modèles auto-hébergés** pour la rédaction, la traduction, le tri du support et la modération. Sur vos machines : pas de facture au token, pas de données chez un tiers. Plus serveurs, réseau fermé par défaut, sauvegardes, monitoring. |
+| **4** | **Une infra in-house** | **n8n** auto-hébergé pour les automatisations (commandes, e-mails, stocks, alertes, publication), **Ollama** et des **modèles auto-hébergés** pour la rédaction, la traduction, le tri du support et la modération. Sur vos machines : pas de facture à l’usage, pas de données chez un tiers. Plus serveurs, réseau fermé par défaut, sauvegardes, monitoring. |
 
 La marche 3 est celle que je recommande : le MCP est la vraie bascule, parce qu'il rend la boutique pilotable depuis les outils que l'équipe utilise déjà, sans jamais toucher au code.
 
@@ -429,7 +431,7 @@ Je construis mes propres produits — [Openline](https://openline.com) (opérate
 
 Avec mes équipes chez **[megastack.sh](https://megastack.sh)** et chez **[calliope.agency](https://calliope.agency)**, on a fini, à force, par développer nos propres modèles dédiés au **branding**, au **web design** et au **développement d'applications web**. Pas des prompts recyclés : des modèles entraînés et outillés pour ça, d'une efficacité assez folle. Ils tournent déjà sur mes propres boîtes — Openline, cupof.news — et sur les projets de nos clients.
 
-Ce dépôt est ce que ça donne : **≈ 500 $ de tokens et 4 à 5 h de mon temps** — un dimanche, en multitâche avec d’autres projets, pendant qu’une dizaine d’heures tournaient en fond. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
+Ce dépôt est ce que ça donne : **≈ 500 $ de crédits et 4 à 5 h de mon temps** — un dimanche, en multitâche avec d’autres projets, pendant qu’une dizaine d’heures tournaient en fond. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
 
 Alors je me suis dit : tiens, je vais proposer de donner un coup de pouce à **Tev** et à l'équipe. 🤝
 

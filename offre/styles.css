@@ -392,6 +392,9 @@ html{scroll-behavior:auto}}
 .bill__tx b{color:var(--ink)}
 .bill__z{font-size:.88rem!important;border-left:3px solid var(--accent);
   padding-left:.95rem;color:var(--mut)!important}
+.bill__n{font-size:.86rem!important;color:var(--mut)!important;
+  background:rgba(var(--ink-rgb),.045);border:1px solid var(--line);
+  border-radius:.55rem;padding:.72rem .85rem}
 .bill__b{font-size:.82rem!important;color:var(--grey)!important;
   padding-top:.6rem;border-top:1px solid var(--line)}
 @media(min-width:820px){.bill{grid-template-columns:348px 1fr}}
