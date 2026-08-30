@@ -215,6 +215,7 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 }
 .hdr.is-hidden { transform: translateY(-102%); }
 .hdr__in { display: flex; align-items: center; gap: 1.5rem; height: 74px; }
+.hdr__logo { display: flex; align-items: center; }
 .hdr__logo img { height: 40px; width: auto; object-fit: contain; }
 .hdr__nav { display: flex; gap: clamp(.5rem, 1.4vw, 1.4rem); margin-left: auto; }
 .hdr__nav a {
@@ -1214,6 +1215,18 @@ body.locked .stickybar { display: none; }
   .burger { display: flex; order: 2; margin-left: .35rem; }
   .hdr__cart { order: 3; margin-left: 0; }
   .pay__note { margin-left: 0; width: 100%; }
+}
+/* sous 560 px, l'entete tenait juste trop large : le panier depassait le bord */
+@media (max-width: 560px) {
+  .hdr__in { gap: .55rem; }
+  .hdr__cart { padding: .6rem .8rem; gap: .4rem; letter-spacing: .1em; }
+  .themetog--hdr { margin-left: auto; }
+}
+/* et sous 400 px (iPhone SE / mini), on serre encore d'un cran */
+@media (max-width: 400px) {
+  .hdr__in { gap: .35rem; }
+  .hdr .tilogo--hdr { font-size: .98rem; }
+  .hdr__cart { padding: .55rem .6rem; font-size: .66rem; letter-spacing: .06em; margin-left: .25rem; }
 }
 @media (max-width: 720px) {
   .hero__vert { display: none; }
