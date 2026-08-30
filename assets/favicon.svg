@@ -4,7 +4,7 @@
     .bloc { fill: #0a0a0a }
     @media (prefers-color-scheme: dark) { .bloc { fill: #ededed } }
   </style>
-  <rect class="bloc" x="0" y="19" width="26" height="62"/>
-  <rect class="bloc" x="74" y="19" width="26" height="62"/>
-  <path d="M63 31 L37 69" fill="none" stroke="#d64747" stroke-width="23" stroke-linecap="round"/>
+  <rect class="bloc" x="0" y="30" width="26" height="40"/>
+  <rect class="bloc" x="74" y="30" width="26" height="40"/>
+  <path d="M72 13 L28 87" fill="none" stroke="#d64747" stroke-width="26" stroke-linecap="round"/>
 </svg>
