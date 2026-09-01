@@ -22,12 +22,12 @@
   display: block; flex: none; height: 1px; background: rgba(var(--ink-rgb), .28);
   width: 0; transition: width .68s var(--ease, cubic-bezier(.16, .84, .32, 1)) .1s;
 }
-.rebnom.is-on .rebnom__r { width: clamp(30px, 7vw, 68px); }
+.rebnom.is-on .rebnom__r { width: clamp(38px, 8.5vw, 88px); }
 .rebnom__t {
   font-family: 'ArchivoVar', 'Archivo', system-ui, sans-serif;
   font-variation-settings: 'wdth' 90, 'wght' 700;
-  text-transform: uppercase; font-size: clamp(.62rem, 1.7vw, 1rem);
-  letter-spacing: .26em; padding-left: .13em;
+  text-transform: uppercase; font-size: clamp(.9rem, 2.7vw, 1.62rem);
+  letter-spacing: .24em; padding-left: .12em;
   color: var(--mut, var(--grey)); white-space: nowrap;
 }
 @media (prefers-reduced-motion: reduce) {
