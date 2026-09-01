@@ -10,6 +10,30 @@
 }
 @media (max-width: 620px) { .rebframe { aspect-ratio: 4 / 3; } }
 
+/* ── le nom parle, entre le logo et la signature ─────────────────────────── */
+.rebnom {
+  display: flex; flex-direction: column; align-items: center;
+  gap: clamp(.5rem, 1.5vh, .95rem);
+  opacity: 0; transform: translateY(9px);
+  transition: opacity .55s var(--ease, cubic-bezier(.16, .84, .32, 1)), transform .65s var(--ease, cubic-bezier(.16, .84, .32, 1));
+}
+.rebanim.is-p5 ~ .rebnom, .rebnom.is-on { opacity: 1; transform: none; }
+.rebnom__r {
+  display: block; flex: none; height: 1px; background: rgba(var(--ink-rgb), .28);
+  width: 0; transition: width .68s var(--ease, cubic-bezier(.16, .84, .32, 1)) .1s;
+}
+.rebnom.is-on .rebnom__r { width: clamp(30px, 7vw, 68px); }
+.rebnom__t {
+  font-family: 'ArchivoVar', 'Archivo', system-ui, sans-serif;
+  font-variation-settings: 'wdth' 90, 'wght' 700;
+  text-transform: uppercase; font-size: clamp(.62rem, 1.7vw, 1rem);
+  letter-spacing: .26em; padding-left: .13em;
+  color: var(--mut, var(--grey)); white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rebnom, .rebnom__r { transition: none; }
+}
+
 /* ── la signature Ici Japon Corp., a la fin de la rencontre ──────────────── */
 .rebijc {
   display: flex; align-items: center; justify-content: center; gap: clamp(.55rem, 1.6vw, .95rem);

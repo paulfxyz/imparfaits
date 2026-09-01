@@ -11,6 +11,7 @@
   function wire(el) {
   var box = el.closest('[data-reb-scene]') || el.parentNode;
   var ijc = box.querySelector('[data-rebijc]');
+  var nom = box.querySelector('[data-rebnom]');
   var timers = [];
 
   function play() {
@@ -19,9 +20,11 @@
     PH.forEach(function (c) { el.classList.remove(c); });
     void el.offsetWidth;
     if (ijc) ijc.classList.remove('is-on');
+    if (nom) nom.classList.remove('is-on');
     if (mq.matches) {
       el.classList.add('no-anim');
       PH.forEach(function (c) { el.classList.add(c); });
+      if (nom) nom.classList.add('is-on');
       if (ijc) ijc.classList.add('is-on');
       return;
     }
@@ -29,6 +32,8 @@
       timers.push(setTimeout(function () { el.classList.add(c); }, AT[i]));
     });
     /* la signature Ici Japon Corp. arrive apres la rencontre, jamais avant */
+    /* le nom parle arrive juste apres la rencontre, avant la signature */
+    if (nom) timers.push(setTimeout(function () { nom.classList.add('is-on'); }, AT[3] + 420));
     if (ijc) timers.push(setTimeout(function () { ijc.classList.add('is-on'); }, AT[3] + 780));
   }
 
