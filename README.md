@@ -290,22 +290,15 @@ Et aussi : **pas de backend, pas de base de données, pas d'API**. C'est volonta
 
 ## 💰 Ce que ça a coûté, vraiment
 
-Par transparence, puisque le travail est offert et que la [page d'offre](https://paulfleury.com/ti/offre/) parle d'argent.
+Par transparence, puisque le travail est offert : voici l'ordre de grandeur, donné pour l'échelle et pas pour facturation.
 
 | Poste | Montant |
 |---|---|
-| **Usage de mes modèles** | **26 607 crédits** — soit **≈ 500 $** à 17–22 $ les mille crédits chez mon fournisseur privé, selon la complexité des tâches |
-| **Temps humain** | **4 à 5 h** — un dimanche, en multitâche avec d’autres projets : cadrage, recherche, direction artistique, arbitrages, relecture, QA |
-| **Temps machine** | **une dizaine d’heures** de travail continu, en parallèle |
+| **Usage de mes modèles** | **≈ 800 à 900 $** de crédits chez mon fournisseur privé, selon la complexité des tâches |
+| **Session de travail** | **17 h 26** — un week-end, en multitâche avec mes autres projets : cadrage, recherche, direction artistique, arbitrages, relecture et QA d'un côté, production des agents de l'autre |
 | **Facturé à Ici Japon Corp** | **0 €** |
 
 > **Un crédit n’est pas un token.** C’est l’unité de compte de mon fournisseur : elle agrège **des millions de tokens** consommés sur **des dizaines de modèles et de services d’IA** — Anthropic, OpenAI, Google, Mistral, Alibaba, OpenRouter et d’autres — auxquels s’ajoutent le raisonnement, les recherches, les lectures de pages et les outils appelés en route. Pour ne pas mélanger deux unités, ce dépôt et la page d’offre ne parlent que de **crédits**.
-
-<p align="center">
-  <img src=".github/img/usage.jpg" width="348" alt="Relevé d'usage : 26 607,26 crédits consommés, 10 h 15 min 17 s de travail, et 0,00 crédit en image, vidéo et audio.">
-  <br>
-  <sub>Le relevé brut, sans retouche. Les trois zéros — image, vidéo, audio — sont la preuve qu’aucun visuel n’a été généré.</sub>
-</p>
 
 **Aucune image n'a été générée par IA.** Toutes les photographies produit viennent du site réel — c'est un choix : une refonte se juge sur les vrais visuels de la marque, pas sur des rendus flatteurs qui n'existeront jamais en boutique.
 
@@ -406,18 +399,9 @@ Les six catégories annoncées dans [« On doit recommencer Tous Imparfaits »](
 
 **Je peux faire ce découpage.** C'est le premier point de la [page d'offre](https://paulfleury.com/ti/offre/).
 
-### Sur le long terme, comment je travaille
+### Sur le long terme, si jamais
 
-La [page d'offre](https://paulfleury.com/ti/offre/#argent) propose quatre façons de faire, dont une qui dépasse la prestation : un **fixe mensuel à trois fois le SMIC brut** (≈ 5 600 € sur la base du [SMIC au 1ᵉʳ juin 2026](https://code.travail.gouv.fr/actualite/le-smic-augmente-au-1er-juin-2026-etes-vous-concerne)) plus des **actions ou un intéressement** sur les projets où mon impact est mesurable.
-
-Ce que ça veut dire en pratique, parce que c'est la partie qui compte :
-
-- **Sans deadline.** Aucun rétro-planning tendu, aucun sprint, aucune pression de part et d'autre.
-- **En temps très partiel, mais régulièrement.** Tranquillement, sur mon temps libre, en alternance avec mes propres boîtes — et ça avance chaque semaine plutôt que par à-coups.
-- **Sur tous les détails et tous les projets souhaités.** Périmètre ouvert : le site, la marque, les automatisations, l'infra, les petits trucs qui traînent depuis deux ans.
-- **Un rapport prix / qualité / délai très efficace.** C'est exactement ce que démontre ce dépôt : les modèles absorbent le volume, je n'arbitre que le goût et les priorités.
-- **Sans deadline ne veut pas dire à petit impact.** C'est l'inverse : le temps que je ne passe pas à tenir un planning, je le passe sur le fond — améliorer ce qui tourne, **refonder** ce qui ne tient plus, **innover** là où personne n'a eu le temps de regarder.
-- **Sur toutes les entités, sans limite de sujet.** La boutique, la marque, les chaînes, l'esport, les outils internes, ce qui n'existe pas encore — et côté technique : web, design, infrastructure, données, IA, automatisation, sécurité. Un an de ce régime change une boîte beaucoup plus qu'un trimestre de sprints.
+La [page d'offre](https://paulfleury.com/ti/offre/#faire) ne vend rien : elle liste simplement les trois choses sur lesquelles j'aide le plus souvent — le découpage en thème Shopify, d'autres refontes graphiques, des automatisations et des optimisations opérationnelles. Avec la réserve dite franchement : peu de disponibilité, des rémunérations qui ne sont pas franchement abordables, donc pas forcément le bon fit. Le template reste offert dans tous les cas.
 
 ---
 
@@ -425,7 +409,7 @@ Ce que ça veut dire en pratique, parce que c'est la partie qui compte :
 
 **Paul Fleury** — ancien de l'ingénierie sociale au service du renseignement, aujourd'hui entrepreneur Internet entre **New York** et **Lisbonne**, consultant sur deux sujets : **cybersécurité** et **IA appliquée**.
 
-Je construis mes propres produits — [Openline](https://openline.com) (opérateur eSIM), [cupof.news](https://cupof.news) (app de news) — et je travaille avec mes équipes chez [megastack.sh](https://megastack.sh) (infrastructure et déploiement), [calliope.agency](https://calliope.agency) (branding, web et IA) et [enki.ngo](https://enki.ngo) (IA locale et décentralisée). J'interviens sur les produits des autres quand le sujet me plaît. Celui-là me plaît depuis 2020.
+Je construis mes propres produits — [Openline](https://openline.com) (opérateur eSIM), [cupof.news](https://cupof.news) (app de news) — et je travaille avec mes équipes chez [megastack.sh](https://megastack.sh) (infrastructure et déploiement), [calliope.agency](https://calliope.agency) (branding, web et IA). J'interviens sur les produits des autres quand le sujet me plaît. Celui-là me plaît depuis 2020.
 
 ### Pourquoi un après-midi suffit
 
