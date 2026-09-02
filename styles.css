@@ -217,7 +217,7 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 .hdr__in { display: flex; align-items: center; gap: 1.5rem; height: 74px; }
 .hdr__logo { display: flex; align-items: center; }
 .hdr__logo img { height: 40px; width: auto; object-fit: contain; }
-.hdr__nav { display: flex; gap: clamp(.5rem, 1.4vw, 1.4rem); margin-left: auto; }
+.hdr__nav { display: flex; gap: clamp(.4rem, 1.1vw, 1.15rem); margin-left: auto; }
 .hdr__nav a {
   font-size: .74rem; text-transform: uppercase; letter-spacing: .16em;
   font-variation-settings: 'wdth' 100, 'wght' 700;
@@ -228,7 +228,7 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 .nav__t {
   display: inline-flex; align-items: center; gap: .4rem; border: 0; background: none; padding: .55rem 0;
   cursor: pointer; font: inherit; color: var(--ink); white-space: nowrap;
-  font-size: .74rem; text-transform: uppercase; letter-spacing: .16em;
+  font-size: .74rem; text-transform: uppercase; letter-spacing: .13em;
   font-variation-settings: 'wdth' 100, 'wght' 700;
 }
 .nav__t::after {
@@ -791,10 +791,111 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 
 
 .reb__grid { display: grid; gap: clamp(1.2rem, 2.6vw, 2.2rem); grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.rebcard { border-top: 2px solid var(--accent); padding-top: 1.1rem; min-width: 0; }
+/* Chaque bloc porte sa propre demonstration : un visuel anime en tete, la
+   legende dessous, puis le texte. Six blocs, six preuves. */
+.rebcard { border-top: 2px solid var(--accent); padding-top: 1.1rem; min-width: 0; display: flex; flex-direction: column; }
+.rebcard__vis {
+  width: 100%; min-height: 152px; display: grid; place-items: center;
+  padding: 1.3rem; margin-bottom: .75rem; overflow: hidden;
+  background: var(--paper-warm); border: 1px solid rgba(var(--ink-rgb), .1);
+}
+.rebcard__lab { color: var(--mut-2); margin: 0 0 1rem; }
 .rebcard__k { font-size: .68rem; letter-spacing: .17em; text-transform: uppercase; color: var(--accent); }
 .rebcard h3 { margin: .5rem 0 .6rem; font-size: clamp(1.05rem, 1.7vw, 1.3rem); font-variation-settings: 'wdth' 88, 'wght' 750; line-height: 1.2; }
 .rebcard p { color: var(--mut); font-size: .93rem; }
+.rebcard p + p { margin-top: .55rem; }
+
+/* L'ecran d'accueil est sombre dans les deux themes : la marque s'y pose en clair. */
+.rebcard__vis--ink { background: #0a0a0a; border-color: rgba(237,237,237,.14); color: #ededed; }
+/* Fond ajoure : le damier passe a travers les deux reserves. */
+.rebcard__vis--tr {
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(45deg, rgba(var(--ink-rgb), .08) 25%, transparent 25% 75%, rgba(var(--ink-rgb), .08) 75%),
+    linear-gradient(45deg, rgba(var(--ink-rgb), .08) 25%, transparent 25% 75%, rgba(var(--ink-rgb), .08) 75%);
+  background-size: 18px 18px; background-position: 0 0, 9px 9px;
+}
+/* Trame textile : la chaine et la trame d'une etiquette tissee. */
+.rebcard__vis--weave {
+  background-color: var(--surface);
+  background-image:
+    repeating-linear-gradient(90deg, rgba(var(--ink-rgb), .09) 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(0deg, rgba(var(--ink-rgb), .09) 0 1px, transparent 1px 6px);
+}
+
+/* Bloc 1 : le domaine et le pseudo, inchanges. Le curseur clignote dans la barre. */
+.urlmock { display: grid; gap: .6rem; justify-items: center; max-width: 100%; }
+.urlmock__b {
+  display: inline-flex; align-items: center; max-width: 100%; padding: .5rem .85rem;
+  background: var(--surface); border: 1px solid rgba(var(--ink-rgb), .14); border-radius: 999px;
+  font-size: .8rem; letter-spacing: .01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.urlmock__b::after {
+  content: ''; width: 1px; height: 1em; margin-left: .3em; background: var(--accent);
+  animation: urlcaret 1.1s steps(1, end) infinite;
+}
+.urlmock__h { font-size: .78rem; letter-spacing: .06em; color: var(--mut-2); }
+@keyframes urlcaret { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+
+/* Bloc 2 : le verrou anime, en petit. Il rejoue au survol et au clic. */
+.tilogo--card { font-size: clamp(1rem, 1.5vw, 1.22rem); cursor: pointer; }
+
+/* Bloc 3 : l'ecusson se pose comme un tampon, et se repose au survol. */
+.rebstamp { display: block; width: 88px; height: 88px; color: currentColor; }
+.rebstamp svg { display: block; width: 100%; height: 100%; }
+.rebcard__vis--tr:hover .rebstamp { animation: rebstamp .5s var(--ease, cubic-bezier(.16, .84, .32, 1)); }
+@keyframes rebstamp {
+  0% { transform: scale(1.14) rotate(-4deg); opacity: .55; }
+  60% { transform: scale(.97) rotate(1deg); opacity: 1; }
+  100% { transform: none; }
+}
+
+/* Bloc 4 : l'onglet a seize pixels, puis l'icone d'accueil et sa pastille. */
+.icnstack { display: grid; gap: 1rem; justify-items: center; }
+.icnstack__t .tabmock { animation: icnup .6s .1s var(--ease, cubic-bezier(.16, .84, .32, 1)) both; }
+.icnstack__i {
+  position: relative; display: block; width: 58px; height: 58px;
+  animation: icnup .6s .32s var(--ease, cubic-bezier(.16, .84, .32, 1)) both;
+}
+.icnstack__i svg { display: block; width: 100%; height: 100%; }
+.icnstack__bdg {
+  position: absolute; top: -7px; right: -7px; min-width: 19px; height: 19px; padding: 0 5px;
+  display: grid; place-items: center; border-radius: 999px; background: var(--accent); color: #fff;
+  font-family: 'ArchivoVar', system-ui, sans-serif; font-style: normal;
+  font-size: .64rem; font-variation-settings: 'wght' 700; line-height: 1;
+  animation: icnbdg 3.4s 1s ease-in-out infinite;
+}
+@keyframes icnup { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+@keyframes icnbdg { 0%, 82%, 100% { transform: none; } 88% { transform: scale(1.22); } 94% { transform: scale(.96); } }
+
+/* Bloc 5 : le contour se brode, boucle a boucle, puis la barre rouge passe. */
+.rebweave { display: block; width: 92px; height: 92px; color: currentColor; }
+.rebweave svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.rebweave path {
+  stroke-dasharray: 340; stroke-dashoffset: 340;
+  animation: rebstitch 7s ease-in-out infinite;
+}
+.rebweave .rebweave__l { animation-delay: .5s; }
+.rebweave .rebweave__r { animation-delay: .85s; }
+.rebweave .rebweave__s { animation-delay: 1.25s; }
+@keyframes rebstitch {
+  0% { stroke-dashoffset: 340; }
+  26%, 74% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -340; }
+}
+
+/* Bloc 6 : la barre reste a sa place, c'est la lecture qui bascule. */
+.rebflip {
+  font-family: 'ArchivoVar', 'Archivo', system-ui, sans-serif;
+  font-variation-settings: 'wdth' 74, 'wght' 800; text-transform: uppercase;
+  letter-spacing: -.015em; font-size: clamp(1.5rem, 3.4vw, 2.1rem); white-space: nowrap;
+}
+.rebflip__s { color: rgba(var(--ink-rgb), .28); animation: rebflip 4.6s ease-in-out infinite; }
+@keyframes rebflip {
+  0%, 42% { color: rgba(var(--ink-rgb), .28); transform: none; }
+  50%, 92% { color: var(--accent); transform: translateY(-.04em) scale(1.08); }
+  100% { color: rgba(var(--ink-rgb), .28); transform: none; }
+}
 
 .reb__read { margin-top: 1.1rem; display: grid; gap: .45rem; }
 .reb__readline { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
@@ -806,27 +907,6 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 .reb__rs--on { color: var(--accent); margin: 0 .1em; }
 .reb__readline em { font-style: normal; font-size: .78rem; letter-spacing: .04em; color: var(--mut-2); }
 
-.reb__uses { margin-top: clamp(2.2rem, 4.6vw, 3.4rem); display: grid; gap: clamp(1rem, 2.4vw, 1.8rem); grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.rebuse { display: flex; flex-direction: column; gap: .85rem; align-items: center; text-align: center; min-width: 0; }
-.rebuse__vis {
-  width: 100%; min-height: 138px; display: grid; place-items: center; padding: 1.4rem;
-  background: var(--paper-warm); border: 1px solid rgba(var(--ink-rgb), .1);
-}
-.rebuse__lab { color: var(--mut-2); }
-/* Le fond de l’écran d’accueil est sombre dans les deux thèmes : la marque s’y pose en clair. */
-.rebuse__vis--ink { background: #0a0a0a; border-color: rgba(237,237,237,.14); color: #ededed; }
-/* Fond ajouré : le damier passe à travers les deux réserves. */
-.rebuse__vis--tr {
-  background-color: var(--surface);
-  background-image:
-    linear-gradient(45deg, rgba(var(--ink-rgb), .08) 25%, transparent 25% 75%, rgba(var(--ink-rgb), .08) 75%),
-    linear-gradient(45deg, rgba(var(--ink-rgb), .08) 25%, transparent 25% 75%, rgba(var(--ink-rgb), .08) 75%);
-  background-size: 18px 18px; background-position: 0 0, 9px 9px;
-}
-.rebuse__ios, .rebuse__mark { display: block; color: currentColor; }
-.rebuse__ios { width: 82px; height: 82px; }
-.rebuse__mark { width: 88px; height: 88px; }
-.rebuse__ios svg, .rebuse__mark svg { display: block; width: 100%; height: 100%; }
 .tabmock {
   display: inline-flex; align-items: center; gap: .5rem; max-width: 100%;
   background: var(--surface); color: var(--ink); border: 1px solid rgba(var(--ink-rgb), .12); border-bottom: 0;
@@ -837,9 +917,18 @@ section[id], [id].sec { scroll-margin-top: clamp(78px, 11vh, 104px); }
 .tabmock__t { font-size: .74rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tabmock__x { font-size: .78rem; opacity: .4; flex: none; }
 
-@media (max-width: 900px) {
+@media (prefers-reduced-motion: reduce) {
+  .urlmock__b::after, .icnstack__t .tabmock, .icnstack__i, .icnstack__bdg,
+  .rebweave path, .rebflip__s { animation: none !important; }
+  .rebweave path { stroke-dashoffset: 0; }
+  .rebflip__s { color: var(--accent); }
+}
+
+@media (max-width: 1080px) {
+  .reb__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
   .reb__grid { grid-template-columns: 1fr; }
-  .reb__uses { grid-template-columns: 1fr; }
 }
 
 /* ---------- Moyens de paiement ---------- */

@@ -7,12 +7,17 @@
   var logos = [].slice.call(document.querySelectorAll('[data-tilogo]'));
   if (!logos.length) return;
 
-  /* Le verrou du header joue une phase de plus : l'ecusson se retire et
-     IM/PARFAITS glisse se ranger a gauche. Les autres verrous s'arretent a p4. */
+  /* Les verrous d'en-tete des trois pages (accueil, planche, offre) jouent une
+     phase de plus : l'ecusson se retire et IM/PARFAITS glisse se ranger a
+     gauche, seul. Les verrous de fin de page s'arretent a p4, avec le signe. */
   var PH = ['p1', 'p2', 'p3', 'p4', 'p5'];
   var STEP = [80, 720, 1360, 1700, 2760];
+  var TOP = ['tilogo--hdr', 'tilogo--nav', 'tilogo--board'];
   function steps(el) {
-    return el.classList.contains('tilogo--hdr') ? PH.length : 4;
+    for (var i = 0; i < TOP.length; i++) {
+      if (el.classList.contains(TOP[i])) return PH.length;
+    }
+    return 4;
   }
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -55,7 +60,7 @@
   });
 
   function start() {
-    var hdr = document.querySelector('.tilogo--hdr');
+    var hdr = document.querySelector('.tilogo--hdr, .tilogo--nav, .tilogo--board');
     if (hdr) play(hdr);
     var rest = logos.filter(function (el) { return el !== hdr; });
     if (!rest.length) return;

@@ -63,7 +63,12 @@
 }
 .tilogo.no-anim * { transition: none !important; }
 
-.tilogo--hdr { font-size: 1.32rem; }
+.tilogo--hdr { font-size: 1.32rem; transition: font-size .5s var(--ease, cubic-bezier(.16,.84,.32,1)); }
+/* Pendant l'intro, le verrou affiche encore le nom entier : a taille finale il
+   passait par-dessus le premier menu entre 860 et 1400 px. Il joue donc ses
+   trois premieres phases un cran plus petit, puis reprend sa taille. */
+.tilogo--hdr:not(.p4) { font-size: .95rem; }
+@media (prefers-reduced-motion: reduce) { .tilogo--hdr { transition: none; } }
 .tilogo--closer {
   justify-content: center; margin: 0 auto clamp(1.4rem, 2.6vw, 2.2rem);
   font-size: clamp(.95rem, 2vw, 1.4rem); letter-spacing: .16em;
@@ -74,7 +79,7 @@
 .tilogo--closer.p2 .tilogo__sl { margin: 0 .1em 0 .04em; }
 .tilogo--ft { margin-bottom: 1rem; font-size: 1.5rem; color: var(--on-ink, var(--paper)); }
 /* hors lien, le curseur annonce qu'un clic rejoue l'intro */
-.tilogo--closer, .tilogo--ft { cursor: pointer; }
+.tilogo--closer, .tilogo--ft, .tilogo--board { cursor: pointer; }
 @media (max-width: 560px) { .tilogo--hdr { font-size: 1.1rem; } }
 
 /* ═══════════════════════════════════════════════════════════════════════════
