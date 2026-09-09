@@ -362,15 +362,16 @@ Le fichier [`assets/asset-manifest.md`](assets/asset-manifest.md) documente **la
 
 ---
 
-## 🛍 Et après : de la découpe Shopify à l'infra maison
+## 🛍 Roadmap — ce qu'il reste à faire
 
-Quatre marches, par ordre croissant d'engagement — et d'autonomie retrouvée.
+Cinq marches, par ordre croissant d'engagement — et d'autonomie retrouvée.
 
 | Marche | Ce qu'on fait | Ce que ça change |
 |:--:|---|---|
+| **0** | **Terminer les dernières vues** | Catégories, listings filtrables, recherche, compte client, suivi de commande : les écrans qui manquent pour que le parcours soit complet de bout en bout, dans la même grille et la même typographie. |
 | **1** | **Découper en thème Shopify** | Sections éditables, blocs réutilisables, panier et checkout natifs, métachamps par univers. Livré prêt à publier. |
-| **2** | **Entourer Shopify** | On garde Shopify pour l'encaissement et la conformité, on reprend tout le reste : vitrine statique et rapide, catalogue et contenu sortis de l'admin, vues manquantes construites. Le moins risqué. |
-| **3** | **Sortir de Shopify** — 👍 **vivement conseillé** | **Stripe en direct** (Apple Pay, Google Pay, PayPal, SEPA, taxes), **base NoSQL sécurisée** pour catalogue / stocks / commandes / clients, **API propre**, et un **serveur MCP** par-dessus pour brancher stocks et contenu sur **Notion, Airtable, ClickUp**, un tableur ou directement des agents. La marge, la vitesse et la propriété des données reviennent à la maison. |
+| **2** | **La vitrine chez vous, Shopify par API** | Le site part sur votre propre hébergement : plus rapide, plus de thème à maintenir, aucune contrainte de gabarit. Shopify se réduit à un back-office appelé par l'API — catalogue, stocks, commandes, encaissement — pendant que l'affichage, le contenu et les vues vous appartiennent. Le moins risqué des sauts. |
+| **3** | **S'en débarrasser** — 👍 **vivement conseillé** | **Stripe en direct** (Apple Pay, Google Pay, PayPal, SEPA, taxes), **base NoSQL sécurisée** pour catalogue / stocks / commandes / clients, **API propre**, et un **serveur MCP** par-dessus pour brancher stocks et contenu sur **Notion, Airtable, ClickUp**, un tableur ou directement des agents. La marge, la vitesse et la propriété des données reviennent à la maison. |
 | **4** | **Une infra in-house** | **n8n** auto-hébergé pour les automatisations (commandes, e-mails, stocks, alertes, publication), **Ollama** et des **modèles auto-hébergés** pour la rédaction, la traduction, le tri du support et la modération. Sur vos machines : pas de facture à l’usage, pas de données chez un tiers. Plus serveurs, réseau fermé par défaut, sauvegardes, monitoring. |
 
 La marche 3 est celle que je recommande : le MCP est la vraie bascule, parce qu'il rend la boutique pilotable depuis les outils que l'équipe utilise déjà, sans jamais toucher au code.
@@ -399,9 +400,9 @@ Les six catégories annoncées dans [« On doit recommencer Tous Imparfaits »](
 
 **Je peux faire ce découpage.** C'est le premier point de la [page d'offre](https://paulfleury.com/ti/offre/).
 
-### Sur le long terme, si jamais
+### Un coup de main, si besoin
 
-La [page d'offre](https://paulfleury.com/ti/offre/#faire) ne vend rien : elle liste simplement les trois choses sur lesquelles j'aide le plus souvent — le découpage en thème Shopify, d'autres refontes graphiques, des automatisations et des optimisations opérationnelles. Avec la réserve dite franchement : peu de disponibilité, des rémunérations qui ne sont pas franchement abordables, donc pas forcément le bon fit. Le template reste offert dans tous les cas.
+Rien à signer, rien à vendre : le template est offert quoi qu'il arrive. Si l'une de ces marches vous intéresse, c'est le genre de chantier sur lequel j'aide le plus souvent — en sachant que mes semaines sont déjà bien prises et que mes conditions se calent sur mon marché. Ça n'enlève rien au plaisir d'en parler : [hello@paulfleury.com](mailto:hello@paulfleury.com).
 
 ---
 
