@@ -15,7 +15,7 @@ Pas envie de cloner ? Le site entier se télécharge en une archive : **[paulfle
 
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-0a0a0a?style=for-the-badge&labelColor=282828)](LICENSE)
 [![Prix](https://img.shields.io/badge/prix-0%20%E2%82%AC-d64747?style=for-the-badge&labelColor=282828)](readme/)
-[![Crédits](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20500%20%24%20de%20cr%C3%A9dits-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
+[![Crédits](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20600%20%C3%A0%20700%20%24-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 [![Temps](https://img.shields.io/badge/temps-4%20%C3%A0%205%20h-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 
 [![Le site refait](https://img.shields.io/badge/en%20ligne-paulfleury.com%2Fti-d64747?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/)
@@ -294,11 +294,11 @@ Par transparence, puisque le travail est offert : voici l'ordre de grandeur, don
 
 | Poste | Montant |
 |---|---|
-| **Usage de mes modèles** | **≈ 800 à 900 $** de crédits chez mon fournisseur privé, selon la complexité des tâches |
+| **Usage de mes modèles** | **≈ 600 à 700 $** en équivalent token chez Anthropic, OpenAI, Mistral, Google, Alibaba et les autres |
 | **Session de travail** | **17 h 26** — un week-end, en multitâche avec mes autres projets : cadrage, recherche, direction artistique, arbitrages, relecture et QA d'un côté, production des agents de l'autre |
 | **Facturé à Ici Japon Corp** | **0 €** |
 
-> **Un crédit n’est pas un token.** C’est l’unité de compte de mon fournisseur : elle agrège **des millions de tokens** consommés sur **des dizaines de modèles et de services d’IA** — Anthropic, OpenAI, Google, Mistral, Alibaba, OpenRouter et d’autres — auxquels s’ajoutent le raisonnement, les recherches, les lectures de pages et les outils appelés en route. Pour ne pas mélanger deux unités, ce dépôt et la page d’offre ne parlent que de **crédits**.
+> **C’est un ordre de grandeur, pas une facture.** Le chiffre est une estimation en **équivalent token** : des millions de tokens consommés sur **des dizaines de modèles et de services d’IA** — Anthropic, OpenAI, Mistral, Google, Alibaba, OpenRouter et d’autres — auxquels s’ajoutent le raisonnement, les recherches, les lectures de pages et les outils appelés en route.
 
 **Aucune image n'a été générée par IA.** Toutes les photographies produit viennent du site réel — c'est un choix : une refonte se juge sur les vrais visuels de la marque, pas sur des rendus flatteurs qui n'existeront jamais en boutique.
 
@@ -416,7 +416,7 @@ Je construis mes propres produits — [Openline](https://openline.com) (opérate
 
 Avec mes équipes chez **[megastack.sh](https://megastack.sh)** et chez **[calliope.agency](https://calliope.agency)**, on a fini, à force, par développer nos propres modèles dédiés au **branding**, au **web design** et au **développement d'applications web**. Pas des prompts recyclés : des modèles entraînés et outillés pour ça, d'une efficacité assez folle. Ils tournent déjà sur mes propres boîtes — Openline, cupof.news — et sur les projets de nos clients.
 
-Ce dépôt est ce que ça donne : **≈ 500 $ de crédits et 4 à 5 h de mon temps** — un dimanche, en multitâche avec d’autres projets, pendant qu’une dizaine d’heures tournaient en fond. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
+Ce dépôt est ce que ça donne : **≈ 600 à 700 $ en équivalent token et 4 à 5 h de mon temps** — un dimanche, en multitâche avec d’autres projets, pendant qu’une dizaine d’heures tournaient en fond. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
 
 Alors je me suis dit : tiens, je vais proposer de donner un coup de pouce à **Tev** et à l'équipe. 🤝
 
