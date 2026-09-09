@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════════════
-   Tous Imparfaits — traduction des pages /offre et /brand
+   Tous Imparfaits — traduction des pages /readme et /brand
    Français, anglais, japonais. Les dictionnaires vivent dans
    <page>/i18n/<code>.json et sont produits par tools-i18n/extract.py :
      { "units": { "texte français": "<b>HTML</b> traduit" },

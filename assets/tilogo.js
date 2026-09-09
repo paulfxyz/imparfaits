@@ -7,7 +7,7 @@
   var logos = [].slice.call(document.querySelectorAll('[data-tilogo]'));
   if (!logos.length) return;
 
-  /* Les verrous d'en-tete des trois pages (accueil, planche, offre) jouent une
+  /* Les verrous d'en-tete des trois pages (accueil, planche, readme) jouent une
      phase de plus : l'ecusson se retire et IM/PARFAITS glisse se ranger a
      gauche, seul. Les verrous de fin de page s'arretent a p4, avec le signe. */
   var PH = ['p1', 'p2', 'p3', 'p4', 'p5'];

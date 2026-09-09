@@ -7,20 +7,20 @@
 **Une refonte complète de [tousimparfaits.com](https://tousimparfaits.com), offerte à [Ici Japon Corp](https://tousimparfaits.com) et à l'écosystème de [Tev](https://www.youtube.com/@IciJapon).**
 Landing page conversion-first · 9 langues · 60 pistes d'identité · zéro dépendance.
 
-Tout est en ligne, tout de suite : le site refait sur **[paulfleury.com/ti](https://paulfleury.com/ti/)**, les soixante pistes de logo sur **[paulfleury.com/ti/brand](https://paulfleury.com/ti/brand/)**, et ce que je peux faire ensuite sur **[paulfleury.com/ti/offre](https://paulfleury.com/ti/offre/)**.
+Tout est en ligne, tout de suite : le site refait sur **[paulfleury.com/ti](https://paulfleury.com/ti/)**, les soixante pistes de logo sur **[paulfleury.com/ti/brand](https://paulfleury.com/ti/brand/)**, et ce que je peux faire ensuite sur **[paulfleury.com/ti/readme](https://paulfleury.com/ti/readme/)**.
 
 Pas envie de cloner ? Le site entier se télécharge en une archive : **[paulfleury.com/ti/dump.zip](https://paulfleury.com/ti/dump.zip)** — les trois pages, les polices, les images et les neuf dictionnaires, prêts à ouvrir dans un serveur statique.
 
 <br>
 
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-0a0a0a?style=for-the-badge&labelColor=282828)](LICENSE)
-[![Prix](https://img.shields.io/badge/prix-0%20%E2%82%AC-d64747?style=for-the-badge&labelColor=282828)](offre/)
+[![Prix](https://img.shields.io/badge/prix-0%20%E2%82%AC-d64747?style=for-the-badge&labelColor=282828)](readme/)
 [![Crédits](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20500%20%24%20de%20cr%C3%A9dits-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 [![Temps](https://img.shields.io/badge/temps-4%20%C3%A0%205%20h-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 
 [![Le site refait](https://img.shields.io/badge/en%20ligne-paulfleury.com%2Fti-d64747?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/)
 [![La planche d'identité](https://img.shields.io/badge/60%20pistes-%2Fti%2Fbrand-0a0a0a?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/brand/)
-[![La page d'offre](https://img.shields.io/badge/l%27offre-%2Fti%2Foffre-0a0a0a?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/offre/)
+[![La page d'offre](https://img.shields.io/badge/l%27offre-%2Fti%2Freadme-0a0a0a?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/readme/)
 [![Télécharger le site](https://img.shields.io/badge/t%C3%A9l%C3%A9charger-dump.zip-d64747?style=for-the-badge&labelColor=282828&logo=files&logoColor=ededed)](https://paulfleury.com/ti/dump.zip)
 
 [![Langues](https://img.shields.io/badge/i18n-9%20langues-0a0a0a?style=flat-square&labelColor=282828)](#-internationalisation--9-langues)
@@ -30,13 +30,13 @@ Pas envie de cloner ? Le site entier se télécharge en une archive : **[paulfle
 [![HTML](https://img.shields.io/badge/HTML-5-e34f26?style=flat-square&labelColor=282828)](#-stack-technique)
 [![CSS](https://img.shields.io/badge/CSS-3-1572b6?style=flat-square&labelColor=282828)](#-stack-technique)
 [![JS](https://img.shields.io/badge/JavaScript-vanilla-f7df1e?style=flat-square&labelColor=282828)](#-stack-technique)
-[![Shopify](https://img.shields.io/badge/Shopify-pr%C3%AAt%20%C3%A0%20d%C3%A9couper-96bf48?style=flat-square&labelColor=282828)](#-et-apr%C3%A8s--de-la-d%C3%A9coupe-shopify-%C3%A0-linfra-maison)
+[![Shopify](https://img.shields.io/badge/Shopify-pr%C3%AAt%20%C3%A0%20d%C3%A9couper-96bf48?style=flat-square&labelColor=282828)](#-roadmap--ce-quil-reste-%C3%A0-faire)
 [![Portée](https://img.shields.io/badge/showcase-statique-d64747?style=flat-square&labelColor=282828)](#-ce-que-ce-showcase-est-et-ce-quil-nest-pas)
 [![Vues](https://img.shields.io/badge/vues-landing%20%C2%B7%20produit%20%C2%B7%20panier-0a0a0a?style=flat-square&labelColor=282828)](#-ce-que-ce-showcase-est-et-ce-quil-nest-pas)
 [![Accessibilité](https://img.shields.io/badge/a11y-AA%20vis%C3%A9-0a0a0a?style=flat-square&labelColor=282828)](#-qualit%C3%A9--ce-qui-a-%C3%A9t%C3%A9-v%C3%A9rifi%C3%A9)
 [![Poids](https://img.shields.io/badge/JS%20total-%3C%2020%20ko-0a0a0a?style=flat-square&labelColor=282828)](#-stack-technique)
 
-**[→ Voir la démo](https://paulfleury.com/ti/)** &nbsp;·&nbsp; **[→ Les 60 pistes de logo](https://paulfleury.com/ti/brand/)** &nbsp;·&nbsp; **[→ L'offre](https://paulfleury.com/ti/offre/)** &nbsp;·&nbsp; **[↓ Télécharger le site](https://paulfleury.com/ti/dump.zip)**
+**[→ Voir la démo](https://paulfleury.com/ti/)** &nbsp;·&nbsp; **[→ Les 60 pistes de logo](https://paulfleury.com/ti/brand/)** &nbsp;·&nbsp; **[→ L'offre](https://paulfleury.com/ti/readme/)** &nbsp;·&nbsp; **[↓ Télécharger le site](https://paulfleury.com/ti/dump.zip)**
 
 </div>
 
@@ -52,7 +52,7 @@ Ce dépôt est **ma réponse, non sollicitée et gratuite**, à cette vidéo. Tr
 |---|---|---|---|
 | **1** | **La landing page** | Refonte complète et statique de la boutique, orientée conversion : hiérarchie de l'offre, preuve sociale, objections traitées, panier et paiement mis en confiance | **[→ paulfleury.com/ti](https://paulfleury.com/ti/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](index.html) |
 | **2** | **La planche d'identité** | 60 pistes de logo générées et documentées — 30 pour « Tous Imparfaits », 30 pour « Imparfaits » — chacune déclinée en logo, favicon 16→48 px, app icon et onglet de navigateur | **[→ paulfleury.com/ti/brand](https://paulfleury.com/ti/brand/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](brand/) |
-| **3** | **La page d'offre** | Ce que je peux faire ensuite pour l'écosystème, et comment je me rémunère. Sans engagement, sans devis | **[→ paulfleury.com/ti/offre](https://paulfleury.com/ti/offre/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](offre/) |
+| **3** | **La page d'offre** | Ce que je peux faire ensuite pour l'écosystème, et comment je me rémunère. Sans engagement, sans devis | **[→ paulfleury.com/ti/readme](https://paulfleury.com/ti/readme/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](readme/) |
 
 > **Aucune contrepartie n'est attendue.** Le code est sous MIT : prenez-le, découpez-le, jetez-le, revendez-le. C'est le vôtre.
 
@@ -328,7 +328,7 @@ cd imparfaits
 python3 -m http.server 8080
 # → http://localhost:8080/          la landing page
 # → http://localhost:8080/brand/    les 60 pistes d'identité
-# → http://localhost:8080/offre/    l'offre
+# → http://localhost:8080/readme/   la page /readme
 ```
 
 Sans git, l'archive fait la même chose :
@@ -354,7 +354,7 @@ python3 -m http.server 8080
 │   ├── *.webp              ← photographies produit (© Ici Japon Corp)
 │   └── asset-manifest.md   ← chaque asset, sa source, son usage
 ├── brand/                  ← la planche : 60 pistes d'identité en SVG
-├── offre/                  ← la page d'offre
+├── readme/                 ← la page /readme
 └── LICENSE
 ```
 
@@ -398,7 +398,7 @@ La page est écrite pour être découpée. Le mapping évident :
 
 Les six catégories annoncées dans [« On doit recommencer Tous Imparfaits »](https://www.youtube.com/watch?v=OPY3aPZYZRU) peuvent devenir six collections Shopify avec un `metafield` de couleur d'univers, ce qui rend la grille pilotable depuis l'admin sans toucher au code.
 
-**Je peux faire ce découpage.** C'est le premier point de la [page d'offre](https://paulfleury.com/ti/offre/).
+**Je peux faire ce découpage.** C'est le premier point de la [page d'offre](https://paulfleury.com/ti/readme/).
 
 ### Un coup de main, si besoin
 
