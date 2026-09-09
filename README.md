@@ -402,7 +402,7 @@ Les six catégories annoncées dans [« On doit recommencer Tous Imparfaits »](
 
 ### Un coup de main, si besoin
 
-Rien à signer, rien à vendre : le template est offert quoi qu'il arrive. Si l'une de ces marches vous intéresse, c'est le genre de chantier sur lequel j'aide le plus souvent — en sachant que mes semaines sont déjà bien prises et que mes conditions se calent sur mon marché. Ça n'enlève rien au plaisir d'en parler : [hello@paulfleury.com](mailto:hello@paulfleury.com).
+Je reste à dispo si vous avez besoin d'un conseil, d'un avis technique ou d'un coup d'œil sur la suite. Et si un jour vous voulez que je mette la main à la pâte sur l'une de ces marches, on en parle : [hello@paulfleury.com](mailto:hello@paulfleury.com).
 
 ---
 

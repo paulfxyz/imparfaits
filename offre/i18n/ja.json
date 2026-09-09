@@ -87,7 +87,6 @@
   "CHéberger la vitrine chez vous, ne garder Shopify que par APILe site part sur votre propre hébergement : plus rapide, plus de thème à maintenir, aucune contrainte de gabarit. Shopify se réduit à un back-office appelé par l'API — catalogue, stocks, commandes, encaissement — pendant que l'affichage, le contenu et les vues vous appartiennent entièrement.": "<span class=\"k\">C</span><b>店舗表示は自社で持ち、ShopifyはAPI経由だけにする</b><span class=\"t\">サイトを自社のホスティングへ移します。表示は速くなり、テーマの保守も、テンプレートの制約もなくなります。Shopifyは商品、在庫、注文、決済をAPIで呼ぶ管理画面に縮小し、見た目と中身と画面設計は完全に皆さんのものになります。</span>",
   "DPuis s'en débarrasserLa suite logique, si l'envie vient : Stripe en direct (Apple Pay, Google Pay, PayPal, SEPA, taxes), une base maison pour le catalogue, les stocks, les commandes et les clients, une API propre, et les automatisations auto-hébergées. Plus d'abonnement, plus de commission sur le thème, les données à la maison.": "<span class=\"k\">D</span><b>そして、手放す</b><span class=\"t\">その気になれば次の段階へ。Stripeを直接使い（Apple&nbsp;Pay、Google&nbsp;Pay、PayPal、SEPA、税処理）、商品・在庫・注文・顧客は自前のデータベースで持ち、きれいなAPIと自社運用の自動化を用意します。月額もテーマの手数料もなく、データは手元に残ります。</span>",
   "[05] 技 Un coup de main, si besoin": "<span class=\"n\">[05]</span> <span class=\"jp\">技</span> 必要なら、お手伝い",
-  "Rien à signer, rien à vendre : la refonte est offerte quoi qu'il arrive. Si l'une de ces étapes vous intéresse, c'est le genre de chantier sur lequel j'aide le plus souvent — en sachant que mes semaines sont déjà bien prises et que mes conditions se calent sur mon marché, autant le dire tout de suite. Ça n'enlève rien au plaisir d'en parler avec vous, à votre rythme.": "署名も、売り込みもありません。リニューアルはどうあれお渡しします。もしこの段階のどれかに関心があれば、私が最もよくお手伝いしている類の仕事です。ただ、すでに予定は詰まっていて、条件もその市場に合わせている点は先にお伝えしておきます。それでも、皆さんのペースでお話しできれば嬉しく思います。",
   "En discuter quand vous voulez →": "いつでもご相談ください <span aria-hidden=\"true\">→</span>",
   "hello@paulfleury.com": "hello@paulfleury.com",
   "Voilà, c’est tout": "以上です",
@@ -120,7 +119,8 @@
   "E-mailhello@paulfleury.com": "<b>メール</b><span>hello@paulfleury.com</span>",
   "Le code sourceGitHub · licence MIT": "<b>ソースコード</b><span>GitHub・MITライセンス</span>",
   "Mon sitepaulfleury.com": "<b>私のサイト</b><span>paulfleury.com</span>",
-  "Fuseau Europe/Lisbonne ou New York selon la semaine. Une réponse peut prendre quelques jours, jamais plus.": "週によって<b>Europe/Lisbonne</b>または<b>ニューヨーク</b>の時間帯です。返信に数日いただくことはありますが、それ以上はありません。"
+  "Fuseau Europe/Lisbonne ou New York selon la semaine. Une réponse peut prendre quelques jours, jamais plus.": "週によって<b>Europe/Lisbonne</b>または<b>ニューヨーク</b>の時間帯です。返信に数日いただくことはありますが、それ以上はありません。",
+  "Je reste à dispo si vous avez besoin d'un conseil, d'un avis technique ou d'un coup d'œil sur la suite. Et si un jour vous voulez que je mette la main à la pâte sur l'une de ces étapes, on en parle — sans engagement, à votre rythme.": "ご相談、技術的な意見、次の一手への目通しが必要なときは、いつでもどうぞ。いずれこの段階のどれかを実際に手伝ってほしくなったら、そのときお話ししましょう。約束事は一切なしで、皆さんのペースで。"
  },
  "attrs": {
   "Fermer": "閉じる",
