@@ -14,13 +14,10 @@ Pas envie de cloner ? Le site entier se télécharge en une archive : **[paulfle
 <br>
 
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-0a0a0a?style=for-the-badge&labelColor=282828)](LICENSE)
-[![Prix](https://img.shields.io/badge/prix-0%20%E2%82%AC-d64747?style=for-the-badge&labelColor=282828)](readme/)
-[![Crédits](https://img.shields.io/badge/co%C3%BBt%20r%C3%A9el-%E2%89%88%20600%20%C3%A0%20700%20%24-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
-[![Temps](https://img.shields.io/badge/temps-4%20%C3%A0%205%20h-d64747?style=for-the-badge&labelColor=282828)](#-ce-que-%C3%A7a-a-co%C3%BBt%C3%A9-vraiment)
 
 [![Le site refait](https://img.shields.io/badge/en%20ligne-paulfleury.com%2Fti-d64747?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/)
 [![La planche d'identité](https://img.shields.io/badge/60%20pistes-%2Fti%2Fbrand-0a0a0a?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/brand/)
-[![La page d'offre](https://img.shields.io/badge/l%27offre-%2Fti%2Freadme-0a0a0a?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/readme/)
+[![La page /readme](https://img.shields.io/badge/la%20page-%2Fti%2Freadme-0a0a0a?style=for-the-badge&labelColor=282828)](https://paulfleury.com/ti/readme/)
 [![Télécharger le site](https://img.shields.io/badge/t%C3%A9l%C3%A9charger-dump.zip-d64747?style=for-the-badge&labelColor=282828&logo=files&logoColor=ededed)](https://paulfleury.com/ti/dump.zip)
 
 [![Langues](https://img.shields.io/badge/i18n-9%20langues-0a0a0a?style=flat-square&labelColor=282828)](#-internationalisation--9-langues)
@@ -36,7 +33,7 @@ Pas envie de cloner ? Le site entier se télécharge en une archive : **[paulfle
 [![Accessibilité](https://img.shields.io/badge/a11y-AA%20vis%C3%A9-0a0a0a?style=flat-square&labelColor=282828)](#-qualit%C3%A9--ce-qui-a-%C3%A9t%C3%A9-v%C3%A9rifi%C3%A9)
 [![Poids](https://img.shields.io/badge/JS%20total-%3C%2020%20ko-0a0a0a?style=flat-square&labelColor=282828)](#-stack-technique)
 
-**[→ Voir la démo](https://paulfleury.com/ti/)** &nbsp;·&nbsp; **[→ Les 60 pistes de logo](https://paulfleury.com/ti/brand/)** &nbsp;·&nbsp; **[→ L'offre](https://paulfleury.com/ti/readme/)** &nbsp;·&nbsp; **[↓ Télécharger le site](https://paulfleury.com/ti/dump.zip)**
+**[→ Voir la démo](https://paulfleury.com/ti/)** &nbsp;·&nbsp; **[→ Les 60 pistes de logo](https://paulfleury.com/ti/brand/)** &nbsp;·&nbsp; **[→ La page /readme](https://paulfleury.com/ti/readme/)** &nbsp;·&nbsp; **[↓ Télécharger le site](https://paulfleury.com/ti/dump.zip)**
 
 </div>
 
@@ -52,7 +49,7 @@ Ce dépôt est **ma réponse, non sollicitée et gratuite**, à cette vidéo. Tr
 |---|---|---|---|
 | **1** | **La landing page** | Refonte complète et statique de la boutique, orientée conversion : hiérarchie de l'offre, preuve sociale, objections traitées, panier et paiement mis en confiance | **[→ paulfleury.com/ti](https://paulfleury.com/ti/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](index.html) |
 | **2** | **La planche d'identité** | 60 pistes de logo générées et documentées — 30 pour « Tous Imparfaits », 30 pour « Imparfaits » — chacune déclinée en logo, favicon 16→48 px, app icon et onglet de navigateur | **[→ paulfleury.com/ti/brand](https://paulfleury.com/ti/brand/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](brand/) |
-| **3** | **La page d'offre** | Ce que je peux faire ensuite pour l'écosystème, et comment je me rémunère. Sans engagement, sans devis | **[→ paulfleury.com/ti/readme](https://paulfleury.com/ti/readme/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](readme/) |
+| **3** | **La page /readme** | Qui je suis, pourquoi je l'ai fait, ce qu'il reste à faire, et un coup de main si besoin | **[→ paulfleury.com/ti/readme](https://paulfleury.com/ti/readme/)**<br>[![Le code](https://img.shields.io/badge/%20-0a0a0a?style=flat-square&logo=github&logoColor=ededed)](readme/) |
 
 > **Aucune contrepartie n'est attendue.** Le code est sous MIT : prenez-le, découpez-le, jetez-le, revendez-le. C'est le vôtre.
 
@@ -74,7 +71,7 @@ Ce dépôt est **ma réponse, non sollicitée et gratuite**, à cette vidéo. Tr
 > Et vous verrez, au fil des opérations, si **Tous Imparfaits** a de quoi
 > s’internationaliser aussi côté logistique. Le site, lui, est déjà prêt pour ce jour-là.
 
-Autant être net d'entrée : **ce dépôt est une vitrine statique**, faite pour montrer le potentiel du parcours en un après-midi de travail — **pas un site de production**. Rien n'est connecté à un vrai stock, à un vrai paiement, à une vraie commande. Le panier vit en mémoire dans le navigateur ; aucune transaction n'est possible.
+Autant être net d'entrée : **ce dépôt est une vitrine statique**, faite pour montrer le potentiel du parcours — **pas un site de production**. Rien n'est connecté à un vrai stock, à un vrai paiement, à une vraie commande. Le panier vit en mémoire dans le navigateur ; aucune transaction n'est possible.
 
 **Trois vues sont construites, de bout en bout :**
 
@@ -91,11 +88,11 @@ Autant être net d'entrée : **ce dépôt est une vitrine statique**, faite pour
 - Le **compte client**, le suivi de commande, les retours, la liste d'envies
 - Les pages légales et éditoriales, le blog, les pages de campagne
 
-Autrement dit : les trois vues les plus difficiles et les plus décisives pour la conversion sont faites ; le reste est du déclinage. La suite est décrite plus bas dans [**Et après**](#-et-après--de-la-découpe-shopify-à-linfra-maison).
+Autrement dit : les trois vues les plus difficiles et les plus décisives pour la conversion sont faites ; le reste est du déclinage. La suite est décrite plus bas dans [**Roadmap**](#-roadmap--ce-quil-reste-à-faire).
 
 <div align="center">
-<img src=".github/img/shot-scope.png" alt="Le périmètre du showcase, tel qu'annoncé sur la page d'offre" width="88%">
-<br><em>Le périmètre annoncé noir sur blanc sur la page d'offre — ce qui est fait, ce qui reste à faire</em>
+<img src=".github/img/shot-scope.png" alt="Le périmètre du showcase, tel qu'annoncé sur la page /readme" width="88%">
+<br><em>Le périmètre annoncé noir sur blanc sur la page /readme — ce qui est fait, ce qui reste à faire</em>
 </div>
 
 <br>
@@ -115,8 +112,8 @@ Autrement dit : les trois vues les plus difficiles et les plus décisives pour l
 <br>
 
 <div align="center">
-<img src=".github/img/shot-offre.png" alt="La page d'offre" width="88%">
-<br><em>3 — La page d'offre</em>
+<img src=".github/img/shot-offre.png" alt="La page /readme" width="88%">
+<br><em>3 — La page /readme</em>
 </div>
 
 <br>
@@ -225,7 +222,7 @@ texte, donc il marche tel quel sur papier comme sur encre.
 ## 🌗 Thème clair, thème sombre
 
 Les trois pages ont un **sélecteur de thème** — à gauche du sélecteur de langue sur la landing,
-en haut à droite sur la planche d'identité, à gauche du menu sur la page d'offre. Le choix suit
+en haut à droite sur la planche d'identité, à gauche du menu sur la page /readme. Le choix suit
 d'abord la préférence du système, puis reste mémorisé. Le thème est posé **avant le premier rendu**,
 donc aucun flash clair au chargement.
 
@@ -285,22 +282,6 @@ Volontairement minimale — parce que le but est qu'un développeur Shopify puis
 Pas de React, pas de jQuery, pas de Bootstrap, pas de Google Fonts en ligne, pas de Font Awesome, pas de cookie tiers, pas de pixel de tracking, pas de `node_modules`. Toutes les icônes sont des SVG inline.
 
 Et aussi : **pas de backend, pas de base de données, pas d'API**. C'est volontaire à ce stade — voir [le périmètre du showcase](#-ce-que-ce-showcase-est-et-ce-quil-nest-pas). Tout ça arrive aux marches 3 et 4.
-
----
-
-## 💰 Ce que ça a coûté, vraiment
-
-Par transparence, puisque le travail est offert : voici l'ordre de grandeur, donné pour l'échelle et pas pour facturation.
-
-| Poste | Montant |
-|---|---|
-| **Usage de mes modèles** | **≈ 600 à 700 $** en équivalent token chez Anthropic, OpenAI, Mistral, Google, Alibaba et les autres |
-| **Session de travail** | **17 h 26** — un week-end, en multitâche avec mes autres projets : cadrage, recherche, direction artistique, arbitrages, relecture et QA d'un côté, production des agents de l'autre |
-| **Facturé à Ici Japon Corp** | **0 €** |
-
-> **C’est un ordre de grandeur, pas une facture.** Le chiffre est une estimation en **équivalent token** : des millions de tokens consommés sur **des dizaines de modèles et de services d’IA** — Anthropic, OpenAI, Mistral, Google, Alibaba, OpenRouter et d’autres — auxquels s’ajoutent le raisonnement, les recherches, les lectures de pages et les outils appelés en route.
-
-**Aucune image n'a été générée par IA.** Toutes les photographies produit viennent du site réel — c'est un choix : une refonte se juge sur les vrais visuels de la marque, pas sur des rendus flatteurs qui n'existeront jamais en boutique.
 
 ---
 
@@ -377,8 +358,8 @@ Cinq marches, par ordre croissant d'engagement — et d'autonomie retrouvée.
 La marche 3 est celle que je recommande : le MCP est la vraie bascule, parce qu'il rend la boutique pilotable depuis les outils que l'équipe utilise déjà, sans jamais toucher au code.
 
 <div align="center">
-<img src=".github/img/shot-steps.png" alt="Les marches détaillées sur la page d'offre" width="88%">
-<br><em>Les mêmes marches, détaillées sur la page d'offre</em>
+<img src=".github/img/shot-steps.png" alt="Les marches détaillées sur la page /readme" width="88%">
+<br><em>Les mêmes marches, détaillées sur la page /readme</em>
 </div>
 
 ### Marche 1 en détail — le mapping Liquid
@@ -398,7 +379,7 @@ La page est écrite pour être découpée. Le mapping évident :
 
 Les six catégories annoncées dans [« On doit recommencer Tous Imparfaits »](https://www.youtube.com/watch?v=OPY3aPZYZRU) peuvent devenir six collections Shopify avec un `metafield` de couleur d'univers, ce qui rend la grille pilotable depuis l'admin sans toucher au code.
 
-**Je peux faire ce découpage.** C'est le premier point de la [page d'offre](https://paulfleury.com/ti/readme/).
+**Je peux faire ce découpage.** C'est le premier point de la [page /readme](https://paulfleury.com/ti/readme/).
 
 ### Un coup de main, si besoin
 
@@ -412,11 +393,13 @@ Je reste à dispo si vous avez besoin d'un conseil, d'un avis technique ou d'un 
 
 Je construis mes propres produits — [Openline](https://openline.com) (opérateur eSIM), [cupof.news](https://cupof.news) (app de news) — et je travaille avec mes équipes chez [megastack.sh](https://megastack.sh) (infrastructure et déploiement), [calliope.agency](https://calliope.agency) (branding, web et IA). J'interviens sur les produits des autres quand le sujet me plaît. Celui-là me plaît depuis 2020.
 
-### Pourquoi un après-midi suffit
+### Pourquoi ce cadeau
 
 Avec mes équipes chez **[megastack.sh](https://megastack.sh)** et chez **[calliope.agency](https://calliope.agency)**, on a fini, à force, par développer nos propres modèles dédiés au **branding**, au **web design** et au **développement d'applications web**. Pas des prompts recyclés : des modèles entraînés et outillés pour ça, d'une efficacité assez folle. Ils tournent déjà sur mes propres boîtes — Openline, cupof.news — et sur les projets de nos clients.
 
-Ce dépôt est ce que ça donne : **≈ 600 à 700 $ en équivalent token et 4 à 5 h de mon temps** — un dimanche, en multitâche avec d’autres projets, pendant qu’une dizaine d’heures tournaient en fond. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
+Ces derniers temps, je les entraîne surtout sur le **web design** et le **branding**. J'en ai profité pour faire un petit run pour vous, les gars — gratis. Et là il n'est question que de design et de front — pas encore du reste, le développement lourd, les infrastructures, les automatisations et les workflows.
+
+**Aucune image n'a été générée par IA.** Toutes les photographies produit viennent du site réel : une refonte se juge sur les vrais visuels de la marque.
 
 Alors je me suis dit : tiens, je vais proposer de donner un coup de pouce à **Tev** et à l'équipe. 🤝
 
