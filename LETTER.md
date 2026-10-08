@@ -2,7 +2,7 @@
 
 Salut l'équipe,
 
-Je vous écris de la part d'Ezechiel, un ami que certains d'entre vous ont croisé récemment au Village.
+Je vous écris via l'intermédiaire d'Ezechiel, un ami prochaine que certains d'entre vous ont croisé récemment au Village.
 
 Ça fait quatre bonnes années que je suis Tev et IJC sur YouTube, et j'ai suivi à peu près toutes les épopées. Il y a deux ans, pendant une période un peu compliquée pour moi, je suis tombé sur le replay d'un street live : Léo, Masa et Jacky dans un izakaya, en train de siroter des limonades. Rien de spécial, et pourtant ce petit moment partagé avec des inconnus m'a fait un bien fou. Depuis, je garde toujours un œil sur votre univers.
 
